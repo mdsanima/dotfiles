@@ -1,0 +1,10 @@
+[user]
+	name = mdsanima
+	email = marcinrozewski@gmail.com
+	signingkey = marcinrozewski@gmail.com
+[commit]
+	gpgsign = true
+[init]
+	defaultbranch = main
+[core]
+	editor = vim
