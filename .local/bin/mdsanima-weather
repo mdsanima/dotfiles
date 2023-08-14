@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+# Copyright © 2023 MDSANIMA
+
+# You can use this in the terminal by typing `mdsanima-weather` which will show
+# the weather in your nearest location or by typing `mdsanima-weather city` for
+# a specific city.
+
+# Basic terminal setting.
+set -o errexit
+set -o pipefail
+set -o nounset
+
+# This is actual weather.
+curl "https://wttr.in/${1:-}"
