@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+# Copyright © 2023 MDSANIMA
+
+# This script is for showing help information like application name and version
+# number only. The version number is from current tag on this repository.
+
+# Get the current tag from the Git repository.
+CURRENT_TAG=$(git describe --tags)
+
+# Application name and version number exports.
+export MDSANIMA_SHELL_APP_NAME="mdsanima-shell"
+export MDSANIMA_SHELL_APP_VERSION=$CURRENT_TAG
+
+# Script setup.
+USAGE_HELP="usage: mdsanima-shell [-h] [-v]"
+if [[ $1 == '-v' || $1 == '--version' ]]; then
+    echo $MDSANIMA_SHELL_APP_NAME $MDSANIMA_SHELL_APP_VERSION
+elif [[ $1 == '-h' || $1 == '--help' ]]; then
+    echo $USAGE_HELP
+    printf "\nMDSANIMA SHELL is a command-line interface for custom shell config.\n"
+    printf "You can use this script on all available hosts in your home labs\n"
+    printf "network and the cloud servers thats you have.\n\n"
+    printf "options:\n"
+    printf "  -h, --help            show this help message and exit\n"
+    printf "  -v, --version         show program's version number and exit\n\n"
+    printf "Copyright © 2023 MDSANIMA\n"
+elif [[ $1 != '-h' || $1 != '--help' ]]; then
+    echo $USAGE_HELP
+    echo "error: unrecognized argument: "$1
+fi
