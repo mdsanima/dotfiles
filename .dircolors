@@ -1,0 +1,284 @@
+# Copyright © 2023 MDSANIMA
+
+# This ia a custom colors definition for directory and specific files.
+
+# Configuration file for dircolors, a utility to help you set the
+# LS_COLORS environment variable used by GNU ls with the --color option.
+# Copyright (C) 1996-2017 Free Software Foundation, Inc.
+# Copying and distribution of this file, with or without modification,
+# are permitted provided the copyright notice and this notice are preserved.
+# The keywords COLOR, OPTIONS, and EIGHTBIT (honored by the
+# slackware version of dircolors) are recognized but ignored.
+# Below are TERM entries, which can be a glob patterns, to match
+# against the TERM environment variable to determine if it is colorizable.
+
+# For information on dircolors files refer to dir_colors Linux Man Pages.
+# https://www.systutorials.com/docs/linux/man/5-dir_colors/
+
+# Documentation reference pages.
+# http://www.mail-archive.com/bug-coreutils@gnu.org/msg11030.html
+
+# Standard colors setup configuration info.
+# Attribute code: 00=none 01=bold 04=underscore 05=blink 07=reverse 08=concealed
+# Text code:      30=black 31=red 32=green 33=yellow 34=blue 35=magenta 36=cyan 37=white
+# Bacground code: 40=black 41=red 42=green 43=yellow 44=blue 45=magenta 46=cyan 47=white
+
+# 256 colors setup configuration info.
+# Text code:      38;5;COLOR_NUMBER
+# Bacground code: 48;5;COLOR_NUMBER
+# Example basic:  48;5;147;01          - lavender background, bold
+# Example 256:    48;5;167;38;5;193;04 - red background, lime-green text, underscore
+
+# Term configuration setup.
+TERM Eterm
+TERM ansi
+TERM *color*
+TERM con[0-9]*x[0-9]*
+TERM cons25
+TERM console
+TERM cygwin
+TERM dtterm
+TERM dvtm
+TERM dvtm-256color
+TERM eterm-color
+TERM fbterm
+TERM gnome
+TERM gnome-256color
+TERM hurd
+TERM jfbterm
+TERM konsole
+TERM konsole-256color
+TERM kterm
+TERM linux
+TERM linux-c
+TERM mach-color
+TERM mlterm
+TERM putty
+TERM putty-256color
+TERM rxvt*
+TERM screen*
+TERM st*
+TERM terminator
+TERM tmux*
+TERM vt100
+TERM xterm*
+
+# Global defaults configuration file formats colors setup.
+RESET                 0            # reset to normal color
+NORMAL                00           # no color
+FILE                  00           # normal
+MISSING               00           # nomral
+CAPABILITY            00           # white
+EXEC                  01           # normal, bold
+DIR                   38;5;45;01   # sky, bold
+LINK                  38;5;115     # green
+MULTIHARDLINK         38;5;115;04  # green, underscore
+FIFO                  48;5;137     # bronze bg, white
+SOCK                  48;5;137     # bronze bg, white
+DOOR                  48;5;137     # bronze bg, white
+BLK                   38;5;222;04  # bronze, underscore
+CHR                   38;5;222;01  # bronze, bold
+ORPHAN                48;5;167;    # red bg, white
+SETUID                38;5;210;04  # red, underscore
+SETGID                38;5;180;04  # bronze, underscore
+OTHER_WRITABLE        38;5;42;01   # cyan, bold
+STICKY                48;5;67      # blue bg, white
+STICKY_OTHER_WRITABLE 48;5;30      # teal bg, white
+
+# Archives or compressed file formats colors setup.
+.7z                   38;5;147;01  # lavender, bold
+.ace                  38;5;147;01  # lavender, bold
+.alz                  38;5;147;01  # lavender, bold
+.apk                  38;5;147;01  # lavender, bold
+.arc                  38;5;147;01  # lavender, bold
+.arj                  38;5;147;01  # lavender, bold
+.bz                   38;5;147;01  # lavender, bold
+.bz2                  38;5;147;01  # lavender, bold
+.cab                  38;5;147;01  # lavender, bold
+.cpio                 38;5;147;01  # lavender, bold
+.deb                  38;5;147;01  # lavender, bold
+.dwm                  38;5;147;01  # lavender, bold
+.dz                   38;5;147;01  # lavender, bold
+.ear                  38;5;147;01  # lavender, bold
+.esd                  38;5;147;01  # lavender, bold
+.gem                  38;5;147;01  # lavender, bold
+.gz                   38;5;147;01  # lavender, bold
+.jar                  38;5;147;01  # lavender, bold
+.lha                  38;5;147;01  # lavender, bold
+.lrz                  38;5;147;01  # lavender, bold
+.lz                   38;5;147;01  # lavender, bold
+.lz4                  38;5;147;01  # lavender, bold
+.lzh                  38;5;147;01  # lavender, bold
+.lzma                 38;5;147;01  # lavender, bold
+.lzo                  38;5;147;01  # lavender, bold
+.rar                  38;5;147;01  # lavender, bold
+.rpm                  38;5;147;01  # lavender, bold
+.rz                   38;5;147;01  # lavender, bold
+.sar                  38;5;147;01  # lavender, bold
+.swm                  38;5;147;01  # lavender, bold
+.t7z                  38;5;147;01  # lavender, bold
+.tar                  38;5;147;01  # lavender, bold
+.taz                  38;5;147;01  # lavender, bold
+.tbz                  38;5;147;01  # lavender, bold
+.tbz2                 38;5;147;01  # lavender, bold
+.tgz                  38;5;147;01  # lavender, bold
+.tlz                  38;5;147;01  # lavender, bold
+.txz                  38;5;147;01  # lavender, bold
+.tz                   38;5;147;01  # lavender, bold
+.tzo                  38;5;147;01  # lavender, bold
+.tzst                 38;5;147;01  # lavender, bold
+.war                  38;5;147;01  # lavender, bold
+.wim                  38;5;147;01  # lavender, bold
+.xz                   38;5;147;01  # lavender, bold
+.z                    38;5;147;01  # lavender, bold
+.zip                  38;5;147;01  # lavender, bold
+.zoo                  38;5;147;01  # lavender, bold
+.zst                  38;5;147;01  # lavender, bold
+
+# Audio file formats colors setup.
+.aac                  38;5;193     # lime
+.au                   38;5;193     # lime
+.axa                  38;5;193     # lime
+.flac                 38;5;193     # lime
+.m4a                  38;5;193     # lime
+.mid                  38;5;193     # lime
+.midi                 38;5;193     # lime
+.mka                  38;5;193     # lime
+.mp3                  38;5;193     # lime
+.mpc                  38;5;193     # lime
+.oga                  38;5;193     # lime
+.ogg                  38;5;193     # lime
+.opus                 38;5;193     # lime
+.ra                   38;5;193     # lime
+.spx                  38;5;193     # lime
+.wav                  38;5;193     # lime
+.xspf                 38;5;193     # lime
+
+# Image file formats colors setup.
+.bmp                  38;5;229     # yellow
+.cgm                  38;5;229     # yellow
+.CR2                  38;5;229     # yellow
+.dl                   38;5;229     # yellow
+.emf                  38;5;229     # yellow
+.eps                  38;5;229     # yellow
+.gif                  38;5;229     # yellow
+.ico                  38;5;229     # yellow
+.jpeg                 38;5;229     # yellow
+.jpg                  38;5;229     # yellow
+.JPG                  38;5;229     # yellow
+.mjpeg                38;5;229     # yellow
+.mjpg                 38;5;229     # yellow
+.mng                  38;5;229     # yellow
+.pbm                  38;5;229     # yellow
+.pcx                  38;5;229     # yellow
+.pgm                  38;5;229     # yellow
+.png                  38;5;229     # yellow
+.PNG                  38;5;229     # yellow
+.ppm                  38;5;229     # yellow
+.svg                  38;5;229     # yellow
+.svgz                 38;5;229     # yellow
+.tga                  38;5;229     # yellow
+.tif                  38;5;229     # yellow
+.tiff                 38;5;229     # yellow
+.xbm                  38;5;229     # yellow
+.xcf                  38;5;229     # yellow
+.xpm                  38;5;229     # yellow
+.xwd                  38;5;229     # yellow
+.yuv                  38;5;229     # yellow
+
+# Video file formats colors setup.
+.anx                  38;5;222     # orange
+.asf                  38;5;222     # orange
+.avi                  38;5;222     # orange
+.axv                  38;5;222     # orange
+.divx                 38;5;222     # orange
+.flc                  38;5;222     # orange
+.fli                  38;5;222     # orange
+.flv                  38;5;222     # orange
+.gl                   38;5;222     # orange
+.m2ts                 38;5;222     # orange
+.m2v                  38;5;222     # orange
+.m4v                  38;5;222     # orange
+.mkv                  38;5;222     # orange
+.mov                  38;5;222     # orange
+.MOV                  38;5;222     # orange
+.mp4                  38;5;222     # orange
+.mp4v                 38;5;222     # orange
+.mpeg                 38;5;222     # orange
+.mpg                  38;5;222     # orange
+.nuv                  38;5;222     # orange
+.ogm                  38;5;222     # orange
+.ogv                  38;5;222     # orange
+.ogx                  38;5;222     # orange
+.qt                   38;5;222     # orange
+.rm                   38;5;222     # orange
+.rmvb                 38;5;222     # orange
+.vob                  38;5;222     # orange
+.webm                 38;5;222     # orange
+.wmv                  38;5;222     # orange
+
+# Other file formats colors setup.
+.c                    00           # noraml
+.cc                   00           # noraml
+.cpp                  00           # noraml
+.csv                  00           # noraml
+.cxx                  00           # noraml
+.go                   00           # noraml
+.h                    00           # noraml
+.hpp                  00           # noraml
+.ini                  00           # noraml
+.n3                   00           # noraml
+.nfo                  00           # noraml
+.nt                   00           # noraml
+.objc                 00           # noraml
+.oga                  00           # noraml
+.opus                 00           # noraml
+.owl                  00           # noraml
+.rdf                  00           # noraml
+.spx                  00           # noraml
+.tex                  00           # noraml
+.torrent              00           # noraml
+.ttl                  00           # noraml
+.xml                  00           # noraml
+.xspf                 00           # noraml
+*1                    00           # noraml
+*build.xml            00           # noraml
+*Dockerfile           00           # noraml
+*Makefile             00           # noraml
+*Rakefile             00           # noraml
+*rc                   00           # noraml
+*README               00           # noraml
+*README.markdown      00           # noraml
+*readme.txt           00           # noraml
+*README.txt           00           # noraml
+
+# Backup and logs uninportant file formats colors setup.
+.aux                  38;5;248     # gray
+.bak                  38;5;248     # gray
+.bbl                  38;5;248     # gray
+.blg                  38;5;248     # gray
+.cache                38;5;248     # gray
+.class                38;5;248     # gray
+.incomplete           38;5;248     # gray
+.lof                  38;5;248     # gray
+.log                  38;5;248     # gray
+.lol                  38;5;248     # gray
+.lot                  38;5;248     # gray
+.o                    38;5;248     # gray
+.out                  38;5;248     # gray
+.part                 38;5;248     # gray
+.pyc                  38;5;248     # gray
+.swp                  38;5;248     # gray
+.temp                 38;5;248     # gray
+.tmp                  38;5;248     # gray
+.toc                  38;5;248     # gray
+
+# Custom mdsanima file formats colors setup.
+.cfg                  38;5;69      # violet
+.conf                 38;5;11      # yellow
+.json                 38;5;30      # blue
+.md                   38;5;208     # orange
+.py                   38;5;14      # sky
+.sql                  38;5;12      # cyan
+.sqlite               38;5;9       # red
+.yml                  38;5;180     # amber

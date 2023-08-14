@@ -1,0 +1,24 @@
+# Copyright © 2023 MDSANIMA
+
+# This directory and files dont copy in to container build.
+node_modules
+npm-debug.log
+Dockerfile
+Dockerfile.dev
+Dockerfile.prod
+Dockerfile.test
+nginx.config
+manifest.yaml
+deploy.yaml
+README.md
+CHANGELOG.md
+.next
+.git
+.gitignore
+.dockerignore
+.env
+.env.test
+.env.local
+.env.test.local
+.env.development.local
+.env.production.local
