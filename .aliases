@@ -1,8 +1,8 @@
-// Copyright © 2023 MDSANIMA
+# Copyright © 2023 MDSANIMA
 
-// Custom alias definitions. This file must be include on `.bashrc` file.
+# Custom alias definitions. This file must be include on `.bashrc` file.
 
-// Aliases for SSH connection to my home lab host.
+# Aliases for SSH connection to my home lab host.
 alias rpi0='ssh mdsanima@192.168.1.27'
 alias rpi1='ssh mdsanima@192.168.1.32'
 alias rpi2='ssh mdsanima@192.168.1.34'
@@ -15,9 +15,9 @@ alias jet1='ssh mdsanima@192.168.1.24'
 alias jet2='ssh mdsanima@192.168.1.30'
 alias macb='ssh mdsanima@192.168.1.44'
 
-// Aliases for the weather script.
+# Aliases for the weather script.
 alias weahter='mdsanima-weather'
-alias pogoda='mdsanima-weather Zawiercie'
+alias pogoda='mdsanima-weather'
 
-// Aliases for the K3S Clusters.
+# Aliases for the K3S Clusters.
 alias k='kubectl'
