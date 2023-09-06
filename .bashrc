@@ -90,11 +90,6 @@ alias l='ls -CF'
 # Add an alert alias for long running commands.
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-# Alias definitions.
-if [ -f ~/.aliases ]; then
-    . ~/.aliases
-fi
-
 # Enable programmable completion features.
 if ! shopt -oq posix; then
     if [ -f /usr/share/bash-completion/bash_completion ]; then
@@ -108,4 +103,14 @@ fi
 if [[ $HOST == 'jet-1' || $HOST == 'jet-2' ]]; then
     export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
     export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+fi
+
+# Alias definitions from bash.
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+# Alias definitions from zsh.
+if [ -f ~/.aliases ]; then
+    . ~/.aliases
 fi
