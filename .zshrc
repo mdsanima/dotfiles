@@ -57,6 +57,11 @@ HIST_STAMPS="yyyy-mm-dd"
 # Adjustment to the right side.
 ZLE_RPROMPT_INDENT=0
 
+# History settings.
+HISTSIZE=50000                          # History lines stored in memory.
+HISTFILESIZE=20000                      # History lines stored on disk.
+HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S   "   # Adding date time before each commands.
+
 # Custom plugins to load.
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-search)
 
