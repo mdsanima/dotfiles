@@ -5,11 +5,18 @@
 # This is a installation script for `Oh My Zsh` terminal configuration. This
 # script also colorize print text in a fancy way.
 
+# List of packages to install.
+APT_PACKAGES="python3-pip zsh powerline fonts-powerline zsh-theme-powerlevel9k"
+APT_PACKAGES_OPTIONAL="curl git htop vim tmux mc neofetch cmatrix ffmpeg"
+
+# Get the current tag from the Git repository.
+CURRENT_GIT_TAG=$(git describe --tags)
+
 # Import default color definition.
 source "$PWD/.local/bin/mdsanima-color"
 
 # Help function for printing text in color.
-print_color() {
+function print_color() {
     local text="$1"
     local fg_color
     local bg_color
@@ -61,3 +68,30 @@ print_color() {
         echo -e "${fg_code}${bg_code}${text}${reset_code}"
     fi
 }
+
+# Writing the event log info.
+function write_show_info() {
+    local bg_color="$1"
+    local fg_color="$2"
+    local log_info="$3"
+    print_color " MDSANIMA-DEV " -fg WHITE -bg $bg_color -nonewline
+    print_color " $log_info" -fg $fg_color
+}
+
+# Writing the version and app name.
+function write_show_version() {
+    print_color ""
+    write_show_info GRAY ORANGE "dotfiles $CURRENT_GIT_TAG"
+    print_color ""
+}
+
+# Writing the help instruction.
+function write_show_help() {
+    write_show_version
+    print_color "This installer is only available for Linux on Bash terminal." -fg WHITE
+    print_color ""
+    print_color "Copyright © 2023 MDSANIMA" -fg ORANGE
+    print_color ""
+}
+
+write_show_help
