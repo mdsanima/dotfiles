@@ -16,7 +16,7 @@ CURRENT_GIT_TAG=$(git describe --tags)
 source "$PWD/.local/bin/mdsanima-color"
 
 # Help function for printing text in color.
-function print_color() {
+function color_print() {
     local text="$1"
     local fg_color
     local bg_color
@@ -69,29 +69,29 @@ function print_color() {
     fi
 }
 
-# Writing the event log info.
-function write_show_info() {
+# Printing the event log info.
+function print_show_info() {
     local bg_color="$1"
     local fg_color="$2"
     local log_info="$3"
-    print_color " MDSANIMA-DEV " -fg WHITE -bg $bg_color -nonewline
-    print_color " $log_info" -fg $fg_color
+    color_print " MDSANIMA-DEV " -fg WHITE -bg $bg_color -nonewline
+    color_print " $log_info" -fg $fg_color
 }
 
-# Writing the version and app name.
-function write_show_version() {
-    print_color ""
-    write_show_info GRAY ORANGE "dotfiles $CURRENT_GIT_TAG"
-    print_color ""
+# Printing the version and app name.
+function print_show_version() {
+    color_print ""
+    print_show_info GRAY ORANGE "dotfiles $CURRENT_GIT_TAG"
+    color_print ""
 }
 
-# Writing the help instruction.
-function write_show_help() {
-    write_show_version
-    print_color "This installer is only available for Linux on Bash terminal." -fg WHITE
-    print_color ""
-    print_color "Copyright © 2023 MDSANIMA" -fg ORANGE
-    print_color ""
+# Printing the help instruction.
+function print_show_help() {
+    print_show_version
+    color_print "This installer is only available for Linux system." -fg WHITE
+    color_print ""
+    color_print "Copyright © 2023 MDSANIMA" -fg ORANGE
+    color_print ""
 }
 
-write_show_help
+print_show_help
