@@ -216,12 +216,22 @@ typings/
 
 # dotenv environment variables file
 .env
+
 .env.test
 .env.local
-.env.test.local
-.env.development.local
-.env.production.local
+.env.secret
+.env.dev
+.env.development
+.env.prod
+.env.production
+
+.env*.test
 .env*.local
+.env*.secret
+.env*.dev
+.env*.development
+.env*.prod
+.env*.production
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
@@ -263,9 +273,13 @@ dist
 *.pem
 
 # MDSANIMA Template
-# setuptools_scm
+# Python package `setuptools_scm` version number
 _version.py
 
-# temp folder
+# Secret directories
+secret
+secrets
+
+# Temporary directories
 tmp
 temp
