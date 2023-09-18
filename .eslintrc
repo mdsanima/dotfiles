@@ -1,7 +1,7 @@
 // Copyright © 2023 MDSANIMA
 
 {
-  "extends": "eslint:recommended",
+  "extends": ["@eslint:recommended"],
   "plugins": ["header"],
   "rules": {
     "indent": ["error", 2],

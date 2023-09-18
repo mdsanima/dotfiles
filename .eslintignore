@@ -1,6 +1,6 @@
 # Copyright © 2023 MDSANIMA
 
-# Ignore this directory and files.
+# Ignore this directories and files.
 **/node_modules/**
 **/apps/**/*.d.ts
 **/next.config.js

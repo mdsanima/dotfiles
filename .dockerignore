@@ -1,6 +1,6 @@
 # Copyright © 2023 MDSANIMA
 
-# This directory and files dont copy in to container build.
+# This directories and files are not copied into the container during the build.
 node_modules
 npm-debug.log
 Dockerfile
@@ -19,6 +19,15 @@ CHANGELOG.md
 .env
 .env.test
 .env.local
-.env.test.local
-.env.development.local
-.env.production.local
+.env.secret
+.env.dev
+.env.development
+.env.prod
+.env.production
+.env*.test
+.env*.local
+.env*.secret
+.env*.dev
+.env*.development
+.env*.prod
+.env*.production

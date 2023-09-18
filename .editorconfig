@@ -46,6 +46,11 @@ end_of_line = lf
 indent_size = 2
 indent_style = space
 
+[*.mjs]
+indent_size = 2
+indent_style = space
+max_line_length = 120
+
 [*.ps1]
 indent_size = 4
 indent_style = space
@@ -78,6 +83,11 @@ indent_size = 2
 indent_style = space
 max_line_length = off
 
+[*.yaml]
+indent_size = 2
+indent_style = space
+max_line_length = off
+
 [*.zsh]
 indent_size = 4
 indent_style = space
@@ -85,6 +95,14 @@ indent_style = space
 [.bashrc]
 indent_size = 4
 indent_style = space
+
+[.env*]
+insert_final_newline = false
+
+[.eslint*]
+indent_size = 2
+indent_style = space
+max_line_length = 120
 
 [.gitconfig]
 indent_size = 4
