@@ -1,0 +1,31 @@
+# Copyright (c) 2023-2024 MDSANIMA DEV. All rights reserved.
+# Licensed under the MIT license.
+
+# This file is used for the syncing the repository labels.
+# Documentation: https://github.com/Financial-Times/github-label-sync/#label-config-file
+
+
+name: Sync Labels
+
+on:
+  schedule:
+    - cron: "0 0 1 * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/labels.yml"
+
+jobs:
+  sync-labels:
+    name: Sync Labels
+    runs-on: ubuntu-latest
+    permissions: write-all
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Syncing labels
+        uses: crazy-max/ghaction-github-labeler@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}

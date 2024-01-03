@@ -1,24 +1,17 @@
 # dotfiles
 
-This is a configuration settings files for various tools I use includes [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh/) and [Oh My Posh](https://github.com/JanDeDobbeleer/oh-my-posh), editor config and many more.
+These dotfiles include configuration settings for various tools I use, such as [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh/) for _Linux_, [Oh My Posh](https://github.com/JanDeDobbeleer/oh-my-posh/) for _Windows_ terminal customization, editor config, and many more.
 
-## Getting Started
+Additionally, this repository contains template files that I use for other repositories, such as GitHub workflows, dependabot, or labels.
 
-Make sure you have [nerd-fonts](https://github.com/ryanoasis/nerd-fonts) installed in your system.
+## Getting started
+
+Make sure you have [nerd-fonts](https://github.com/ryanoasis/nerd-fonts/) installed in your system.
 
 ### Installation on Linux
 
-Clone this repository and type the `./install.sh` command in the terminal to perform the installation in _Linux_ system.
+Clone this repository and type the `./install.sh` command in the **Shell** terminal to perform the installation in _Linux_ system.
 
 ### Installation on Windows
 
 Clone this repository and type the `.\install.ps1` command in the **PowerShell** terminal to perform the installation in _Windows_ system.
-
-## Examples
-
-Here is an example dotfiles repository that can serve as inspiration for your own use. Be sure to check out these repositories:
-
-- [bashbunni](https://github.com/bashbunni/dotfiles/)
-- [Beatriz Stollnitz](https://github.com/bstollnitz/dotfiles/)
-- [Sarah Schulte](https://github.com/cgsdev0/dotfiles)
-- [Nick Janetakis](https://github.com/nickjj/dotfiles)

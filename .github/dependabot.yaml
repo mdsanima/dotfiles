@@ -1,0 +1,16 @@
+# Copyright (c) 2023-2024 MDSANIMA DEV. All rights reserved.
+# Licensed under the MIT license.
+
+# This is a configuration file for Dependabot that automatically updates the packages to the latest versions.
+# Documentation: https://docs.github.com/en/code-security/dependabot/dependabot-version-updates
+
+
+version: 2
+updates:
+  - package-ecosystem: pip
+    directory: /
+    schedule:
+      interval: daily
+      timezone: Europe/Warsaw
+      time: "12:30"
+    labels: [dependencies, python, pip]
