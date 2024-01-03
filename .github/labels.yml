@@ -1,11 +1,10 @@
 # Copyright (c) 2023-2024 MDSANIMA DEV. All rights reserved.
 # Licensed under the MIT license.
 
-# This file is used to declaratively define the repository default labels.
+# This file is used to declaratively define the GitHub repository default labels.
 # Documentation: https://github.com/Financial-Times/github-label-sync/#label-config-file
 
-
-# Generic labels
+# Generic
 - name: bug
   color: B60205
   description: Something isn't working

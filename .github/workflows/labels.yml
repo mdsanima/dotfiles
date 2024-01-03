@@ -1,10 +1,10 @@
 # Copyright (c) 2023-2024 MDSANIMA DEV. All rights reserved.
 # Licensed under the MIT license.
 
-# This file is used for the syncing the repository labels.
+# This file is used for syncing GitHub repository labels defined in the `.github/labels.yml` file.
 # Documentation: https://github.com/Financial-Times/github-label-sync/#label-config-file
 
-
+# Workflow setup
 name: Sync Labels
 
 on:
@@ -12,8 +12,11 @@ on:
     - cron: "0 0 1 * *"
   workflow_dispatch:
   push:
-    branches: main
-    paths: ./.github/labels.yaml
+    branches:
+      - main
+    paths:
+      - .github/labels.yml
+      - .github/workflows/labels.yml
 
 jobs:
   sync-labels:
@@ -29,3 +32,4 @@ jobs:
         uses: crazy-max/ghaction-github-labeler@v5
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          yaml-file: .github/labels.yml
