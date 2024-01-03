@@ -1,16 +1,20 @@
-# Copyright © 2023 MDSANIMA
+# Copyright (c) 2023-2024 MDSANIMA DEV. All rights reserved.
+# Licensed under the MIT license.
 
-# This ia a custom colors definition for directory and specific files.
+# This is a custom configuration for the colors definition for directories and
+# specific files.
 
-# Configuration file for dircolors, a utility to help you set the
-# LS_COLORS environment variable used by GNU ls with the --color option.
+# Configuration file for dircolors, a utility to help you set the `LS_COLORS`
+# environment variable used by GNU ls with the --color option.
+
 # Copyright (C) 1996-2017 Free Software Foundation, Inc.
 # Copying and distribution of this file, with or without modification,
 # are permitted provided the copyright notice and this notice are preserved.
-# The keywords COLOR, OPTIONS, and EIGHTBIT (honored by the
-# slackware version of dircolors) are recognized but ignored.
-# Below are TERM entries, which can be a glob patterns, to match
-# against the TERM environment variable to determine if it is colorizable.
+
+# The keywords COLOR, OPTIONS, and EIGHTBIT (honored by the slackware version of
+# dircolors) are recognized but ignored. Below are TERM entries, which can be
+# a glob patterns, to match against the TERM environment variable to determine
+# if it is colorizable.
 
 # For information on dircolors files refer to dir_colors Linux Man Pages.
 # https://www.systutorials.com/docs/linux/man/5-dir_colors/
@@ -18,18 +22,20 @@
 # Documentation reference pages.
 # http://www.mail-archive.com/bug-coreutils@gnu.org/msg11030.html
 
-# Standard colors setup configuration info.
+
+# Standard colors configuration information
 # Attribute code: 00=none 01=bold 04=underscore 05=blink 07=reverse 08=concealed
 # Text code:      30=black 31=red 32=green 33=yellow 34=blue 35=magenta 36=cyan 37=white
 # Bacground code: 40=black 41=red 42=green 43=yellow 44=blue 45=magenta 46=cyan 47=white
 
-# 256 colors setup configuration info.
+# 256 colors configuration information
 # Text code:      38;5;COLOR_NUMBER
 # Bacground code: 48;5;COLOR_NUMBER
 # Example basic:  48;5;147;01          - lavender background, bold
 # Example 256:    48;5;167;38;5;193;04 - red background, lime-green text, underscore
 
-# Term configuration setup.
+
+# Term configuration
 TERM Eterm
 TERM ansi
 TERM *color*
@@ -63,7 +69,7 @@ TERM tmux*
 TERM vt100
 TERM xterm*
 
-# Global defaults configuration file formats colors setup.
+# Global defaults configuration file formats
 RESET                 0            # reset to normal color
 NORMAL                00           # no color
 FILE                  00           # normal
@@ -85,7 +91,7 @@ OTHER_WRITABLE        38;5;42;01   # cyan, bold
 STICKY                48;5;67      # blue bg, white
 STICKY_OTHER_WRITABLE 48;5;30      # teal bg, white
 
-# Archives or compressed file formats colors setup.
+# Archives or compressed file formats
 .7z                   38;5;147;01  # lavender, bold
 .ace                  38;5;147;01  # lavender, bold
 .alz                  38;5;147;01  # lavender, bold
@@ -135,7 +141,7 @@ STICKY_OTHER_WRITABLE 48;5;30      # teal bg, white
 .zoo                  38;5;147;01  # lavender, bold
 .zst                  38;5;147;01  # lavender, bold
 
-# Audio file formats colors setup.
+# Audio file formats
 .aac                  38;5;193     # lime
 .au                   38;5;193     # lime
 .axa                  38;5;193     # lime
@@ -154,7 +160,7 @@ STICKY_OTHER_WRITABLE 48;5;30      # teal bg, white
 .wav                  38;5;193     # lime
 .xspf                 38;5;193     # lime
 
-# Image file formats colors setup.
+# Image file formats
 .bmp                  38;5;229     # yellow
 .cgm                  38;5;229     # yellow
 .CR2                  38;5;229     # yellow
@@ -186,7 +192,7 @@ STICKY_OTHER_WRITABLE 48;5;30      # teal bg, white
 .xwd                  38;5;229     # yellow
 .yuv                  38;5;229     # yellow
 
-# Video file formats colors setup.
+# Video file formats
 .anx                  38;5;222     # orange
 .asf                  38;5;222     # orange
 .avi                  38;5;222     # orange
@@ -217,7 +223,7 @@ STICKY_OTHER_WRITABLE 48;5;30      # teal bg, white
 .webm                 38;5;222     # orange
 .wmv                  38;5;222     # orange
 
-# Other file formats colors setup.
+# Other file formats
 .c                    00           # noraml
 .cc                   00           # noraml
 .cpp                  00           # noraml
@@ -252,7 +258,7 @@ STICKY_OTHER_WRITABLE 48;5;30      # teal bg, white
 *readme.txt           00           # noraml
 *README.txt           00           # noraml
 
-# Backup and logs uninportant file formats colors setup.
+# Backup and logs uninportant file formats
 .aux                  38;5;248     # gray
 .bak                  38;5;248     # gray
 .bbl                  38;5;248     # gray
@@ -273,7 +279,7 @@ STICKY_OTHER_WRITABLE 48;5;30      # teal bg, white
 .tmp                  38;5;248     # gray
 .toc                  38;5;248     # gray
 
-# Custom mdsanima file formats colors setup.
+# Custom MDSANIMA file formats
 .cfg                  38;5;69      # violet
 .conf                 38;5;11      # yellow
 .json                 38;5;30      # blue

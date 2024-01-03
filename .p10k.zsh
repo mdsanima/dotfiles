@@ -1,7 +1,11 @@
-# Copyright © 2023 MDSANIMA
+# Copyright (c) 2023-2024 MDSANIMA DEV. All rights reserved.
+# Licensed under the MIT license.
 
-# Removed all unused command and help comment on this config file.
-# Type `p10k configure` to generate new config.
+# This is a configuration file for the `Oh My Zsh` terminal customization.
+
+# We have removed all unused commands and help comments from this configuration
+# file. Type in the reminal `p10k configure` to generate new config.
+
 
 #########################[ temporarily change options ]#########################
 'builtin' 'local' '-a' 'p10k_config_opts'

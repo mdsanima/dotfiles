@@ -1,12 +1,14 @@
-# Copyright © 2023 MDSANIMA
+# Copyright (c) 2023-2024 MDSANIMA DEV. All rights reserved.
+# Licensed under the MIT license.
 
-# Defining default color names and color code variables in Bash terminal script
+# Defining default color names with color code variables in Bash terminal script
 # to colorize your output in a fancy way.
 
-# To use this color palette, add this line `source mdsanima-colors` to your
-# Bash script and apply for ANSI sequences.
+# To use this color palette, add this line `source mdsanima-colors` to your Bash
+# script and apply for ANSI sequences.
 
-# Default color names and color code.
+
+# Default color names with color code
 CYAN="50"
 SKY="39"
 BLUE="27"

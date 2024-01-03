@@ -1,42 +1,45 @@
-# Copyright © 2023 MDSANIMA
+# Copyright (c) 2023-2024 MDSANIMA DEV. All rights reserved.
+# Licensed under the MIT license.
 
-# Custom config `.zshrc` file for Ubuntu. You can use this script on all
-# available hosts in the home labs network and a cloud servers thats you have.
+# This is a custom configuration `.zshrc` file for Linux system. You can use
+# this script for all available hosts in your network.
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
+
+
+# Instant prompt
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# If you come from bash you might have to change your $PATH.
+# If you come from bash you might have to change your $PATH
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Python script WARNING which is not on PATCH.
+# Python script `WARNING` which is not on $PATH
 export PATH=$HOME/.local/bin:$PATH
 
-# Initial host name and user name.
+# Initial host name and user name
 name=$( ( echo $USER ) )
 nhos=$( ( echo "$(cat /etc/hostname)" ) )
 
-# Color WARNING! on powerlevel9k.zsh-theme
+# Color `WARNING` on powerlevel9k.zsh-theme
 export TERM="xterm-256color"
 
-# Disabled underline zsh-syntax-highlighting.
+# Disabled underline
 (( ${+ZSH_HIGHLIGHT_STYLES} )) || typeset -A ZSH_HIGHLIGHT_STYLES
 ZSH_HIGHLIGHT_STYLES[path]=none
 ZSH_HIGHLIGHT_STYLES[path_prefix]=none
 
-# Checking host and export path to oh-my-zsh installation.
+# Checking host and export $PATH to `.oh-my-zsh` installation
 if [[ $name = 'mdsanima' ]]; then
     export ZSH="/home/mdsanima/.oh-my-zsh"
 elif [[ $name = 'ubuntu' ]]; then
     export ZSH="/home/ubuntu/.oh-my-zsh"
 fi
 
-# Set automatically run zsh script from `/etc/profile.d` directory.
-# Don't run this on wsl-1 and jammy hosts.
+# Set auto run zsh script from `/etc/profile.d` directory, dont run on wsl
 if [[ $nhos != 'wsl-1' && $nhos != 'jammy' ]]; then
     if [[ -d /etc/profile.d ]]; then
         for i in /etc/profile.d/*.sh; do
@@ -48,33 +51,33 @@ if [[ $nhos != 'wsl-1' && $nhos != 'jammy' ]]; then
     fi
 fi
 
-# Set name of the theme to load.
+# Set name of the theme to load
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-# Execution time stamp shown in the history command output.
+# Execution time stamp shown in the history command output
 HIST_STAMPS="yyyy-mm-dd"
 
-# Adjustment to the right side.
+# Adjustment to the right side
 ZLE_RPROMPT_INDENT=0
 
-# History settings.
-HISTSIZE=50000                          # History lines stored in memory.
-HISTFILESIZE=20000                      # History lines stored on disk.
-HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S   "   # Adding date time before each commands.
+# History settings
+HISTSIZE=50000                          # History lines stored in memory
+HISTFILESIZE=20000                      # History lines stored on disk
+HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S   "   # Adding date time before each commands
 
-# Custom plugins to load.
+# Custom plugins to load
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-search)
 
-# Add zsh terminal.
+# Add zsh terminal
 source $ZSH/oh-my-zsh.sh
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Type `dircolors --print-database` in terminal.
+# Type `dircolors --print-database` in terminal
 [[ -e $HOME/.dircolors ]] && eval "`dircolors --sh $HOME/.dircolors`"
 
-# Checking host and set the colors and icons.
+# Checking host and set the colors and icons
 if [[ $nhos = 'none' ]]; then
     none=none
 elif [[ $nhos == 'jammy' ]]; then
@@ -145,16 +148,16 @@ elif [[ $nhos == 'rpi-1' || $nhos == 'rpi-2' || $nhos == 'rpi-3' || $nhos == 'rp
     typeset -g POWERLEVEL9K_DIR_PREFIX='💩 '
 fi
 
-# This is a extensions for zsh.
+# This is a extensions for zsh, uncomment this if you want to turn on this ext
 # autoload predict-on
 # predict-on
 
-# Alias definitions from bash.
+# Alias definitions for BASH
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-# Alias definitions from zsh.
+# Alias definitions for ZSH
 if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi

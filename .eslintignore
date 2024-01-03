@@ -1,6 +1,10 @@
-# Copyright © 2023 MDSANIMA
+# Copyright (c) 2023-2024 MDSANIMA DEV. All rights reserved.
+# Licensed under the MIT license.
 
-# Ignore this directories and files.
+# This is a configuration file for ignoring eslint files on this repository.
+
+
+# Ignore this files and dirs
 **/node_modules/**
 **/apps/**/*.d.ts
 **/next.config.js

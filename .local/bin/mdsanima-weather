@@ -1,15 +1,17 @@
 #!/usr/bin/env bash
 
-# Copyright © 2023 MDSANIMA
+# Copyright (c) 2023-2024 MDSANIMA DEV. All rights reserved.
+# Licensed under the MIT license.
 
 # You can use this in the terminal by typing `mdsanima-weather` which will show
 # the weather in your nearest location or by typing `mdsanima-weather city` for
-# a specific city.
+# a specific target city.
 
-# Basic terminal setting.
+
+# Basic terminal settings
 set -o errexit
 set -o pipefail
 set -o nounset
 
-# This is actual weather.
+# Get the actual weather
 curl "https://wttr.in/${1:-}"

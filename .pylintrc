@@ -1,44 +1,46 @@
-# Copyright © 2023 MDSANIMA
+# Copyright (c) 2023-2024 MDSANIMA DEV. All rights reserved.
+# Licensed under the MIT license.
+
+# This is a configuration file for code linting in Python package.
 
 
 [MASTER]
 
-# Add files or directories to the blacklist. They should be base names, not paths.
+# Add files or dirs to the blacklist, they should be base names, not paths
 ignore=.git,flake8.egg-info,conf.py
 
-# Add files or directories matching the regex patterns to the blacklist.
-# The regex matches against base names, not paths.
+# Add files or dirs matching the regex patterns to the blacklist, they should be base names, not paths
 ignore-patterns=.*_test.py,.*_tmp.py
 
-# Use multiple processes to speed up Pylint.
+# Use multiple processes to speed up Pylint
 jobs=4
 
 
 [FORMAT]
 
-# Maximum number of characters on a single line.
+# Maximum number of characters on a single line
 max-line-length=120
 
-# Regexp for a line that is allowed to be longer than the limit.
+# Regexp for a line that is allowed to be longer than the limit
 ignore-long-lines=^\s+:([A-Za-z]+( [A-Za-z]+)+)_[A-Za-z]+:.*$
 
-# Maximum number of lines in a module.
+# Maximum number of lines in a module
 max-module-lines=1000
 
 
 [DESIGN]
 
-# Maximum number of arguments for function / method.
+# Maximum number of arguments for function / method
 max-args=20
 
-# Maximum number of locals for function / method body.
+# Maximum number of locals for function / method body
 max-locals=30
 
-# Maximum number of return / yield for function / method body.
+# Maximum number of return / yield for function / method body
 max-returns=6
 
-# Maximum number of branch for function / method body.
+# Maximum number of branch for function / method body
 max-branches=20
 
-# Maximum number of statements in function / method body.
+# Maximum number of statements in function / method body
 max-statements=50

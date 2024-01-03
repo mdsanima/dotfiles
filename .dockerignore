@@ -1,33 +1,66 @@
-# Copyright © 2023 MDSANIMA
+# Copyright (c) 2023-2024 MDSANIMA DEV. All rights reserved.
+# Licensed under the MIT license.
 
-# This directories and files are not copied into the container during the build.
+# This directories and files are not copied into the container during the build process.
+
+
+# Dependency directories
 node_modules
 npm-debug.log
+
+# Container bulds files
 Dockerfile
 Dockerfile.dev
 Dockerfile.prod
 Dockerfile.test
+
+*.dockerfile
+*.dockerfile.dev
+*.dockerfile.prod
+*.dockerfile.test
+
+# Nginx configuration file
 nginx.config
+
+# Kubernetes files
 manifest.yaml
 deploy.yaml
+
+# Markdown files
 README.md
 CHANGELOG.md
+
+# Environment variable files
+.env
+
+.env.test
+.env.local
+.env.secret
+.env.development
+.env.staging
+.env.production
+.env.dev
+.env.stage
+.env.prod
+.env.ci
+.env.demo
+.env.backup
+
+.env.*.test
+.env.*.local
+.env.*.secret
+.env.*.development
+.env.*.staging
+.env.*.production
+.env.*.dev
+.env.*.stage
+.env.*.prod
+.env.*.ci
+.env.*.demo
+.env.*.backup
+
+# Other files and dirs
 .next
 .git
 .gitignore
 .dockerignore
-.env
-.env.test
-.env.local
-.env.secret
-.env.dev
-.env.development
-.env.prod
-.env.production
-.env*.test
-.env*.local
-.env*.secret
-.env*.dev
-.env*.development
-.env*.prod
-.env*.production
