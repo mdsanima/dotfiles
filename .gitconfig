@@ -1,10 +1,20 @@
+# Copyright (c) 2023-2024 MDSANIMA DEV. All rights reserved.
+# Licensed under the MIT license.
+
+# This is a global Git configuration file for my repositories.
+# Documentation: https://help.github.com
+
+
 [user]
 	name = mdsanima
 	email = marcinrozewski@gmail.com
 	signingkey = marcinrozewski@gmail.com
+
 [commit]
 	gpgsign = true
+
 [init]
 	defaultbranch = main
+
 [core]
 	editor = vim
