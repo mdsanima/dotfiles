@@ -15,9 +15,11 @@ jobs:
     name: Run Commitlint on PR
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: wagoid/commitlint-github-action@v5
+      - name: Lint commit messages
+        uses: wagoid/commitlint-github-action@v5
         with:
           configFile: ./.commitlintrc
