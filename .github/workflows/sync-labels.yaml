@@ -12,10 +12,8 @@ on:
     - cron: "0 0 1 * *"
   workflow_dispatch:
   push:
-    branches:
-      - main
-    paths:
-      - ".github/labels.yaml"
+    branches: main
+    paths: ./.github/labels.yaml
 
 jobs:
   sync-labels:
@@ -25,6 +23,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Syncing labels
         uses: crazy-max/ghaction-github-labeler@v5
         with:
