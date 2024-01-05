@@ -2,7 +2,7 @@
 # Licensed under the MIT license.
 
 # This is a configuration file for commit lint that makes sharing of commit conventions easy.
-# Documentation: https://commitlint.js.org
+# Documentation: https://commitlint.js.org/
 
 
 extends: ["@commitlint/config-conventional"]

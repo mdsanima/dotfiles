@@ -196,7 +196,7 @@ typings/
 
 # TypeScript cache
 *.tsbuildinfo
-# next-env.d.ts
+next-env.d.ts
 
 # Optional npm cache directory
 .npm
@@ -216,8 +216,9 @@ typings/
 # Output of 'npm pack'
 *.tgz
 
-# Yarn Integrity file
+# Yarn file
 .yarn-integrity
+.yarn/install-state.gz
 
 # Environment variable files
 .env
