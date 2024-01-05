@@ -3,11 +3,10 @@
 
 # This is a configuration file that helps maintain consistent coding styles for
 # multiple developers working on the same project across various editors and IDEs.
-# Documentation: https://editorconfig.org
+# Documentation: https://editorconfig.org/
 
 
 root = true
-
 
 [*]
 charset = utf-8
