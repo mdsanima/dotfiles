@@ -2,17 +2,20 @@
 // Licensed under the MIT license.
 
 {
-  "extends": ["@eslint:recommended"],
+  "extends": "eslint:recommended",
   "plugins": ["header"],
   "rules": {
     "indent": ["error", 2],
     "linebreak-style": ["error", "unix"],
     "quotes": ["error", "double"],
     "semi": ["error", "never"],
-    "header/header": [
-      "error",
-      "block",
-      [" Copyright (c) 2023-2024 MDSANIMA DEV. All rights reserved. ", " Licensed under the MIT license. "]
-    ]
+    "header/header": ["error", "line", [
+      " Copyright (c) 2023-2024 MDSANIMA DEV. All rights reserved.",
+      " Licensed under the MIT license."
+    ], 2]
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": "latest"
   }
 }
