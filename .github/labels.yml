@@ -4,7 +4,7 @@
 # This file is used to declaratively define the GitHub repository default labels.
 # Documentation: https://github.com/Financial-Times/github-label-sync/#label-config-file
 
-# Generic
+# Generic labels
 - name: bug
   color: B60205
   description: Something isn't working
