@@ -5,6 +5,7 @@
 # Documentation: https://commitlint.js.org/
 
 
+# Commitlint setup
 extends: ["@commitlint/config-conventional"]
 rules:
   type-enum:
@@ -17,8 +18,8 @@ rules:
     - kebab-case
   subject-case:
     - 2
-    - never
-    - [upper-case, pascal-case, sentence-case, start-case]
+    - always
+    - sentence-case
   body-case:
     - 2
     - always
