@@ -15,7 +15,7 @@ APT_PACKAGES_OPTIONAL="curl git htop vim tmux mc neofetch cmatrix ffmpeg"
 CURRENT_GIT_TAG=$(git describe --tags)
 
 # Import default colors definition
-source "$PWD/.local/bin/mdsanima-colors"
+source "$PWD/bin/mdsanima-colors"
 
 
 # Help function for printing text in colors
