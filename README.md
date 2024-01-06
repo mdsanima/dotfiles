@@ -1,8 +1,8 @@
 # dotfiles
 
-These dotfiles include configuration settings for various tools I use, such as [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh/) for _Linux_, [Oh My Posh](https://github.com/JanDeDobbeleer/oh-my-posh/) for _Windows_ terminal customization, editor config, and many more.
+These dotfiles include configuration settings for various tools I use, such as [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh/) for _Linux_ terminal customization, [Oh My Posh](https://github.com/JanDeDobbeleer/oh-my-posh/) for _Windows_ terminal customization, EditorConfig, and many more.
 
-Additionally, this repository contains template files that I use for other repositories, such as GitHub workflows, dependabot, or labels.
+Additionally, this repository contains template files that I use for other repositories, such as GitHub Actions Workflow, Dependabot, syncing labels, or the other commonly used dotfiles.
 
 ## Getting started
 
