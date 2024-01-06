@@ -10,8 +10,19 @@
 # script and apply for ANSI sequences.
 
 
-# Default color names with color code
-CYAN="50"
+# Generic colors
+WHITE="255"
+BLACK="16"
+
+# Default colors
+LIGHT="252"
+DARK="236"
+NIGHT="67"
+STORM="204"
+SHINE="107"
+TOKYO="73"
+TOWN="14"
+CYAN="45"
 SKY="39"
 BLUE="27"
 INDIGO="105"
@@ -33,5 +44,6 @@ GITTER="30"
 SLATE="250"
 GRAY="245"
 ZINC="238"
-WHITE="255"
-BLACK="16"
+NEUTRAL="240"
+BASIC="242"
+STONE="244"

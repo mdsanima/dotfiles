@@ -20,7 +20,7 @@ if [[ $1 == "-v" || $1 == "--version" ]]; then
     echo $MDSANIMA_SHELL_APP_NAME $MDSANIMA_SHELL_APP_VERSION
 elif [[ $1 == "-h" || $1 == "--help" ]]; then
     echo $USAGE_HELP
-    printf "\nMDSANIMA SHELL is a command-line interface for custom shell config.\n"
+    printf "\nMDSANIMA SHELL is a command-line interface for custom Shell config.\n"
     printf "You can use this script on all available hosts in your Home Labs\n"
     printf "network and the cloud servers thats you have.\n\n"
     printf "Options:\n"

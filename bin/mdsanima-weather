@@ -3,7 +3,7 @@
 # Copyright (c) 2023-2024 MDSANIMA DEV. All rights reserved.
 # Licensed under the MIT license.
 
-# You can use this in the terminal by typing `mdsanima-weather` which will show
+# You can use this in the terminal by typing `mdsanima-weather`, which will show
 # the weather in your nearest location or by typing `mdsanima-weather city` for
 # a specific target city.
 
