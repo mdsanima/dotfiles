@@ -6,6 +6,7 @@
 # Documentation: https://editorconfig.org/
 
 
+# EditorConfig setup
 root = true
 
 [*]
@@ -119,9 +120,9 @@ indent_style = tab
 indent_size = 4
 indent_style = space
 
-[Makefile]
+[devcontainer.json]
 indent_size = 4
-indent_style = tab
+indent_style = space
 
 [nginx.conf]
 indent_size = 4
@@ -130,3 +131,7 @@ indent_style = space
 [pyproject.toml]
 indent_size = 4
 indent_style = space
+
+[Makefile]
+indent_size = 4
+indent_style = tab
