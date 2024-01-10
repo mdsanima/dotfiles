@@ -304,6 +304,8 @@ secrets
 # Temporary directories
 tmp
 temp
+.tmp
+.temp
 
 # Extension sqltools connections secrets
 .vscode*
