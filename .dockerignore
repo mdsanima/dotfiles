@@ -26,6 +26,9 @@ nginx.config
 manifest.yaml
 deploy.yaml
 
+manifest.yml
+deploy.yml
+
 # Markdown files
 README.md
 CHANGELOG.md
@@ -60,7 +63,11 @@ CHANGELOG.md
 .env.*.backup
 
 # Other files and dirs
+build*
 .next
 .git
 .gitignore
 .dockerignore
+.mypy_cache
+.cache
+.docker
