@@ -76,18 +76,18 @@ FILE                  00           # normal
 MISSING               00           # nomral
 CAPABILITY            00           # white
 EXEC                  01           # normal, bold
-DIR                   38;5;45;01   # sky, bold
-LINK                  38;5;115     # green
-MULTIHARDLINK         38;5;115;04  # green, underscore
+DIR                   38;5;27;01   # blue, bold
+LINK                  38;5;42      # green
+MULTIHARDLINK         38;5;42;04   # green, underscore
 FIFO                  48;5;137     # bronze bg, white
 SOCK                  48;5;137     # bronze bg, white
 DOOR                  48;5;137     # bronze bg, white
 BLK                   38;5;222;04  # bronze, underscore
 CHR                   38;5;222;01  # bronze, bold
-ORPHAN                48;5;167;    # red bg, white
-SETUID                38;5;210;04  # red, underscore
+ORPHAN                48;5;196;    # red bg, white
+SETUID                38;5;196;04  # red, underscore
 SETGID                38;5;180;04  # bronze, underscore
-OTHER_WRITABLE        38;5;42;01   # cyan, bold
+OTHER_WRITABLE        38;5;82;01   # green, bold
 STICKY                48;5;67      # blue bg, white
 STICKY_OTHER_WRITABLE 48;5;30      # teal bg, white
 
@@ -281,9 +281,9 @@ STICKY_OTHER_WRITABLE 48;5;30      # teal bg, white
 
 # Custom MDSANIMA file formats
 .cfg                  38;5;69      # violet
-.conf                 38;5;11      # yellow
-.json                 38;5;30      # blue
-.md                   38;5;208     # orange
+.conf                 38;5;11      # gold
+.json                 38;5;220     # yellow
+.md                   38;5;32      # blue
 .py                   38;5;14      # sky
 .sql                  38;5;12      # cyan
 .sqlite               38;5;9       # red
