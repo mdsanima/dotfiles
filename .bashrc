@@ -5,9 +5,6 @@
 # this script for all available hosts in your network.
 
 
-# Python script `WARNING` which is not on $PATH
-export PATH=$HOME/.local/bin:$PATH
-
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -21,8 +18,8 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # History settings
-HISTSIZE=50000                          # History lines stored in memory
-HISTFILESIZE=20000                      # History lines stored on disk
+HISTSIZE=500000                         # History lines stored in memory
+HISTFILESIZE=500000                     # History lines stored on disk
 HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S   "   # Adding date time before each commands
 
 # Check the window size after each command
@@ -36,7 +33,7 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-# Set a fancy prompt non-color
+# Set a fancy prompt
 case "$TERM" in
     xterm-color|*-256color) color_prompt=yes;;
 esac
@@ -53,9 +50,9 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1="${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\n\$ "
+    PS1="${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ "
 else
-    PS1="${debian_chroot:+($debian_chroot)}\u@\h:\w\n\$ "
+    PS1="${debian_chroot:+($debian_chroot)}\u@\h:\w\$ "
 fi
 unset color_prompt force_color_prompt
 
@@ -72,10 +69,10 @@ esac
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls="ls --color=auto"
-    alias grep="grep --color=auto"
     alias dir="dir --color=auto"
     alias vdir="vdir --color=auto"
 
+    alias grep="grep --color=auto"
     alias fgrep="fgrep --color=auto"
     alias egrep="egrep --color=auto"
 fi
@@ -88,23 +85,8 @@ alias ll="ls -alF"
 alias la="ls -A"
 alias l="ls -CF"
 
-# Add an alert alias for long running commands
+# Add an alert alias for long running commands. Use like so: sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
-# Enable programmable completion features
-if ! shopt -oq posix; then
-    if [ -f /usr/share/bash-completion/bash_completion ]; then
-        . /usr/share/bash-completion/bash_completion
-    elif [ -f /etc/bash_completion ]; then
-        . /etc/bash_completion
-    fi
-fi
-
-# Cuda toolkit `nvcc` path on nVidia Jetson Nano hosts
-if [[ $HOST == "jet-1" || $HOST == "jet-2" ]]; then
-    export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
-    export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-fi
 
 # Alias definitions for BASH
 if [ -f ~/.bash_aliases ]; then
@@ -115,3 +97,20 @@ fi
 if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi
+
+# Enable programmable completion features
+if ! shopt -oq posix; then
+    if [ -f /usr/share/bash-completion/bash_completion ]; then
+        . /usr/share/bash-completion/bash_completion
+    elif [ -f /etc/bash_completion ]; then
+        . /etc/bash_completion
+    fi
+fi
+
+# Include ~/.local/bin in PATH
+export PATH=$HOME/.local/bin:$PATH
+
+# Set the bash prompt theme
+source mdsanima-theme
+__bash_prompt
+export PROMPT_DIRTRIM=4
