@@ -17,9 +17,12 @@ set expandtab           " Override mode for TAB
 set nobackup            " Dont make backups
 set nowritebackup       " Dont save backups
 
-" Keyboard shortcuts setup
+" Keyboard shortcuts
 map <C-S> :w<CR>        " Save file     CTRL+S
-map <C-Q> :q<CR>        " Exit Vim      CTRL+S
+map <C-Q> :q<CR>        " Exit Vim      CTRL+Q
 
-" Shows hidden setup
+" Shows hidden
 set list listchars=tab:»\ ,extends:→,precedes:←,nbsp:·,trail:·,
+
+" Cursor style
+autocmd VimLeave * set guicursor=a:ver1-blinkon1
