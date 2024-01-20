@@ -1,11 +1,10 @@
 # Copyright (c) 2023-2024 MDSANIMA DEV. All rights reserved.
 # Licensed under the MIT license.
 
-# Custom alias definitions. This file must be included in the `.bashrc` file for
-# proper functioning.
+# Custom alias definitions.
 
 
-# Aliases for SSH connection to my Home Labs hosts
+# Aliases for SSH connection to my home labs hosts
 alias rpi0="ssh mdsanima@192.168.1.27"
 alias rpi1="ssh mdsanima@192.168.1.32"
 alias rpi2="ssh mdsanima@192.168.1.34"
