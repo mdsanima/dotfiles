@@ -78,4 +78,4 @@ unset ZSH_AUTOSUGGEST_USE_ASYNC
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
 
 # Custom powerlevel10k settings
-[ -f "$HOME/.config/zsh/.p10k.zsh" ] && source "$HOME/.config/zsh/.p10k.zsh"
+[ -f "$HOME/.config/zsh/p10k-mdsanima.zsh" ] && source "$HOME/.config/zsh/p10k-mdsanima.zsh"
