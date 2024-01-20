@@ -3,22 +3,27 @@
 # Copyright (c) 2023-2024 MDSANIMA DEV. All rights reserved.
 # Licensed under the MIT license.
 
-# This is a script for printing text in colors with a fancy way in terminal.
+# This is a script for printing text in colors with a fancy way in the terminal.
+
+
+# Arguments:
+#     -fg <color>  Foreground color number or name, optional, default to none
+#     -bg <color>  Background color number or name, optional, default to none
+#     -nonewline   Don't print a new line after text, optional, default to false
+#     <text>       Text to be printed in colors
+#
 # Usage:
-#    source mdsanima-prints && source mdsanima-colors
-#    _color_print <text> -fg <color> -bg <color> -nonewline
-#    _color_print "red text on white background" -fg 196 -bg 255
-#    _color_print "red text on white background" -fg RED -bg WHITE
-
-
+#     source mdsanima-prints && source mdsanima-colors
+#     _color_print -fg <color> -bg <color> -nonewline <text>
+#     _color_print -fg 196 -bg 255 "red text on white background"
+#     _color_print -fg RED -bg WHITE "red text on white background"
+#
 # Printing text in colors
 function _color_print() {
-    local text="$1"
     local fg_color
     local bg_color
     local no_newline=false
-
-    shift 1
+    local text
 
     while [[ $# -gt 0 ]]; do
         case "$1" in
@@ -35,11 +40,21 @@ function _color_print() {
                 shift 1
                 ;;
             *)
-                echo "unrecognized argument: $1"
-                return 1
+                if [ -z "$text" ]; then
+                    text="$1"
+                else
+                    echo "Unrecognized argument: $1" >&2
+                    return 1
+                fi
+                shift 1
                 ;;
         esac
     done
+
+    if [ -z "$text" ]; then
+        echo "No text specified for coloring" >&2
+        return 1
+    fi
 
     local fg_code
     local bg_code
