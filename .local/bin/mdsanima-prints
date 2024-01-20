@@ -4,6 +4,7 @@
 # Licensed under the MIT license.
 
 # This is a script for printing text in colors with a fancy way in the terminal.
+# Should be used only in shell script not in terminal directly.
 
 
 # Arguments:
@@ -14,12 +15,12 @@
 #
 # Usage:
 #     source mdsanima-prints && source mdsanima-colors
-#     _color_print -fg <color> -bg <color> -nonewline <text>
-#     _color_print -fg 196 -bg 255 "red text on white background"
-#     _color_print -fg RED -bg WHITE "red text on white background"
+#     __mds_color_print -fg <color> -bg <color> -nonewline <text>
+#     __mds_color_print -fg 196 -bg 255 "red text on white background"
+#     __mds_color_print -fg RED -bg WHITE "red text on white background"
 #
 # Printing text in colors
-function _color_print() {
+function __mds_color_print() {
     local fg_color
     local bg_color
     local no_newline=false

@@ -24,25 +24,25 @@ function _print_event() {
     local bg_color="$1"
     local fg_color="$2"
     local log_info="$3"
-    _color_print -fg WHITE -bg $bg_color -nonewline " MDSANIMA DEV "
-    _color_print -fg $fg_color " $log_info"
+    __mds_color_print -fg WHITE -bg $bg_color -nonewline " MDSANIMA DEV "
+    __mds_color_print -fg $fg_color " $log_info"
 }
 
 
 # Version and application name
 function show_version() {
-    _color_print " "
+    __mds_color_print " "
     _print_event GRAY SKY "dotfiles $CURRENT_GIT_TAG"
-    _color_print " "
+    __mds_color_print " "
 }
 
 
 # Help instruction
 function show_help() {
-    _color_print -fg WHITE "This installer is only available for Linux system."
-    _color_print " "
-    _color_print -fg RED "Copyright (c) 2023-2024 MDSANIMA DEV. All rights reserved. Licensed under the MIT license."
-    _color_print " "
+    __mds_color_print -fg WHITE "This installer is only available for Linux system."
+    __mds_color_print " "
+    __mds_color_print -fg RED "Copyright (c) 2023-2024 MDSANIMA DEV. All rights reserved. Licensed under the MIT license."
+    __mds_color_print " "
 }
 
 
