@@ -1,20 +1,26 @@
-# Copyright (c) 2023-2024 MDSANIMA DEV. All rights reserved.
-# Licensed under the MIT license.
+[core]
+	editor = nvim
+	symlinks = true
 
-# This is a global Git configuration file for my repositories.
-# Documentation: https://help.github.com/
+[alias]
+	st = status
+	ci = commit --verbose
+	co = checkout
+	cb = checkout -b
+	cm = checkout main
+	br = branch
+	bd = branch -D
+	df = diff
+	dh = diff HEAD
+	lg = log -p
+	lp = log --pretty=oneline
 
-
-[user]
-	name = mdsanima
-	email = marcinrozewski@gmail.com
-	signingkey = marcinrozewski@gmail.com
-
-[commit]
-	gpgsign = true
+[include]
+	path = ~/.gitcredentials
 
 [init]
 	defaultbranch = main
 
-[core]
-	editor = nvim
+[commit]
+	gpgsign = true
+	verbose = true
