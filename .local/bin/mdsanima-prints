@@ -21,18 +21,44 @@
 #
 # Printing text in colors
 function __mds_color_print() {
+    # Local variables
     local fg_color
     local bg_color
-    local no_newline=false
+    local no_newline
     local text
 
+    # Define color sequences
+    local fg_seq="\e[38;5;"
+    local bg_seq="\e[48;5;"
+    local reset_code="\e[0m"
+
+    # Define black bold error text on red background
+    local _error_="${fg_seq}16;01m${bg_seq}196m ERROR ${reset_code}"
+
+    # Define defaults red error text
+    local color_error="${fg_seq}196m Color number must be between 0 and 255${reset_code}"
+    local argument_error="${fg_seq}196m Unrecognized argument:${reset_code}"
+    local no_text_error="${fg_seq}196m No text specified for coloring${reset_code}"
+
+    # Default values
+    no_newline=false
+
+    # Parse arguments
     while [[ $# -gt 0 ]]; do
         case "$1" in
             -fg)
+                if (( $2 > 255 )); then
+                    echo -e "${_error_}${color_error}" >&2
+                    return 1
+                fi
                 fg_color="$2"
                 shift 2
                 ;;
             -bg)
+                if (( $2 > 255 )); then
+                    echo -e "${_error_}${color_error}" >&2
+                    return 1
+                fi
                 bg_color="$2"
                 shift 2
                 ;;
@@ -44,7 +70,7 @@ function __mds_color_print() {
                 if [ -z "$text" ]; then
                     text="$1"
                 else
-                    echo "Unrecognized argument: $1" >&2
+                    echo -e "${_error_}${argument_error} $1" >&2
                     return 1
                 fi
                 shift 1
@@ -52,27 +78,31 @@ function __mds_color_print() {
         esac
     done
 
+    # Show error if no text is specified
     if [ -z "$text" ]; then
-        echo "No text specified for coloring" >&2
+        echo -e "${_error_}${no_text_error}" >&2
         return 1
     fi
 
+    # Local color codes
     local fg_code
     local bg_code
-    local reset_code="\x1b[0m"
 
+    # Set color codes for foreground
     if [[ "$fg_color" =~ ^[0-9]+$ ]]; then
-        fg_code="\x1b[38;5;${fg_color}m"
+        fg_code="${fg_seq}${fg_color}m"
     elif [[ -v "$fg_color" ]]; then
-        fg_code="\x1b[38;5;${!fg_color}m"
+        fg_code="${fg_seq}${!fg_color}m"
     fi
 
+    # Set color codes for background
     if [[ "$bg_color" =~ ^[0-9]+$ ]]; then
-        bg_code="\x1b[48;5;${bg_color}m"
+        bg_code="${bg_seq}${bg_color}m"
     elif [[ -v "$bg_color" ]]; then
-        bg_code="\x1b[48;5;${!bg_color}m"
+        bg_code="${bg_seq}${!bg_color}m"
     fi
 
+    # Print text in colors
     if [[ "$no_newline" == true ]]; then
         echo -e -n "${fg_code}${bg_code}${text}${reset_code}"
     else
