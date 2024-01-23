@@ -6,5 +6,5 @@
 
 
 " Mappings shortcuts
-map <C-S> :w<CR>			" CTRL+S to Save file
-map <C-Q> :q<CR>			" CTRL+Q to Quit file
+map <C-S> :w<CR>            " CTRL+S to Save file
+map <C-Q> :q<CR>            " CTRL+Q to Quit file
