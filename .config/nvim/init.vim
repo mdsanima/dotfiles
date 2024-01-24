@@ -6,8 +6,7 @@
 
 
 " Base initial setup
-colorscheme pablo
-syntax on
+colorscheme mdsanima
 
 " Load configurations sources
 source $HOME/.config/nvim/settings.vim
