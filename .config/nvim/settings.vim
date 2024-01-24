@@ -1,11 +1,11 @@
 " Copyright (c) 2023-2024 MDSANIMA DEV. All rights reserved.
 " Licensed under the MIT license.
 
-" This file sets up the basic settings options for Neovim.
-" This config shuld be sourced in the `init.vim` file.
+" This file sets up the settings for Neovim.
+" Shuld be sourced in the `init.vim` file.
 
 
-" Settings options
+" Settings
 set autoindent              " Indent from last line
 set autoread                " Read file on change
 set backup                  " Make backups files
