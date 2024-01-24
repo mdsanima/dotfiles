@@ -7,6 +7,7 @@
 
 " Basic
 hi clear
+set notermguicolors
 set background=dark
 let g:colors_name = "mdsanima"
 
