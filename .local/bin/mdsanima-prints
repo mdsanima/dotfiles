@@ -32,8 +32,8 @@ function __mds_color_print() {
     local bg_seq="\e[48;5;"
     local reset_code="\e[0m"
 
-    # Define black bold error text on red background
-    local _error_="${fg_seq}16;01m${bg_seq}196m ERROR ${reset_code}"
+    # Define white bold error text on red background
+    local _error_="${fg_seq}15;01m${bg_seq}196m ERROR ${reset_code}"
 
     # Define defaults red error text
     local color_error="${fg_seq}196m Color number must be between 0 and 255${reset_code}"

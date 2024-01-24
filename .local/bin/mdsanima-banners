@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+# Copyright (c) 2023-2024 MDSANIMA DEV. All rights reserved.
+# Licensed under the MIT license.
+
+# This is a ASCII art banners with colors for `mdsanima-shell` script.
+# The all baners is generated from command-line tool called `figlet` by
+# typing `figlet -f future "mdsanima-shell"` and here is a colorized version
+# with some font and colors variants thats may be useful for other purposes.
+
+
+# Import default colors definition and help function for printing text in colors
+source "$PWD/mdsanima-colors"
+source "$PWD/mdsanima-prints"
+
+# Pringing ASCII art lines
+function __mds_shell_banner() {
+    __mds_color_print -fg ROSE   "┏┳┓╺┳┓┏━┓┏━┓┏┓╻╻┏┳┓┏━┓   ┏━┓╻ ╻┏━╸╻  ╻  "
+    __mds_color_print -fg RED    "┃┃┃ ┃┃┗━┓┣━┫┃┗┫┃┃┃┃┣━┫╺━╸┗━┓┣━┫┣╸ ┃  ┃  "
+    __mds_color_print -fg ORANGE "╹ ╹╺┻┛┗━┛╹ ╹╹ ╹╹╹ ╹╹ ╹   ┗━┛╹ ╹┗━╸┗━╸┗━╸"
+}
