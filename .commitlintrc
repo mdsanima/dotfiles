@@ -5,6 +5,7 @@
 # These are the default reference rules; see the docs: https://commitlint.js.org/#/reference-rules/
 # What is Commitlint? See help: https://github.com/conventional-changelog/commitlint/#what-is-commitlint/
 
+
 # For local usage, you can simply run the `commitlint` command in the terminal, which is the command-line tool to
 # validate commits. This configuration file is also used for the GitHub Actions workflow that validates the
 # last commit message in the pull request. The workflow file is in the `.github/workflows` folder.
@@ -36,7 +37,7 @@ rules:
   subject-case: [2, always, sentence-case]
   subject-empty: [2, never]
   subject-full-stop: [2, never, .]
-  header-max-length: [2, always, 100]
+  header-max-length: [2, always, 80]
   body-case: [2, always, sentence-case]
   body-leading-blank: [2, always]
   body-max-line-length: [2, always, 100]
