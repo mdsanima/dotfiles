@@ -7,40 +7,46 @@
 # Should be used only in shell script not in terminal directly.
 
 
+# This function is for prints text in colors in the terminal. The text can be
+# bold and italic. The text can be printed in a new line or not.
+#
 # Arguments:
 #     -fg <color>  Foreground color number or name, optional, default to none
 #     -bg <color>  Background color number or name, optional, default to none
+#     -bold        Print text in bold, optional, default to false
+#     -italic      Print text in italic, optional, default to false
 #     -nonewline   Don't print a new line after text, optional, default to false
 #     <text>       Text to be printed in colors
 #
 # Usage:
-#     source mdsanima-prints && source mdsanima-colors
-#     __mds_color_print -fg <color> -bg <color> -nonewline <text>
-#     __mds_color_print -fg 196 -bg 255 "red text on white background"
-#     __mds_color_print -fg RED -bg WHITE "red text on white background"
+#     __mds_color_print -fg <color> -bg <color> -bold -italic -nonewline <text>
+#     __mds_color_print -fg 15 -bg 9 -bold "Bold white text on red background"
+#     __mds_color_print -fg 196 -italic "Italic red text"
+#     __mds_color_print -fg WHITE -bg RED "White text on red background"
 #
-# Printing text in colors
 function __mds_color_print() {
-    # Local variables
     local fg_color
     local bg_color
+    local bold_text
+    local italic_text
     local no_newline
     local text
 
-    # Define color sequences
     local fg_seq="\e[38;5;"
     local bg_seq="\e[48;5;"
-    local reset_code="\e[0m"
+    local reset="\e[0m"
 
-    # Define white bold error text on red background
-    local _error_="${fg_seq}15;01m${bg_seq}196m ERROR ${reset_code}"
+    # White bold error text on red background
+    local _error_="${fg_seq}15;01m${bg_seq}196m ERROR ${reset}"
 
-    # Define defaults red error text
-    local color_error="${fg_seq}196m Color number must be between 0 and 255${reset_code}"
-    local argument_error="${fg_seq}196m Unrecognized argument:${reset_code}"
-    local no_text_error="${fg_seq}196m No text specified for coloring${reset_code}"
+    # Red error messages
+    local n_error="${fg_seq}196m Color number must be between 0 and 255${reset}"
+    local argument_error="${fg_seq}196m Unrecognized argument:${reset}"
+    local no_text_error="${fg_seq}196m No text specified for coloring${reset}"
 
     # Default values
+    bold_text=false
+    italic_text=false
     no_newline=false
 
     # Parse arguments
@@ -48,7 +54,7 @@ function __mds_color_print() {
         case "$1" in
             -fg)
                 if (( $2 > 255 )); then
-                    echo -e "${_error_}${color_error}" >&2
+                    echo -e "${_error_}${n_error}" >&2
                     return 1
                 fi
                 fg_color="$2"
@@ -56,11 +62,19 @@ function __mds_color_print() {
                 ;;
             -bg)
                 if (( $2 > 255 )); then
-                    echo -e "${_error_}${color_error}" >&2
+                    echo -e "${_error_}${n_error}" >&2
                     return 1
                 fi
                 bg_color="$2"
                 shift 2
+                ;;
+            -bold)
+                bold_text=true
+                shift 1
+                ;;
+            -italic)
+                italic_text=true
+                shift 1
                 ;;
             -nonewline)
                 no_newline=true
@@ -78,34 +92,44 @@ function __mds_color_print() {
         esac
     done
 
-    # Show error if no text is specified
+    # Error if no text
     if [ -z "$text" ]; then
         echo -e "${_error_}${no_text_error}" >&2
         return 1
     fi
 
-    # Local color codes
+    # Set foreground
     local fg_code
-    local bg_code
-
-    # Set color codes for foreground
     if [[ "$fg_color" =~ ^[0-9]+$ ]]; then
         fg_code="${fg_seq}${fg_color}m"
     elif [[ -v "$fg_color" ]]; then
         fg_code="${fg_seq}${!fg_color}m"
     fi
 
-    # Set color codes for background
+    # Set background
+    local bg_code
     if [[ "$bg_color" =~ ^[0-9]+$ ]]; then
         bg_code="${bg_seq}${bg_color}m"
     elif [[ -v "$bg_color" ]]; then
         bg_code="${bg_seq}${!bg_color}m"
     fi
 
-    # Print text in colors
+    # Set bold
+    local bold_seq
+    if [[ "$bold_text" == true ]]; then
+        bold_seq="\e[1m"
+    fi
+
+    # Set italic
+    local italic_seq
+    if [[ "$italic_text" == true ]]; then
+        italic_seq="\e[3m"
+    fi
+
+    # Printing text
     if [[ "$no_newline" == true ]]; then
-        echo -e -n "${fg_code}${bg_code}${text}${reset_code}"
+        echo -e -n "${fg_code}${bold_seq}${italic_seq}${bg_code}${text}${reset}"
     else
-        echo -e "${fg_code}${bg_code}${text}${reset_code}"
+        echo -e "${fg_code}${bold_seq}${italic_seq}${bg_code}${text}${reset}"
     fi
 }
