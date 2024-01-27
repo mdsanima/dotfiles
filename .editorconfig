@@ -15,127 +15,24 @@ end_of_line = lf
 indent_size = 4
 indent_style = space
 insert_final_newline = true
-max_line_length = 79
 trim_trailing_whitespace = true
-
-[*.cmd]
-indent_size = 4
-indent_style = space
-
-[*.css]
-indent_size = 4
-indent_style = space
 max_line_length = 120
+quote_type = double
 
-[*.html]
+[*.{commitlintrc,eslint*,js,jsx,json,md,mjs,ts,tsx}]
 indent_size = 2
-indent_style = space
+
+[*.{html,yml,yaml}]
+indent_size = 2
 max_line_length = off
-
-[*.js]
-indent_size = 2
-indent_style = space
-max_line_length = 120
-
-[*.jsx]
-indent_size = 2
-indent_style = space
-max_line_length = 120
-
-[*.json]
-indent_size = 2
-indent_style = space
-end_of_line = lf
-
-[*.md]
-indent_size = 2
-indent_style = space
-
-[*.mjs]
-indent_size = 2
-indent_style = space
-max_line_length = 120
-
-[*.ps1]
-indent_size = 4
-indent_style = space
 
 [*.py]
 profile = black
-indent_size = 4
-indent_style = space
-max_line_length = 120
 
-[*.sh]
-indent_size = 4
-indent_style = space
-
-[*.svg]
+[{*.svg,.env*}]
 insert_final_newline = false
-
-[*.ts]
-indent_size = 2
-indent_style = space
-max_line_length = 120
-
-[*.tsx]
-indent_size = 2
-indent_style = space
-max_line_length = 120
-
-[*.vim]
-indent_size = 4
-indent_style = space
-
-[*.yml]
-indent_size = 2
-indent_style = space
 max_line_length = off
 
-[*.yaml]
-indent_size = 2
-indent_style = space
-max_line_length = off
-
-[*.zsh]
-indent_size = 4
-indent_style = space
-
-[.commitlintrc]
-indent_size = 2
-
-[.bashrc]
-indent_size = 4
-indent_style = space
-
-[.env*]
-insert_final_newline = false
-
-[.eslint*]
-indent_size = 2
-indent_style = space
-max_line_length = 120
-
-[.gitconfig]
-indent_size = 4
-indent_style = tab
-
-[.zshrc]
-indent_size = 4
-indent_style = space
-
-[devcontainer.json]
-indent_size = 4
-indent_style = space
-
-[nginx.conf]
-indent_size = 4
-indent_style = space
-
-[pyproject.toml]
-indent_size = 4
-indent_style = space
-
-[Makefile]
-indent_size = 4
+[{Makefile,.gitconfig,.gitcredentials}]
+indent_size = 8
 indent_style = tab
