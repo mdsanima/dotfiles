@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# Copyright (c) 2023-2024 MDSANIMA DEV. All rights reserved.
+# Licensed under the MIT license.
+
+# This script serves as the entry point for the `mdsanima-shell` module, which is part of the `mdsanima-dev` dotfiles
+# project. It will provide several functions that can be used in the shell terminal and various Bash scripts, enabling
+# faster script development.
