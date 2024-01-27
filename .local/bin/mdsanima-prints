@@ -1,30 +1,33 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 # Copyright (c) 2023-2024 MDSANIMA DEV. All rights reserved.
 # Licensed under the MIT license.
 
-# This is a script for printing text in colors with a fancy way in the terminal.
-# Should be used only in shell script not in terminal directly.
+# This script is designed for printing text in colors in a fancy way in the
+# terminal. It should be used only in shell scripts, not in the terminal
+# directly. However, it now also works in the terminal; simply source it.
 
 
-# This function is for prints text in colors in the terminal. The text can be
-# bold and italic. The text can be printed in a new line or not.
+# This function prints text in colors in the terminal. The text can be
+# bold and italic. It can be printed in a new line or not. Instead of
+# using this function, consider using the `cprint` function defined below.
+# Both functions work the same, and you can use either if you prefer.
 #
 # Arguments:
-#     -fg <color>  Foreground color number or name, optional, default to none
-#     -bg <color>  Background color number or name, optional, default to none
-#     -bold        Print text in bold, optional, default to false
-#     -italic      Print text in italic, optional, default to false
-#     -nonewline   Don't print a new line after text, optional, default to false
-#     <text>       Text to be printed in colors
+#   -fg <color>      Foreground color number or name, optional, default to none
+#   -bg <color>      Background color number or name, optional, default to none
+#   -bold, -b        Print text in bold, optional, default to false
+#   -italic, -i      Print text in italic, optional, default to false
+#   -nonewline, -n   Don't print new line after text, optional, default to false
+#   <text>           Text to be printed in colors
 #
 # Usage:
-#     __mds_color_print -fg <color> -bg <color> -bold -italic -nonewline <text>
-#     __mds_color_print -fg 15 -bg 9 -bold "Bold white text on red background"
-#     __mds_color_print -fg 196 -italic "Italic red text"
-#     __mds_color_print -fg WHITE -bg RED "White text on red background"
+#   __mds_color_print -fg <color> -bg <color> -bold -italic -nonewline <text>
+#   __mds_color_print -fg 15 -bg 9 -bold "Bold white text on red background"
+#   __mds_color_print -fg 196 -b -i "Bold italic red text"
+#   __mds_color_print -fg $WHITE -bg $RED "White text on red background"
 #
-function __mds_color_print() {
+__mds_color_print() {
     local fg_color
     local bg_color
     local bold_text
@@ -50,33 +53,33 @@ function __mds_color_print() {
     no_newline=false
 
     # Parse arguments
-    while [[ $# -gt 0 ]]; do
+    while [ $# -gt 0 ]; do
         case "$1" in
             -fg)
-                if (( $2 > 255 )); then
-                    echo -e "${_error_}${n_error}" >&2
+                if [ "$2" -gt 255 ]; then
+                    echo "${_error_}${n_error}" >&2
                     return 1
                 fi
                 fg_color="$2"
                 shift 2
                 ;;
             -bg)
-                if (( $2 > 255 )); then
-                    echo -e "${_error_}${n_error}" >&2
+                if [ "$2" -gt 255 ]; then
+                    echo "${_error_}${n_error}" >&2
                     return 1
                 fi
                 bg_color="$2"
                 shift 2
                 ;;
-            -bold)
+            -bold | -b)
                 bold_text=true
                 shift 1
                 ;;
-            -italic)
+            -italic | -i)
                 italic_text=true
                 shift 1
                 ;;
-            -nonewline)
+            -nonewline | -n)
                 no_newline=true
                 shift 1
                 ;;
@@ -84,7 +87,7 @@ function __mds_color_print() {
                 if [ -z "$text" ]; then
                     text="$1"
                 else
-                    echo -e "${_error_}${argument_error} $1" >&2
+                    echo "${_error_}${argument_error} $1" >&2
                     return 1
                 fi
                 shift 1
@@ -94,42 +97,44 @@ function __mds_color_print() {
 
     # Error if no text
     if [ -z "$text" ]; then
-        echo -e "${_error_}${no_text_error}" >&2
+        echo "${_error_}${no_text_error}" >&2
         return 1
     fi
 
     # Set foreground
     local fg_code
-    if [[ "$fg_color" =~ ^[0-9]+$ ]]; then
+    if [ -n "$fg_color" ] && expr "$fg_color" : '^[0-9]\+$' > /dev/null; then
         fg_code="${fg_seq}${fg_color}m"
-    elif [[ -v "$fg_color" ]]; then
-        fg_code="${fg_seq}${!fg_color}m"
     fi
 
     # Set background
     local bg_code
-    if [[ "$bg_color" =~ ^[0-9]+$ ]]; then
+    if [ -n "$bg_color" ] && expr "$bg_color" : '^[0-9]\+$' > /dev/null; then
         bg_code="${bg_seq}${bg_color}m"
-    elif [[ -v "$bg_color" ]]; then
-        bg_code="${bg_seq}${!bg_color}m"
     fi
 
     # Set bold
     local bold_seq
-    if [[ "$bold_text" == true ]]; then
+    if [ "$bold_text" = true ]; then
         bold_seq="\e[1m"
     fi
 
     # Set italic
     local italic_seq
-    if [[ "$italic_text" == true ]]; then
+    if [ "$italic_text" = true ]; then
         italic_seq="\e[3m"
     fi
 
     # Printing text
-    if [[ "$no_newline" == true ]]; then
-        echo -e -n "${fg_code}${bold_seq}${italic_seq}${bg_code}${text}${reset}"
+    if [ "$no_newline" = true ]; then
+        echo -n "${fg_code}${bold_seq}${italic_seq}${bg_code}${text}${reset}"
     else
-        echo -e "${fg_code}${bold_seq}${italic_seq}${bg_code}${text}${reset}"
+        echo "${fg_code}${bold_seq}${italic_seq}${bg_code}${text}${reset}"
     fi
+}
+
+
+# The alternative to `__mds_color_print` function, it works the same way
+cprint() {
+    __mds_color_print "$@"
 }
