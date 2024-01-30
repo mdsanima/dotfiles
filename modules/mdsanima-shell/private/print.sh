@@ -4,23 +4,27 @@
 # This script is designed for printing text in colors in a fancy way in the terminal.
 
 
+# Printing text with colors in the terminal is a very common task. This function provides a simple way to do it.
+#
 # The usage of this function is intended for internal use only. We offer an equivalent function with the same
 # functionality but under a new name. The alternative function operates in the same way but with the new name.
 #
 # Arguments:
-#       -fg <color>           Foreground color number (integer) or name (string), optional, default to none
-#       -bg <color>           Background color number (integer) or name (string), optional, default to none
-#       -bold, -b             Print the text in bold style, optional, default to false
-#       -italic, -i           Print the text in italic style, optional, default to false
-#       -nonewline, -n        Do not print a new line after the given text, optional, default to false
-#       <text>                The text (string) to be printed in colors, required, must be the last argument
+#     -fg <color>       Foreground color number (integer) or name (string), optional, default to none
+#     -bg <color>       Background color number (integer) or name (string), optional, default to none
+#     -bold, -b         Print the text in bold style, optional, default to false
+#     -italic, -i       Print the text in italic style, optional, default to false
+#     -nonewline, -n    Do not print a new line after the given text, optional, default to false
+#     <text>            The text (string) to be printed in colors, required, must be the last argument
 #
 # Usage:
-#       __mdsanima_color_print -fg <color> -bg <color> -bold -italic -nonewline <text>
-#       __mdsanima_color_print -fg 15 -bg 9 -bold "Bold white text on red background"
-#       __mdsanima_color_print -fg 196 -b -italic "Bold italic red text"
-#       __mdsanima_color_print -fg $WHITE -bg $RED "White text on red background"
-__mdsanima_color_print() {
+#     __mds_color_print -fg <color> -bg <color> -bold -italic -nonewline <text>
+#     __mds_color_print -fg 15 -bg 9 -bold "Bold white text on red background"
+#     __mds_color_print -fg 196 -b -italic "Bold italic red text"
+#     __mds_color_print -fg $WHITE -bg $RED "White text on red background"
+
+
+__mds_color_print() {
     local fg_color
     local bg_color
     local bold_text

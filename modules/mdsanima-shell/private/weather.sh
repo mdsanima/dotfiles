@@ -4,6 +4,6 @@
 # Check the weather in your nearest location or by target city and show the weather on the terminal in nice way.
 
 
-__mdsanima_get_actual_weather() {
+__mds_actual_weather() {
     curl "https://wttr.in/${1:-}"
 }
