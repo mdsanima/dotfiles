@@ -7,6 +7,7 @@
 
 # Import private modules
 source "$PWD/private/banner.sh"
+source "$PWD/private/event.sh"
 source "$PWD/private/print.sh"
 source "$PWD/private/prompt.sh"
 source "$PWD/private/weather.sh"
@@ -15,8 +16,7 @@ source "$PWD/private/weather.sh"
 source "$PWD/public/colors.sh"
 
 
-# The alternative to `__mdsanima_color_print` function, it works the same way
+# The alternative to `__mds_color_print` function, it works the same way
 cprint() {
-    __mdsanima_color_print "$@"
-    unset -f __mdsanima_color_print
+    __mds_color_print "$@"
 }
