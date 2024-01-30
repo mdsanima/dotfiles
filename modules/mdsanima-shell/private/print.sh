@@ -54,7 +54,7 @@ __mds_color_print() {
         case "$1" in
             -fg)
                 if [ "$2" -gt 255 ]; then
-                    echo -e "${_error_}${color_number_error}" >&2
+                    echo "${_error_}${color_number_error}" >&2
                     return 1
                 fi
                 fg_color="$2"
@@ -62,7 +62,7 @@ __mds_color_print() {
                 ;;
             -bg)
                 if [ "$2" -gt 255 ]; then
-                    echo -e "${_error_}${color_number_error}" >&2
+                    echo "${_error_}${color_number_error}" >&2
                     return 1
                 fi
                 bg_color="$2"
@@ -94,7 +94,7 @@ __mds_color_print() {
 
     # Error if no text
     if [ -z "$text" ]; then
-        echo -e "${_error_}${no_text_error}" >&2
+        echo "${_error_}${no_text_error}" >&2
         return 1
     fi
 
@@ -124,8 +124,8 @@ __mds_color_print() {
 
     # Printing text
     if [ "$no_newline" = true ]; then
-        echo -e -n "${fg_code}${bold_seq}${italic_seq}${bg_code}${text}${reset}"
+        echo -n "${fg_code}${bold_seq}${italic_seq}${bg_code}${text}${reset}"
     else
-        echo -e "${fg_code}${bold_seq}${italic_seq}${bg_code}${text}${reset}"
+        echo "${fg_code}${bold_seq}${italic_seq}${bg_code}${text}${reset}"
     fi
 }

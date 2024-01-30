@@ -5,16 +5,18 @@
 # files in `mdsanima-shell` module. The module is the part of `mdsanima-dev` dotfiles project.
 
 
+# Get the current directory
+MODULE_DIR="$(dirname "$0")"
+
 # Import private modules
-source "$PWD/private/banner.sh"
-source "$PWD/private/event.sh"
-source "$PWD/private/print.sh"
-source "$PWD/private/prompt.sh"
-source "$PWD/private/weather.sh"
+. "$MODULE_DIR/private/banner.sh"
+. "$MODULE_DIR/private/event.sh"
+. "$MODULE_DIR/private/print.sh"
+. "$MODULE_DIR/private/prompt.sh"
+. "$MODULE_DIR/private/weather.sh"
 
 # Import public modules
-source "$PWD/public/colors.sh"
-
+. "$MODULE_DIR/public/colors.sh"
 
 # The alternative to `__mds_color_print` function, it works the same way
 cprint() {
