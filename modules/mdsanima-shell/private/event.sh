@@ -19,10 +19,10 @@
 # Arguments:
 #     <event_color>    The color number (integer) or name (string) for the bg color of the event and fg text, required
 #     <event_name>     The event name (string), required
-#     <evnet_text>     The text (string) to be printed in colors, required
+#     <event_text>     The text (string) to be printed in colors, required
 #
 # Usage:
-#     __mds_event_log <event_color> <event_name> <evnet_text>
+#     __mds_event_log <event_color> <event_name> <event_text>
 #     __mds_event_log $BLUE "DEV" "This is a dev event"
 #     __mds_event_dev "This is a dev event"
 #     __mds_event_info "This is a info event"
@@ -33,12 +33,12 @@
 
 
 __mds_event_log() {
-    local event_color=$1
-    local event_name=$2
-    local event_text=$3
+    local event_color="$1"
+    local event_name="$2"
+    local event_text="$3"
 
     __mds_color_print -fg $BLACK -bg $event_color -b -n " $event_name "
-    __mds_color_print -fg $evnet_color " $evnet_text"
+    __mds_color_print -fg $event_color " $event_text"
 }
 
 __mds_event_dev() {
