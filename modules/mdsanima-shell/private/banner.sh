@@ -6,7 +6,7 @@
 # various fonts and color variants that may be useful for other purposes.
 
 
-__mdsanima_shell_ascii_banner() {
+__mds_ascii_banner() {
     __mds_color_print -fg $ROSE   "┏┳┓╺┳┓┏━┓┏━┓┏┓╻╻┏┳┓┏━┓   ┏━┓╻ ╻┏━╸╻  ╻  "
     __mds_color_print -fg $RED    "┃┃┃ ┃┃┗━┓┣━┫┃┗┫┃┃┃┃┣━┫╺━╸┗━┓┣━┫┣╸ ┃  ┃  "
     __mds_color_print -fg $ORANGE "╹ ╹╺┻┛┗━┛╹ ╹╹ ╹╹╹ ╹╹ ╹   ┗━┛╹ ╹┗━╸┗━╸┗━╸"

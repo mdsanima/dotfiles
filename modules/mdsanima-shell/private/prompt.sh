@@ -13,7 +13,7 @@
 # Codespaces bash and OMZ themes - partly inspired by https://github.com/ohmyzsh/ohmyzsh/blob/master/themes/robbyrussell.zsh-theme
 
 
-__mdsanima_bash_prompt() {
+__mds_bash_prompt() {
     local userpart='`export XIT=$? \
         && [ ! -z "${GITHUB_USER}" ] && echo -n "\[\033[0;32m\]@${GITHUB_USER} " || echo -n "\[\033[0;32m\]\u " \
         && [ "$XIT" -ne "0" ] && echo -n "\[\033[1;31m\]➜" || echo -n "\[\033[0m\]➜"`'
@@ -32,5 +32,5 @@ __mdsanima_bash_prompt() {
     local lightblue='\[\033[1;34m\]'
     local removecolor='\[\033[0m\]'
     PS1="${userpart} ${lightblue}\w ${gitbranch}${removecolor}\$ "
-    unset -f __mdsanima_bash_prompt
+    unset -f __mds_bash_prompt
 }
