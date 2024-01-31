@@ -9,7 +9,6 @@
 MODULE_DIR="$(dirname "$0")"
 
 # Import private modules
-. "$MODULE_DIR/private/banner.sh"
 . "$MODULE_DIR/private/event.sh"
 . "$MODULE_DIR/private/print.sh"
 . "$MODULE_DIR/private/prompt.sh"
