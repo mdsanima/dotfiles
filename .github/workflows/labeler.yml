@@ -1,34 +1,37 @@
-# Copyright (c) 2023-2024 MDSANIMA DEV. All rights reserved.
+# Copyright (c) 2023 MDSANIMA DEV. All rights reserved.
 # Licensed under the MIT license.
 
-# This file is used for syncing GitHub repository labels defined in the `.github/labels.yml` file.
-# Documentation: https://github.com/Financial-Times/github-label-sync/#label-config-file
+# Syncing GitHub repository labels defined in the YAML configuration file.
+# Documentation: https://github.com/Financial-Times/github-label-sync/
 
 # Workflow setup
-name: Sync Labels
+name: Sync Repository Labels
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: "0 0 1 * *"
-  workflow_dispatch:
   push:
     branches:
       - main
     paths:
       - .github/labels.yml
-      - .github/workflows/labels.yml
+      - .github/workflows/labeler.yml
+
+permissions: write-all
 
 jobs:
-  sync-labels:
-    name: Sync Labels
+  labeler:
+    name: Labeler
     runs-on: ubuntu-latest
-    permissions: write-all
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
-      - name: Syncing labels
+
+      - name: Run labeler to sync labels
         uses: crazy-max/ghaction-github-labeler@v5
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
