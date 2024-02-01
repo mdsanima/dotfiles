@@ -1,8 +1,10 @@
 # This is a configuration file for ignoring files on this repository.
 # Documentation: https://help.github.com/articles/ignoring-files/
 
+# The template for Python and Node is sourced from GitHub by creating a new repository and initializing it.
 
-# Python Template
+
+# .gitignore template: Python
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -19,13 +21,12 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
+# lib/
 lib64/
 parts/
 sdist/
 var/
 wheels/
-pip-wheel-metadata/
 share/python-wheels/
 *.egg-info/
 .installed.cfg
@@ -55,6 +56,7 @@ coverage.xml
 *.py,cover
 .hypothesis/
 .pytest_cache/
+cover/
 
 # Translations
 *.mo
@@ -77,6 +79,7 @@ instance/
 docs/_build/
 
 # PyBuilder
+.pybuilder/
 target/
 
 # Jupyter Notebook
@@ -87,7 +90,9 @@ profile_default/
 ipython_config.py
 
 # pyenv
-.python-version
+#   For a library or package, you might want to ignore these files since the code is
+#   intended to run in multiple environments; otherwise, check them in:
+# .python-version
 
 # pipenv
 #   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
@@ -96,7 +101,22 @@ ipython_config.py
 #   install all needed dependencies.
 #Pipfile.lock
 
-# PEP 582; used by e.g. github.com/David-OConnor/pyflow
+# poetry
+#   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.
+#   This is especially recommended for binary packages to ensure reproducibility, and is more
+#   commonly ignored for libraries.
+#   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
+#poetry.lock
+
+# pdm
+#   Similar to Pipfile.lock, it is generally recommended to include pdm.lock in version control.
+#pdm.lock
+#   pdm stores project-wide configurations in .pdm.toml, but it is recommended to not include it
+#   in version control.
+#   https://pdm.fming.dev/#use-with-ide
+.pdm.toml
+
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
 __pypackages__/
 
 # Celery stuff
@@ -107,6 +127,7 @@ celerybeat.pid
 *.sage.py
 
 # Environments
+.env
 .venv
 env/
 venv/
@@ -132,16 +153,21 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# Kivy Python
-*/.buildozer*
-*/.KivyMD*
-*/.testing/cache*
-*/cache*
-*/build/
-*/.build*
-*/__pyca*
+# pytype static type analyzer
+.pytype/
 
-# Node Template
+# Cython debug symbols
+cython_debug/
+
+# PyCharm
+#  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
+#  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
+#  and can be added to the global gitignore or merged into this file.  For a more nuclear
+#  option (not recommended) you can uncomment the following to ignore the entire idea folder.
+#.idea/
+
+
+# .gitignore template: Node
 # Logs
 logs
 *.log
@@ -185,21 +211,21 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
-.pnp
-.pnp.js
 
-# TypeScript v1 declaration files
-typings/
+# Snowpack dependency directory (https://snowpack.dev/)
+web_modules/
 
 # TypeScript cache
 *.tsbuildinfo
-next-env.d.ts
 
 # Optional npm cache directory
 .npm
 
 # Optional eslint cache
 .eslintcache
+
+# Optional stylelint cache
+.stylelintcache
 
 # Microbundle cache
 .rpt2_cache/
@@ -213,11 +239,97 @@ next-env.d.ts
 # Output of 'npm pack'
 *.tgz
 
-# Yarn file
+# Yarn Integrity file
 .yarn-integrity
-.yarn/install-state.gz
 
-# Environment variable files
+# dotenv environment variable files
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+# parcel-bundler cache (https://parceljs.org/)
+.cache
+.parcel-cache
+
+# Next.js build output
+.next
+out
+
+# Nuxt.js build / generate output
+.nuxt
+dist
+
+# Gatsby files
+.cache/
+# Comment in the public line in if your project uses Gatsby and not Next.js
+# https://nextjs.org/blog/next-9-1#public-directory-support
+# public
+
+# vuepress build output
+.vuepress/dist
+
+# vuepress v2.x temp and cache directory
+.temp
+.cache
+
+# Docusaurus cache and generated files
+.docusaurus
+
+# Serverless directories
+.serverless/
+
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# TernJS port file
+.tern-port
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+# yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+
+# .gitignore template: MDSANIMA
+# Python setuptools_scm version
+_version.py
+
+# Python Kivy
+*/.buildozer*
+*/.KivyMD*
+*/.testing/cache*
+*/cache*
+*/build/
+*/.build*
+*/__pyca*
+
+# Vercel
+.vercel
+
+# Misc
+.DS_Store
+*.pem
+
+# Configuration for ZSH
+.zcompdump*
+.zsh_local
+.zcompcache/
+
+# Secret directories
+secret
+secrets
+
+# Environment files
 .env
 
 .env.test
@@ -250,58 +362,6 @@ next-env.d.ts
 .flaskenv*
 !.env.project
 !.env.vault
-
-# parcel-bundler cache (https://parceljs.org/)
-.cache
-
-# Next.js build output
-.next
-/out/
-
-# Nuxt.js build / generate output
-.nuxt
-dist
-
-# vercel
-.vercel
-
-# Gatsby files
-.cache/
-# Comment in the public line in if your project uses Gatsby and *not* Next.js
-# https://nextjs.org/blog/next-9-1#public-directory-support
-# public
-
-# vuepress build output
-.vuepress/dist
-
-# Serverless directories
-.serverless/
-
-# FuseBox cache
-.fusebox/
-
-# DynamoDB Local files
-.dynamodb/
-
-# TernJS port file
-.tern-port
-
-# misc
-.DS_Store
-*.pem
-
-# MDSANIMA Template
-# Configuration for zsh
-.zcompdump*
-.zsh_local
-.zcompcache/
-
-# Python package `setuptools_scm` version number
-_version.py
-
-# Secret directories
-secret
-secrets
 
 # Temporary directories
 tmp
