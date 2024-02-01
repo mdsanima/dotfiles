@@ -1,8 +1,8 @@
-# Copyright (c) 2023-2024 MDSANIMA DEV. All rights reserved.
+# Copyright (c) 2023 MDSANIMA DEV. All rights reserved.
 # Licensed under the MIT license.
 
 # This file is used to declaratively define the GitHub repository default labels.
-# Documentation: https://github.com/Financial-Times/github-label-sync/#label-config-file
+# Documentation: https://github.com/Financial-Times/github-label-sync/
 
 # Generic labels
 - name: bug
@@ -36,8 +36,11 @@
   color: FF7800
   description: This is a cool idea
 - name: feature
-  color: 67AF00
+  color: 0086CC
   description: New features ideas
+- name: good first issue
+  color: 7057FF
+  description: Good for newcomers
 - name: help wanted
   color: 008672
   description: Extra attention is needed
@@ -57,7 +60,7 @@
   color: 006B75
   description: Pull requests that update a dependency file
 - name: question
-  color: D876E3
+  color: E54979
   description: Further information is requested
 - name: service
   color: 3EFA45

@@ -1,0 +1,27 @@
+# Copyright (c) 2023 MDSANIMA DEV. All rights reserved.
+# Licensed under the MIT license.
+
+# Linting commit messages with commitlint GitHub Action workflow on PR.
+# Documentation: https://github.com/wagoid/commitlint-github-action/
+
+# Workflow setup
+name: Lint Commit Messages
+
+on:
+  pull_request:
+
+jobs:
+  commitlint:
+    name: Commitlint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run linting commit messages
+        uses: wagoid/commitlint-github-action@v5
+        with:
+          configFile: .commitlintrc

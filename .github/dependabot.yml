@@ -1,8 +1,8 @@
-# Copyright (c) 2023-2024 MDSANIMA DEV. All rights reserved.
+# Copyright (c) 2023 MDSANIMA DEV. All rights reserved.
 # Licensed under the MIT license.
 
-# This file is used for Dependabot that automatically updates the packages to the latest release versions.
-# Documentation: https://docs.github.com/en/code-security/dependabot/dependabot-version-updates
+# Automatically keep the dependencies and packages updated to the latest version.
+# Documentation: https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/
 
 # Dependabot setup
 version: 2
