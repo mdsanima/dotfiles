@@ -29,6 +29,10 @@ max_line_length = off
 [*.py]
 profile = black
 
+[*.{sh,bash,zsh}]
+indent_size = 2
+max_line_length = 80
+
 [{*.svg,.env*}]
 insert_final_newline = false
 max_line_length = off
