@@ -1,8 +1,8 @@
-# Copyright (c) 2023-2024 MDSANIMA DEV. All rights reserved.
+# Copyright (c) 2023 MDSANIMA DEV. All rights reserved.
 # Licensed under the MIT license.
 
-# Defining default color names with color code variables in Bash terminal script to colorize your output in a fancy way.
-# To use this color palette, add this line `source mdsanima-colors` to your Bash script and apply for ANSI sequences.
+# Defining default color names with color code number thats is used in the
+# terminal script output.
 
 
 # Generic
