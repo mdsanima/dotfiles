@@ -1,4 +1,4 @@
-# Copyright (c) 2023-2024 MDSANIMA DEV. All rights reserved.
+# Copyright (c) 2024 MDSANIMA DEV. All rights reserved.
 # Licensed under the MIT license.
 
 # This is a installation script for `Oh My Posh` a prompt theme engine.
@@ -74,7 +74,7 @@ function Write-ShowHelp {
     Write-ShowVersion
     Write-Host "  This installer is only available for Windows on PowerShell terminal." -ForegroundColor White
     Write-Host ""
-    Write-Host "  Copyright (c) 2023-2024 MDSANIMA DEV. All rights reserved. Licensed under the MIT license." -ForegroundColor Blue
+    Write-Host "  Copyright (c) 2024 MDSANIMA DEV. All rights reserved. Licensed under the MIT license." -ForegroundColor Blue
     Write-Host ""
 }
 

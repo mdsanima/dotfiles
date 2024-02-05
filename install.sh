@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Copyright (c) 2023-2024 MDSANIMA DEV. All rights reserved.
+# Copyright (c) 2024 MDSANIMA DEV. All rights reserved.
 # Licensed under the MIT license.
 
 # This is a installation script for MDSANIMA DEV dotfiles on Linux terminal configuration.
@@ -25,7 +25,7 @@ dotfiles_installer() {
     __mds_color_print " "
     __mds_color_print -fg $WHITE "This installer is only available for Linux system."
     __mds_color_print " "
-    __mds_color_print -fg $GRAY "Copyright (c) 2023-2024 MDSANIMA DEV. All rights reserved. Licensed under the MIT license."
+    __mds_color_print -fg $GRAY "Copyright (c) 2024 MDSANIMA DEV. All rights reserved. Licensed under the MIT license."
 }
 
 dotfiles_installer
