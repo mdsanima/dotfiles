@@ -26,6 +26,9 @@ indent_size = 2
 indent_size = 2
 max_line_length = off
 
+[*.{ps1,psm1,psd1}]
+max_line_length = 115
+
 [*.py]
 profile = black
 
