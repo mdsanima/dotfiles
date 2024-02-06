@@ -1,17 +1,17 @@
 # dotfiles
 
-These dotfiles include configuration settings for various tools I use, such as [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh/) for _Linux_ terminal customization, [Oh My Posh](https://github.com/JanDeDobbeleer/oh-my-posh/) for _Windows_ terminal customization, EditorConfig, and many more.
+These dotfiles include configuration settings for various tools like [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh/) and [Oh My Posh](https://github.com/JanDeDobbeleer/oh-my-posh/) for terminal customization, custom libraries, and many more.
 
-Additionally, this repository contains template files that I use for other repositories, such as GitHub Actions Workflow, Dependabot, syncing labels, or the other commonly used dotfiles.
+Additionally, this repository contains template files that can be used for other repositories, such as _GitHub Actions Workflow_, _Dependabot_, _Labeler_, or other commonly used dotfiles.
 
-## Getting started
+## Getting Started
 
-Make sure you have [nerd-fonts](https://github.com/ryanoasis/nerd-fonts/) installed in your system.
+Ensure that you have [nerd-fonts](https://github.com/ryanoasis/nerd-fonts/) installed on your system.
 
 ### Installation on Linux
 
-Clone this repository and type the `./install.sh` command in the **Shell** terminal to perform the installation in _Linux_ system.
+Clone this repository and execute the `./install.sh` script in the _Shell_ terminal to install the configurations on **Linux**.
 
 ### Installation on Windows
 
-Clone this repository and type the `.\install.ps1` command in the **PowerShell** terminal to perform the installation in _Windows_ system.
+Clone this repository and execute the `.\install.ps1` script in the _PowerShell_ terminal to install the configurations on **Windows**.

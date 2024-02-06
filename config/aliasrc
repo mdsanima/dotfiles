@@ -1,7 +1,7 @@
 # Copyright (c) 2024 MDSANIMA DEV. All rights reserved.
 # Licensed under the MIT license.
 
-# This is a custom aliases definitions file for Linux system.
+# This is a custom aliases definitions file for GNU/Linux systems.
 
 
 # Aliases for internal hosts
@@ -16,10 +16,6 @@ alias rpi7="ssh mdsanima@192.168.1.36"
 alias jet1="ssh mdsanima@192.168.1.24"
 alias jet2="ssh mdsanima@192.168.1.30"
 alias macb="ssh mdsanima@192.168.1.44"
-
-# Aliases for shell scripts
-alias weahter="mdsanima-weather"
-alias pogoda="mdsanima-weather"
 
 # Aliases for Kubernetes
 alias k="kubectl"
