@@ -1,8 +1,7 @@
 # Copyright (c) 2024 MDSANIMA DEV. All rights reserved.
 # Licensed under the MIT license.
 
-# Defining default color names with color code number thats is used in the
-# terminal script output.
+# This library is designed to define color names with color code number.
 
 
 # Generic

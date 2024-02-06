@@ -1,12 +1,12 @@
 # Copyright (c) 2024 MDSANIMA DEV. All rights reserved.
 # Licensed under the MIT license.
 
-# This library is designed for printing the text in colors and other styles.
+# This library is designed to print text in colors and other styles.
 
 
-################################################################################
-# This function provides a simple way to printing the text with colors on the
-# terminal bash script.
+#-------------------------------------------------------------------------------
+# This function provides a simple way to print text with colors on the terminal
+# bash script outputs.
 #
 # Arguments:
 #   -fg <color>     Foreground color number or name, optional, default to none
@@ -20,8 +20,8 @@
 #   print::color -fg <color> -bg <color> -bold -italic -nonewline <text>
 #   print::color -fg 15 -bg 9 -bold "Bold white text on red background"
 #   print::color -fg 196 -b -italic "Bold italic red text"
-#   print::color -fg WHITE -bg RED "White text on red background"
-################################################################################
+#   print::color -fg ${WHITE} -bg ${RED} "White text on red background"
+#-------------------------------------------------------------------------------
 function print::color() {
   local fg_color
   local bg_color
