@@ -7,25 +7,25 @@
 
 
 function event::debug() {
-  print::color -fg ${BLACK} -bg ${GRAY} -b " DEBUG "
+  mprint::color -fg ${BLACK} -bg ${GRAY} -b " DEBUG "
 }
 
 function event::dev() {
-  print::color -fg ${BLACK} -bg ${BLUE} -b " DEV "
+  mprint::color -fg ${BLACK} -bg ${BLUE} -b " DEV "
 }
 
 function event::error() {
-  print::color -fg ${BLACK} -bg ${RED} -b " ERROR "
+  mprint::color -fg ${BLACK} -bg ${RED} -b " ERROR "
 }
 
 function event::info() {
-  print::color -fg ${BLACK} -bg ${SKY} -b " INFO "
+  mprint::color -fg ${BLACK} -bg ${SKY} -b " INFO "
 }
 
 function event::success() {
-  print::color -fg ${BLACK} -bg ${LIME} -b " SUCCESS "
+  mprint::color -fg ${BLACK} -bg ${LIME} -b " SUCCESS "
 }
 
 function event::warning() {
-  print::color -fg ${BLACK} -bg ${ORANGE} -b " WARNING "
+  mprint::color -fg ${BLACK} -bg ${ORANGE} -b " WARNING "
 }

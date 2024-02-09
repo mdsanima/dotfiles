@@ -20,11 +20,11 @@ List of available files and functions:
   - `event::info`
   - `event::success`
   - `event::warning`
-- `libprint.sh`: Functions for print text messages in colors.
-  - `print::color`
+- `libmprint.sh`: Functions for print text messages in colors.
+  - `mprint::color`
 - `libutil.sh`: Utility functions.
   - `util::one_line_progress`
-  - `util::check_package_is_installed`
+  - `util::check_package_installed`
 
 Each file above contains appropriate documentation for each available function and how to use it.
 
@@ -46,24 +46,24 @@ Example script file `test.sh` must be located on the root of this repository:
 # Importing libraries
 source "$PWD/lib/mdsanima-shell/libcolor.sh"
 source "$PWD/lib/mdsanima-shell/libevent.sh"
-source "$PWD/lib/mdsanima-shell/libprint.sh"
+source "$PWD/lib/mdsanima-shell/libmprint.sh"
 source "$PWD/lib/mdsanima-shell/libutil.sh"
 
-# Testing print functions
-print::color -fg ${WHITE} -bg ${BLUE} -bold -nonewline " MDSANIMA "
-print::color -fg 27 " Blue text next to other"
-print::color -fg ${BLACK} -bg ${RED} "Black text on red background"
-print::color -fg 15 -bg 9 -bold "Bold white text on red background"
-print::color "Normal text"
-print::color -fg 196 "Red text"
-print::color -fg 196 -b "Bold red text"
-print::color -fg 196 -i "Italic red text"
-print::color -fg ${BLUE} -b -italic "Bold italic blue text"
-print::color -n "This line is printed in "
-print::color -fg ${RED} -n "red "
-print::color -fg ${GREEN} -n "green "
-print::color -fg ${BLUE} -n "blue "
-print::color "colored text"
+# Testing mprint functions
+mprint::color -fg ${WHITE} -bg ${BLUE} -bold -nonewline " MDSANIMA "
+mprint::color -fg 27 " Blue text next to other"
+mprint::color -fg ${BLACK} -bg ${RED} "Black text on red background"
+mprint::color -fg 15 -bg 9 -bold "Bold white text on red background"
+mprint::color "Normal text"
+mprint::color -fg 196 "Red text"
+mprint::color -fg 196 -b "Bold red text"
+mprint::color -fg 196 -i "Italic red text"
+mprint::color -fg ${BLUE} -b -italic "Bold italic blue text"
+mprint::color -n "This line is printed in "
+mprint::color -fg ${RED} -n "red "
+mprint::color -fg ${GREEN} -n "green "
+mprint::color -fg ${BLUE} -n "blue "
+mprint::color "colored text"
 
 # Testing event functions
 event::dev
@@ -76,7 +76,7 @@ echo -e "${clean_line_seq}${done} Testing event functions was finished!"
 
 # Tesging util functions
 util::one_line_progress sudo apt update
-if util::check_package_is_installed git; then
+if util::check_package_installed git; then
   echo "Package git is installed!"
 else
   echo "Package git is not installed!"
