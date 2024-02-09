@@ -50,10 +50,10 @@ source "$PWD/lib/mdsanima-shell/libmprint.sh"
 source "$PWD/lib/mdsanima-shell/libutil.sh"
 
 # Testing mprint functions
-mprint::color -fg ${WHITE} -bg ${BLUE} -bold -nonewline " MDSANIMA "
-mprint::color -fg 27 " Blue text next to other"
 mprint::color -fg ${BLACK} -bg ${RED} "Black text on red background"
-mprint::color -fg 15 -bg 9 -bold "Bold white text on red background"
+mprint::color -fg 16 -bg 208 -bold "Bold black text on orange background"
+mprint::color -fg ${BLACK} -bg ${BLUE} -bold -nonewline " MDSANIMA "
+mprint::color -fg 27 " Blue text next to other"
 mprint::color "Normal text"
 mprint::color -fg 196 "Red text"
 mprint::color -fg 196 -b "Bold red text"
@@ -77,9 +77,9 @@ echo -e "${clean_line_seq}${done} Testing event functions was finished!"
 # Tesging util functions
 util::one_line_progress sudo apt update
 if util::check_package_installed git; then
-  echo "Package git is installed!"
+  echo "Package 'git' is installed!"
 else
-  echo "Package git is not installed!"
+  echo "Package 'git' is not installed!"
 fi
 ```
 

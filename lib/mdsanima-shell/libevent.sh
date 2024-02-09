@@ -19,7 +19,7 @@ function event::error() {
 }
 
 function event::info() {
-  mprint::color -fg ${BLACK} -bg ${SKY} -b " INFO "
+  mprint::color -fg ${BLACK} -bg ${CYAN} -b " INFO "
 }
 
 function event::success() {

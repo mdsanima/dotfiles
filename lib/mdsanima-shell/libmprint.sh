@@ -18,9 +18,9 @@
 #
 # Usage:
 #   mprint::color -fg <color> -bg <color> -bold -italic -nonewline <text>
-#   mprint::color -fg 15 -bg 9 -bold "Bold white text on red background"
+#   mprint::color -fg 15 -bg 208 -bold "Bold white text on orange background"
 #   mprint::color -fg 196 -b -italic "Bold italic red text"
-#   mprint::color -fg ${WHITE} -bg ${RED} "White text on red background"
+#   mprint::color -fg ${BLACK} -bg ${ORANGE} "Black text on orange background"
 #-------------------------------------------------------------------------------
 function mprint::color() {
   local fg_color
@@ -35,8 +35,8 @@ function mprint::color() {
   local bg_seq="\e[48;5;"
   local reset="\e[0m"
 
-  # White bold error text on red background
-  local _error_="${fg_seq}15;01m${bg_seq}196m ERROR ${reset}"
+  # Black bold error text on red background
+  local _error_="${fg_seq}16;01m${bg_seq}196m ERROR ${reset}"
 
   # Red error messages
   local num_error="${fg_seq}196m Color number must be between 0 and 255${reset}"
