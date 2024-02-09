@@ -41,10 +41,10 @@ function util::one_line_progress() {
 #   1 if the package is not installed
 #
 # Usage:
-#   util::check_package_is_installed <package>
-#   util::check_package_is_installed git
+#   util::check_package_installed <package>
+#   util::check_package_installed git
 #-------------------------------------------------------------------------------
-function util::check_package_is_installed() {
+function util::check_package_installed() {
   local package="$1"
   local query=$(dpkg-query -W -f='${Status}' "${package}" 2>/dev/null)
 

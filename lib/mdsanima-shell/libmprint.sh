@@ -17,12 +17,12 @@
 #   <text>          The text to be printed in colors, required
 #
 # Usage:
-#   print::color -fg <color> -bg <color> -bold -italic -nonewline <text>
-#   print::color -fg 15 -bg 9 -bold "Bold white text on red background"
-#   print::color -fg 196 -b -italic "Bold italic red text"
-#   print::color -fg ${WHITE} -bg ${RED} "White text on red background"
+#   mprint::color -fg <color> -bg <color> -bold -italic -nonewline <text>
+#   mprint::color -fg 15 -bg 9 -bold "Bold white text on red background"
+#   mprint::color -fg 196 -b -italic "Bold italic red text"
+#   mprint::color -fg ${WHITE} -bg ${RED} "White text on red background"
 #-------------------------------------------------------------------------------
-function print::color() {
+function mprint::color() {
   local fg_color
   local bg_color
   local bold_text
