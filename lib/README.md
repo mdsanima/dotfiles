@@ -2,13 +2,24 @@
 
 Below is documentation for the libraries included in this project, which you can utilize in your own projects.
 
-Currently, the libraries are only available within this project and cannot be installed as a package using commands such as `sudo apt install`. However, there are plans to make it available as a standalone package in the future.
+> [!NOTE]
+> Currently, the libraries are only available within this project and cannot be installed as a package using `sudo apt install` command. However, there are plans to make it available as a standalone package in the future.
+
+<details>
+<summary><strong>Table of Contents</strong> (click to expand)</summary>
+
+- [Libraries](#libraries)
+  - [mdsanima-shell](#mdsanima-shell)
+    - [Available functions](#available-functions)
+    - [Example usages](#example-usages)
+
+</details>
 
 ## mdsanima-shell
 
 This library contains functions thats help to execute _Shell Scripts_ on **GNU/Linux** systems, like _Debian_ or _Ubuntu_.
 
-## Available functions
+### Available functions
 
 List of available files and functions:
 
@@ -30,11 +41,11 @@ List of available files and functions:
 
 Each file above contains appropriate documentation for each available function and how to use it.
 
-## Example usages
+### Example usages
 
 If you want to use this library files you can simple sourced this file on your bash script like this example:
 
-```bash
+```shell
 source "$PWD/lib/mdsanima-shell/libcolor.sh"
 ```
 
@@ -42,7 +53,7 @@ In the above example, I used `$PWD` to get the path to the file directory. This 
 
 Example script file `test.sh` must be located on the root of this repository:
 
-```bash
+```shell
 #!/bin/bash
 
 # Importing libraries
