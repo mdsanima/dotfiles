@@ -8,27 +8,29 @@ Currently, the libraries are only available within this project and cannot be in
 
 This library contains functions thats help to execute _Shell Scripts_ on **GNU/Linux** systems, like _Debian_ or _Ubuntu_.
 
-## Available Functions
+## Available functions
 
 List of available files and functions:
 
-- `libcolor.sh`: Defined color names with color code number.
-- `libevent.sh`: Functions for print event names in colors.
+- `libcolor.sh`: Color schemes.
+- `libconvert.sh`: Functions for converting.
+  - `conver::hex_to_rgb`
+- `libevent.sh`: Functions for event logs.
   - `event::debug`
   - `event::dev`
   - `event::error`
   - `event::info`
   - `event::success`
   - `event::warning`
-- `libmprint.sh`: Functions for print text messages in colors.
+- `libmprint.sh`: Functions for printing.
   - `mprint::color`
-- `libutil.sh`: Utility functions.
-  - `util::one_line_progress`
+- `libutil.sh`: Functions for utility.
   - `util::check_package_installed`
+  - `util::one_line_progress`
 
 Each file above contains appropriate documentation for each available function and how to use it.
 
-## Example Usages
+## Example usages
 
 If you want to use this library files you can simple sourced this file on your bash script like this example:
 
