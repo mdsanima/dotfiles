@@ -1,8 +1,4 @@
-# This is a configuration file for ignoring files on this repository.
-# Documentation: https://help.github.com/articles/ignoring-files/
-
-# The template for Python and Node is sourced from GitHub by creating a new repository and initializing it.
-
+# Defined base templates
 
 # .gitignore template: Python
 # Byte-compiled / optimized / DLL files

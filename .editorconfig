@@ -1,12 +1,5 @@
-# Copyright (c) 2024 MDSANIMA DEV. All rights reserved.
-# Licensed under the MIT license.
+# Maintain consistent coding style
 
-# This is a configuration file that helps maintain consistent coding styles for
-# multiple developers working on the same project across various editors and IDEs.
-# Documentation: https://editorconfig.org/
-
-
-# EditorConfig setup
 root = true
 
 [*]
@@ -19,7 +12,7 @@ trim_trailing_whitespace = true
 max_line_length = 120
 quote_type = double
 
-[*.{commitlintrc,eslint*,js,jsx,json,md,mjs,ts,tsx}]
+[*.{commitlintrc,eslint*,js,jsx,json,md,mjs,ts,tsx,versionrc}]
 indent_size = 2
 
 [*.{html,yml,yaml}]

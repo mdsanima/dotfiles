@@ -1,10 +1,3 @@
-# Copyright (c) 2024 MDSANIMA DEV. All rights reserved.
-# Licensed under the MIT license.
-
-# This is a custom aliases definitions file for GNU/Linux systems.
-
-
-# Aliases for internal hosts
 alias rpi0="ssh mdsanima@192.168.1.27"
 alias rpi1="ssh mdsanima@192.168.1.32"
 alias rpi2="ssh mdsanima@192.168.1.34"
@@ -17,9 +10,7 @@ alias jet1="ssh mdsanima@192.168.1.24"
 alias jet2="ssh mdsanima@192.168.1.30"
 alias macb="ssh mdsanima@192.168.1.44"
 
-# Aliases for Kubernetes
 alias k="kubectl"
 
-# Aliases for Neovim
 alias vi="nvim"
 alias vim="nvim"

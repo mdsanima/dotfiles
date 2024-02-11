@@ -1,6 +1,6 @@
 {
   "infile": "CHANGELOG.md",
-  "header": "# Changelog\n\nAll notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org/) for commit guidelines.\n\nDocumentation for the [mdsanima-dev](https://pypi.org/project/mdsanima-dev/) package is available on [docs.mdsanima.dev](https://docs.mdsanima.dev/) site, and in the [README](README.md) file. Be sure to check it.\n\n<!-- markdownlint-disable -->\n",
+  "header": "# Changelog\n\nAll notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org/) for commit guidelines.\n\n<!-- markdownlint-disable -->\n",
   "skip": { "bump": false, "changelog": false, "commit": true, "tag": true },
   "types": [
     { "type": "feat",      "section": "🐱‍👤 Features",                  "hidden": false },
