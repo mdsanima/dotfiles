@@ -1,14 +1,8 @@
-# Copyright (c) 2024 MDSANIMA DEV. All rights reserved.
-# Licensed under the MIT license.
-
-# This directories and files are not copied into the container during the build process.
-
-
-# Dependency directories
+# Dependency
 node_modules
 npm-debug.log
 
-# Container bulds files
+# Container
 Dockerfile
 Dockerfile.dev
 Dockerfile.prod
@@ -19,21 +13,20 @@ Dockerfile.test
 *.dockerfile.prod
 *.dockerfile.test
 
-# Nginx configuration file
-nginx.config
-
-# Kubernetes files
+# Kubernetes
 manifest.yaml
 deploy.yaml
 
 manifest.yml
 deploy.yml
 
-# Markdown files
+nginx.config
+
+# Markdown
 README.md
 CHANGELOG.md
 
-# Environment variable files
+# Environment
 .env
 
 .env.test
@@ -62,7 +55,7 @@ CHANGELOG.md
 .env.*.demo
 .env.*.backup
 
-# Other files and dirs
+# Other
 build*
 .next
 .git
