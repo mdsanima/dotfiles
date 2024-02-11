@@ -1,14 +1,10 @@
-# Copyright (c) 2024 MDSANIMA DEV. All rights reserved.
-# Licensed under the MIT license.
-
-# Linting commit messages with commitlint GitHub Action workflow on PR.
-# Documentation: https://github.com/wagoid/commitlint-github-action/
-
-# Workflow setup
 name: Lint Commit Messages
 
-on:
-  pull_request:
+on: [pull_request]
+
+permissions:
+  contents: read
+  pull-requests: read
 
 jobs:
   commitlint:
@@ -16,12 +12,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Run linting commit messages
+      - name: Run commitlint
         uses: wagoid/commitlint-github-action@v5
         with:
-          configFile: .commitlintrc
+          configFile: .github/commitlint.config.js
