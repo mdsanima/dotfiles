@@ -1,11 +1,4 @@
-# Copyright (c) 2024 MDSANIMA DEV. All rights reserved.
-# Licensed under the MIT license.
-
-# Syncing GitHub repository labels defined in the YAML configuration file.
-# Documentation: https://github.com/Financial-Times/github-label-sync/
-
-# Workflow setup
-name: Sync Repository Labels
+name: Sync Labels
 
 on:
   workflow_dispatch:
@@ -18,20 +11,19 @@ on:
       - .github/labels.yml
       - .github/workflows/labeler.yml
 
-permissions: write-all
-
 jobs:
   labeler:
     name: Labeler
     runs-on: ubuntu-latest
+    permissions: write-all
 
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
 
-      - name: Run labeler to sync labels
+      - name: Run labeler
         uses: crazy-max/ghaction-github-labeler@v5
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
