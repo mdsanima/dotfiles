@@ -1,16 +1,18 @@
-# Copyright (c) 2024 MDSANIMA DEV. All rights reserved.
-# Licensed under the MIT license.
-
-# Automatically keep the dependencies and packages updated to the latest version.
-# Documentation: https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/
-
-# Dependabot setup
 version: 2
+
 updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: daily
+      timezone: Europe/Warsaw
+      time: "10:00"
+    labels: [deps, ci, workflow]
+
   - package-ecosystem: pip
     directory: /
     schedule:
       interval: daily
       timezone: Europe/Warsaw
-      time: "12:30"
-    labels: [dependencies, python, pip]
+      time: "11:00"
+    labels: [deps, python, pip]
