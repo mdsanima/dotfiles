@@ -1,11 +1,10 @@
 " Copyright (c) 2024 MDSANIMA DEV. All rights reserved.
 " Licensed under the MIT license.
 
-" This file sets up the settings for Neovim.
-" Shuld be sourced in the `init.vim` file.
+" Custom `mdsanima` configuration setting options.
 
 
-" Settings
+" Setting
 set autoindent              " Indent from last line
 set autoread                " Read file on change
 set backup                  " Make backups files
@@ -35,7 +34,7 @@ set tabstop=4               " Ident spaces
 set undofile                " Persistent undo
 set writebackup             " Make backups files
 
-" Directories
+" File
 set backupdir=$HOME/.cache/nvim/backup//
 set directory=$HOME/.cache/nvim/swap//
 set undodir=$HOME/.cache/nvim/undo//

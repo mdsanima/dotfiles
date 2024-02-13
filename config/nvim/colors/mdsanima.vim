@@ -1,17 +1,17 @@
 " Copyright (c) 2024 MDSANIMA DEV. All rights reserved.
 " Licensed under the MIT license.
 
-" This is a color file for custom theme in Neovim.
-" Based on the default `pablo` vim color file.
+" Custom `mdsanima` color theme. Based on the default `pablo` vim color file.
+" Run this command `vim -c 'edit $VIMRUNTIME/colors/pablo.vim'` for help.
 
 
-" Basic
+" Setup
 hi clear
 set notermguicolors
 set background=dark
-let g:colors_name = "mdsanima"
+let g:colors_name = 'mdsanima'
 
-" Colors
+" Default
 hi Boolean        cterm=none  ctermfg=202  ctermbg=none
 hi Comment        cterm=none  ctermfg=8    ctermbg=none
 hi Constant       cterm=none  ctermfg=222  ctermbg=none
@@ -31,7 +31,7 @@ hi StatusLine     cterm=bold  ctermfg=16   ctermbg=12
 hi Todo           cterm=bold  ctermfg=15   ctermbg=3
 hi Type           cterm=none  ctermfg=36   ctermbg=none
 
-" Commits
+" Commit
 hi diffRemoved    cterm=none  ctermfg=196  ctermbg=none
 hi diffAdded      cterm=none  ctermfg=76   ctermbg=none
 hi diffChanged    cterm=none  ctermfg=202  ctermbg=none
