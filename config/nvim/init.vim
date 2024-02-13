@@ -1,16 +1,8 @@
 " Copyright (c) 2024 MDSANIMA DEV. All rights reserved.
 " Licensed under the MIT license.
 
-" This is a initial configuration script for Neovim.
-" Repository: https://github.com/neovim/neovim/
+" Initial configuration for Neovim. Other configs will be loaded automatically.
 
 
-" Base initial setup
+" Load color theme
 colorscheme mdsanima
-
-" Load configurations sources
-source $HOME/.config/nvim/settings.vim
-source $HOME/.config/nvim/keymaps.vim
-
-" Back to default terminal cursor style
-autocmd VimLeave * set guicursor=a:ver1-blinkon1

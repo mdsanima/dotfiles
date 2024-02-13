@@ -1,11 +1,11 @@
 " Copyright (c) 2024 MDSANIMA DEV. All rights reserved.
 " Licensed under the MIT license.
 
-" This file sets up the mdsanima functions for the Neovim.
-" Should be called by a specific function name.
+" Autoloaded functions. Autoloading allows functions to be loaded on
+" demand, which makes startuptime faster and enforces function namespacing.
 
 
-" Tesging function
+" Testing
 function mdsanima#hello()
-    echo "Hello World"
+  echo 'Hello World'
 endfunction
