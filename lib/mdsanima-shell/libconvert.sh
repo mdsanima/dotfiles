@@ -1,7 +1,7 @@
 # Copyright (c) 2024 MDSANIMA DEV. All rights reserved.
 # Licensed under the MIT license.
 
-# This library is for converting functions.
+# Library for converting functions.
 
 
 #-------------------------------------------------------------------------------
@@ -19,11 +19,11 @@ function convert::hex_to_rgb() {
   local hex_color="$1"
   local awk_cmd='{print strtonum("0x" $0)}'
 
-  # Converting
+  # Convert HEX to RGB
   local r=$(echo "${hex_color:1:2}" | awk "${awk_cmd}")
   local g=$(echo "${hex_color:3:2}" | awk "${awk_cmd}")
   local b=$(echo "${hex_color:5:2}" | awk "${awk_cmd}")
 
   # Return RGB
-  echo "$r;$g;$b"
+  echo "${r};${g};${b}"
 }

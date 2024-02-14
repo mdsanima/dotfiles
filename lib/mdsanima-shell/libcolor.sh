@@ -1,7 +1,7 @@
 # Copyright (c) 2024 MDSANIMA DEV. All rights reserved.
 # Licensed under the MIT license.
 
-# This library is designed to define color names with color code number.
+# Library for color palette definition.
 
 
 # Generic
