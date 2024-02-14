@@ -1,7 +1,7 @@
 # Copyright (c) 2024 MDSANIMA DEV. All rights reserved.
 # Licensed under the MIT license.
 
-# This library is designed to print text in colors and other styles.
+# Library for printing functions.
 
 
 #-------------------------------------------------------------------------------
@@ -17,12 +17,12 @@
 #   <text>          The text to be printed in colors, required
 #
 # Usage:
-#   mprint::color -fg <color> -bg <color> -bold -italic -nonewline <text>
-#   mprint::color -fg 15 -bg 208 -bold "Bold white text on orange background"
-#   mprint::color -fg 196 -b -italic "Bold italic red text"
-#   mprint::color -fg ${BLACK} -bg ${ORANGE} "Black text on orange background"
+#   print::color -fg <color> -bg <color> -bold -italic -nonewline <text>
+#   print::color -fg 15 -bg 208 -b "Bold white text on orange background"
+#   print::color -fg 196 -b -italic "Bold italic red text"
+#   print::color -fg ${BLACK} -bg ${RED} "Black text on red background"
 #-------------------------------------------------------------------------------
-function mprint::color() {
+function print::color() {
   local fg_color
   local bg_color
   local bold_text
