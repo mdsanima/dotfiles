@@ -3,8 +3,7 @@
 Below is documentation for the libraries included in this project, which you can utilize in your own projects.
 
 > [!NOTE]
-> Currently, the libraries are only available within this project and cannot be installed as a package using `apt install`.
->
+> Currently, the libraries are only available within this project and cannot be installed as a package using `apt install` command.
 > However, there are plans to make it available as a standalone package in the future.
 
 <details>
@@ -24,26 +23,26 @@ This package contains libraries for functions that help execute _Shell Scripts_ 
 
 ### Available libraries
 
-- [`libcolor`](./mdsanima-shell/libcolor.sh): Color palette definition that will be used throughout a project for consistent styling.
-- [`libconvert`](./mdsanima-shell/libconvert.sh): Converting data or values from one format or type to another.
-- [`libevent`](./mdsanima-shell/libevent.sh): Logging events or actions within a program for debugging or monitoring purposes.
-- [`libprint`](./mdsanima-shell/libprint.sh): Printing formatted text or data to the shell console or another output stream.
-- [`libutil`](./mdsanima-shell/libutil.sh): Utility that perform common tasks or operations needed across different parts of a project.
+- [`libcolor.sh`](./mdsanima-shell/libcolor.sh): Color palette definition that will be used throughout a project for consistent styling.
+- [`libconvert.sh`](./mdsanima-shell/libconvert.sh): Converting data or values from one format or type to another.
+- [`libevent.sh`](./mdsanima-shell/libevent.sh): Logging events or actions within a program for debugging or monitoring purposes.
+- [`libprint.sh`](./mdsanima-shell/libprint.sh): Printing formatted text or data to the shell console or another output stream.
+- [`libutil.sh`](./mdsanima-shell/libutil.sh): Utility that perform common tasks or operations needed across different parts of a project.
 
 Each file above contains appropriate documentation for each available function and how to use it.
 
 ### Available functions
 
-- `convert::hex_to_rgb`
-- `event::debug`
-- `event::dev`
-- `event::error`
-- `event::info`
-- `event::success`
-- `event::warning`
-- `print::color`
-- `util::check_package_installed`
-- `util::one_line_progress`
+- [`convert::hex_to_rgb`](./mdsanima-shell/libconert.sh#L18)
+- [`event::debug`](./mdsanima-shell/libevent.sh#L7)
+- [`event::dev`](./mdsanima-shell/libevent.sh#L11)
+- [`event::error`](./mdsanima-shell/libevent.sh#L15)
+- [`event::info`](./mdsanima-shell/libevent.sh#L19)
+- [`event::success`](./mdsanima-shell/libevent.sh#L23)
+- [`event::warning`](./mdsanima-shell/libevent.sh#L27)
+- [`print::color`](./mdsanima-shell/libprint.sh#L25)
+- [`util::check_package_installed`](./mdsanima-shell/libutil.sh#L25)
+- [`util::one_line_progress`](./mdsanima-shell/libutil.sh#L50)
 
 ### Example usages
 
@@ -68,7 +67,9 @@ source "$PWD/lib/mdsanima-shell/libprint.sh"
 source "$PWD/lib/mdsanima-shell/libutil.sh"
 
 # Test color library
-echo "RED color number: ${RED}"
+echo "${RED}: int color: 'RED'"
+echo "${INT_RED}: int color: 'INT_RED'"
+echo "${HEX_RED}: hex color: 'HEX_RED'"
 
 # Test contert library
 hex="ff0000"
@@ -82,7 +83,7 @@ echo -e "${clean_line_seq}${done} Testing event functions was finished!"
 
 # Test print library
 print::color -fg 16 -bg 196 -bold "Bold black text on red background"
-print::color -fg ${BLACK} -bg ${BLUE} -bold -nonewline " MDSANIMA "
+print::color -fg ${BLACK} -bg ${INT_BLUE} -bold -nonewline " MDSANIMA "
 print::color -fg 27 " Blue text next to other"
 
 # Test util library
