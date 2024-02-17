@@ -3,7 +3,6 @@
 
 # Library for converting functions.
 
-
 #-------------------------------------------------------------------------------
 # This function converting HEX color code to RGB values. The returned values are
 # separated by semicolon and will be used in another function.

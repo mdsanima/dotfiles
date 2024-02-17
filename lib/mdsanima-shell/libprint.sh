@@ -3,7 +3,6 @@
 
 # Library for printing functions.
 
-
 #-------------------------------------------------------------------------------
 # This function provides a simple way to print text with colors on the terminal
 # bash script outputs.
@@ -51,43 +50,43 @@ function print::color() {
   # Parse arguments
   while [[ $# -gt 0 ]]; do
     case "$1" in
-      -fg)
-        if [[ "$2" -gt 255 ]]; then
-          echo -e "${_error_}${num_error}" >&2
-          return 1
-        fi
-        fg_color="$2"
-        shift 2
-        ;;
-      -bg)
-        if [[ "$2" -gt 255 ]]; then
-          echo -e "${_error_}${num_error}" >&2
-          return 1
-        fi
-        bg_color="$2"
-        shift 2
-        ;;
-      -bold | -b)
-        bold_text=true
-        shift 1
-        ;;
-      -italic | -i)
-        italic_text=true
-        shift 1
-        ;;
-      -nonewline | -n)
-        no_newline=true
-        shift 1
-        ;;
-      *)
-        if [[ -z "${text}" ]]; then
-          text="$1"
-        else
-          echo -e "${_error_}${argument_error} $1" >&2
-          return 1
-        fi
-        shift 1
-        ;;
+    -fg)
+      if [[ "$2" -gt 255 ]]; then
+        echo -e "${_error_}${num_error}" >&2
+        return 1
+      fi
+      fg_color="$2"
+      shift 2
+      ;;
+    -bg)
+      if [[ "$2" -gt 255 ]]; then
+        echo -e "${_error_}${num_error}" >&2
+        return 1
+      fi
+      bg_color="$2"
+      shift 2
+      ;;
+    -bold | -b)
+      bold_text=true
+      shift 1
+      ;;
+    -italic | -i)
+      italic_text=true
+      shift 1
+      ;;
+    -nonewline | -n)
+      no_newline=true
+      shift 1
+      ;;
+    *)
+      if [[ -z "${text}" ]]; then
+        text="$1"
+      else
+        echo -e "${_error_}${argument_error} $1" >&2
+        return 1
+      fi
+      shift 1
+      ;;
     esac
   done
 

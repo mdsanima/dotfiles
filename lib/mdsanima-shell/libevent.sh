@@ -3,7 +3,6 @@
 
 # Library for event logging functions.
 
-
 function event::debug() {
   print::color -fg ${BLACK} -bg ${GRAY} -b " DEBUG "
 }
