@@ -3,10 +3,8 @@
 
 # Library for utility functions.
 
-
 # Cleaned line sequence
-declare clean_line_seq="\r\e[0K"
-
+readonly clean_line_seq="\r\e[0K"
 
 #-------------------------------------------------------------------------------
 # This function provides a simple way to check if a package is installed.
@@ -33,7 +31,6 @@ function util::check_package_installed() {
     return 1
   fi
 }
-
 
 #-------------------------------------------------------------------------------
 # This function provides a simple way to execute bash commands with one line in

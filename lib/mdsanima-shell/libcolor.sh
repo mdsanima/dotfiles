@@ -3,9 +3,8 @@
 
 # Library for color palette definition.
 
-
 #-------------------------------------------------------------------------------
-# GLOBAL MAIN DEFAULT COLOR NAMES
+# Global main default color names
 #-------------------------------------------------------------------------------
 readonly WHITE=15
 readonly BLACK=16
@@ -42,9 +41,8 @@ readonly NEUTRAL=240
 readonly BASIC=242
 readonly STONE=244
 
-
 #-------------------------------------------------------------------------------
-# GLOBAL BASE INTEGER COLOR NAMES
+# Global base integer color names
 #-------------------------------------------------------------------------------
 readonly INT_WHITE=${WHITE}
 readonly INT_BLACK=${BLACK}
@@ -81,9 +79,8 @@ readonly INT_NEUTRAL=${NEUTRAL}
 readonly INT_BASIC=${BASIC}
 readonly INT_STONE=${STONE}
 
-
 #-------------------------------------------------------------------------------
-# GLOBAL BASE HEXADECIMAL COLOR NAMES
+# Global base hexadecimal color names
 #-------------------------------------------------------------------------------
 readonly HEX_WHITE="#ffffff"
 readonly HEX_BLACK="#000000"
