@@ -41,8 +41,12 @@ Each file above contains appropriate documentation for each available function a
 - [`event::success`](./mdsanima-shell/libevent.sh#L23)
 - [`event::warning`](./mdsanima-shell/libevent.sh#L27)
 - [`print::color`](./mdsanima-shell/libprint.sh#L25)
-- [`util::check_package_installed`](./mdsanima-shell/libutil.sh#L25)
-- [`util::one_line_progress`](./mdsanima-shell/libutil.sh#L50)
+- [`util::is_integer`](./mdsanima-shell/libutil.sh#L8)
+- [`util::is_number`](./mdsanima-shell/libutil.sh#L17)
+- [`util::is_string`](./mdsanima-shell/libutil.sh#L22)
+- [`util::is_text`](./mdsanima-shell/libutil.sh#L31)
+- [`util::is_package_installed`](./mdsanima-shell/libutil.sh#L36)
+- [`util::one_line_progress`](./mdsanima-shell/libutil.sh#L46)
 
 ### Example usages
 
@@ -88,7 +92,7 @@ print::color -fg 27 " Blue text next to other"
 
 # Test util library
 util::one_line_progress sudo apt update
-if util::check_package_installed git; then
+if util::is_installed git; then
   echo "Package git is installed!"
 else
   echo "Package git is not installed!"
