@@ -3,28 +3,39 @@
 
 # Library for utility functions.
 
-# Cleaned line sequence
 readonly clean_line_seq="\r\e[0K"
 
-#-------------------------------------------------------------------------------
-# This function provides a simple way to check if a package is installed.
-#
-# Arguments:
-#   <package>  The package name to check if is installed, required
-#
-# Returns:
-#   0 if the package is installed
-#   1 if the package is not installed
-#
-# Usage:
-#   util::check_package_installed <package>
-#   util::check_package_installed git
-#-------------------------------------------------------------------------------
-function util::check_package_installed() {
+function util::is_integer() {
+  local arg="$1"
+  if [[ "$arg" =~ ^[0-9]+$ ]]; then
+    return 0
+  else
+    return 1
+  fi
+}
+
+function util::is_number() {
+  local arg="$1"
+  util::is_integer "$arg"
+}
+
+function util::is_string() {
+  local arg="$1"
+  if [[ "$arg" =~ ^[a-zA-Z]+$ ]]; then
+    return 0
+  else
+    return 1
+  fi
+}
+
+function util::is_text() {
+  local arg="$1"
+  util::is_string "$arg"
+}
+
+function util::is_package_installed() {
   local package="$1"
   local query=$(dpkg-query -W -f='${Status}' "${package}" 2>/dev/null)
-
-  # Check if the package is installed
   if echo "${query}" | grep -q "install ok installed"; then
     return 0
   else
@@ -32,22 +43,8 @@ function util::check_package_installed() {
   fi
 }
 
-#-------------------------------------------------------------------------------
-# This function provides a simple way to execute bash commands with one line in
-# the stdout progress by reading each line of the stdout and displaying it with
-# overwriting the previous line.
-#
-# Arguments:
-#   <command>  The command to be executed, required
-#
-# Usage:
-#   util::one_line_progress <command>
-#   util::one_line_progress sudo apt update
-#-------------------------------------------------------------------------------
 function util::one_line_progress() {
   local command="$@"
-
-  # Execute the command and read each line of the stdout
   ${command} 2>&1 | while IFS= read -r line; do
     echo -n -e "${clean_line_seq}${line}"
   done
