@@ -12,7 +12,7 @@ trim_trailing_whitespace = true
 max_line_length = 120
 quote_type = double
 
-[*.{commitlintrc,eslint*,js,jsx,json,md,mjs,ts,tsx,versionrc}]
+[*.{commitlintrc,eslint*,js,jsx,json,md,mjs,ts,tsx,versionrc,todo}]
 indent_size = 2
 
 [*.{html,yml,yaml}]
@@ -32,6 +32,13 @@ max_line_length = 80
 [{*.svg,.env*}]
 insert_final_newline = false
 max_line_length = off
+
+[{.clang-format,.clang-tidy}]
+indent_size = 2
+
+[{CMakeLists.txt,*.{cmake,c,h,cc,hh,cpp,hpp,cxx,hxx}}]
+indent_size = 2
+max_line_length = 80
 
 [{Makefile,.gitattributes,.gitconfig,.gitcredentials,.gitmessage,.gitmodules}]
 indent_size = 8
