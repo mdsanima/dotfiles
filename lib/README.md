@@ -49,8 +49,9 @@ Each file above contains appropriate documentation for each available function a
 - [`util::is_string`](./mdsanima-shell/libutil.sh#L58)
 - [`util::is_special_char`](./mdsanima-shell/libutil.sh#L69)
 - [`util::is_first_char_special`](./mdsanima-shell/libutil.sh#L81)
-- [`util::contains_special_char`](./mdsanima-shell/libutil.sh#L93)
-- [`util::one_line_progress`](./mdsanima-shell/libutil.sh#L104)
+- [`util::is_hex`](./mdsanima-shell/libutil.sh#L93)
+- [`util::contains_special_char`](./mdsanima-shell/libutil.sh#L105)
+- [`util::one_line_progress`](./mdsanima-shell/libutil.sh#L116)
 
 ### Example usages
 
