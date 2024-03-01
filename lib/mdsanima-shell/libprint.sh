@@ -41,11 +41,11 @@ function print::color() {
   local _error_="${fg_seq}16;01m${bg_seq}196m ERROR ${reset} "
 
   # Error messages
-  local number_error="Color number must be between 0 and 255"
-  local hex_error="This is a not valid HEX color"
+  local number_error="Color number must be between 0 and 255."
+  local hex_error="This is a not valid HEX color."
   local color_error="Unrecognized color:"
   local argument_error="Unrecognized argument:"
-  local no_text_error="No text specified for coloring"
+  local no_text_error="No text specified for coloring."
 
   # Default values
   bold_text=false
