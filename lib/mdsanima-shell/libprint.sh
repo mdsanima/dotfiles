@@ -5,11 +5,11 @@
 
 #-------------------------------------------------------------------------------
 # This function provides a simple way to print text with colors on the terminal
-# bash script outputs.
+# bash script outputs. The color mode may be number, name or HEX code.
 #
 # Arguments:
-#   -fg <color>     Foreground color number or name, optional, default to none
-#   -bg <color>     Background color number or name, optional, default to none
+#   -fg <color>     Foreground color mode, optional, default to none
+#   -bg <color>     Background color mode, optional, default to none
 #   -bold, -b       Print the text in bold style, optional, default to false
 #   -italic, -i     Print the text in italic style, optional, default to false
 #   -nonewline, -n  Dont print a new line after text, optional, default to false
@@ -19,7 +19,9 @@
 #   print::color -fg <color> -bg <color> -bold -italic -nonewline <text>
 #   print::color -fg 15 -bg 208 -b "Bold white text on orange background"
 #   print::color -fg 196 -b -italic "Bold italic red text"
-#   print::color -fg ${BLACK} -bg ${RED} "Black text on red background"
+#   print::color -fg ${BLACK} -bg ${INT_RED} "Black text on red background"
+#   print::color -fg ${HEX_YELLOW} -i "Italic yellow text"
+#   print::color -fg "#f97316" -b "Bold orange text"
 #-------------------------------------------------------------------------------
 function print::color() {
   local fg_color
@@ -28,6 +30,7 @@ function print::color() {
   local italic_text
   local no_newline
   local text
+  local hex_mode
 
   # Set color sequences
   local fg_seq="\e[38;5;"
@@ -35,35 +38,66 @@ function print::color() {
   local reset="\e[0m"
 
   # Black bold error text on red background
-  local _error_="${fg_seq}16;01m${bg_seq}196m ERROR ${reset}"
+  local _error_="${fg_seq}16;01m${bg_seq}196m ERROR ${reset} "
 
-  # Red error messages
-  local num_error="${fg_seq}196m Color number must be between 0 and 255${reset}"
-  local argument_error="${fg_seq}196m Unrecognized argument:${reset}"
-  local no_text_error="${fg_seq}196m No text specified for coloring${reset}"
+  # Error messages
+  local number_error="Color number must be between 0 and 255"
+  local hex_error="This is a not valid HEX color"
+  local color_error="Unrecognized color:"
+  local argument_error="Unrecognized argument:"
+  local no_text_error="No text specified for coloring"
 
   # Default values
   bold_text=false
   italic_text=false
   no_newline=false
 
+  function set_color_mode() {
+    local color_mode="$1"
+    set -e
+    if util::is_integer "$color_mode"; then
+      if [[ "$color_mode" -gt 255 ]]; then
+        echo -e "${_error_}${number_error}" >&2
+        return 1 # ERROR
+      else
+        hex_mode=false
+        return 0 # SUCCESS
+      fi
+    elif util::is_first_char_special "$color_mode"; then
+      if [[ "$color_mode" =~ ^#[0-9a-fA-F]{6}$ ]]; then
+        hex_mode=true
+        return 0 # SUCCESS
+      else
+        echo -e "${_error_}${hex_error}" >&2
+        return 1 # ERROR
+      fi
+    else
+      echo -e "${_error_}${color_error} $color_mode" >&2
+      return 1 # ERROR
+    fi
+  }
+
   # Parse arguments
   while [[ $# -gt 0 ]]; do
     case "$1" in
     -fg)
-      if [[ "$2" -gt 255 ]]; then
-        echo -e "${_error_}${num_error}" >&2
-        return 1
+      set_color_mode $2
+      if [[ "$hex_mode" == true ]]; then
+        fg_seq="\e[38;2;"
+        fg_color=$(convert::hex_to_rgb $2)
+      else
+        fg_color="$2"
       fi
-      fg_color="$2"
       shift 2
       ;;
     -bg)
-      if [[ "$2" -gt 255 ]]; then
-        echo -e "${_error_}${num_error}" >&2
-        return 1
+      set_color_mode $2
+      if [[ "$hex_mode" == true ]]; then
+        bg_seq="\e[48;2;"
+        bg_color=$(convert::hex_to_rgb $2)
+      else
+        bg_color="$2"
       fi
-      bg_color="$2"
       shift 2
       ;;
     -bold | -b)
@@ -98,7 +132,7 @@ function print::color() {
 
   # Set foreground
   local fg_code
-  if [[ "${fg_color}" =~ ^[0-9]+$ ]]; then
+  if util::is_integer $fg_color || util::contains_special_char $fg_color; then
     fg_code="${fg_seq}${fg_color}m"
   elif [[ -v "${fg_color}" ]]; then
     fg_code="${fg_seq}${!fg_color}m"
@@ -106,7 +140,7 @@ function print::color() {
 
   # Set background
   local bg_code
-  if [[ "${bg_color}" =~ ^[0-9]+$ ]]; then
+  if util::is_integer $bg_color || util::contains_special_char $bg_color; then
     bg_code="${bg_seq}${bg_color}m"
   elif [[ -v "${bg_color}" ]]; then
     bg_code="${bg_seq}${!bg_color}m"
@@ -124,7 +158,7 @@ function print::color() {
     italic_seq="\e[3m"
   fi
 
-  # Printing text
+  # Print text with colors
   if [[ "${no_newline}" == true ]]; then
     echo -e -n "${fg_code}${bold_seq}${italic_seq}${bg_code}${text}${reset}"
   else

@@ -81,7 +81,7 @@ echo "${INT_RED}: int color: 'INT_RED'"
 echo "${HEX_RED}: hex color: 'HEX_RED'"
 
 # Test contert library
-hex="ff0000"
+hex="#ff0000"
 rgb=$(convert::hex_to_rgb $hex)
 echo "HEX ${hex} color is converted to RGB: ${rgb}"
 

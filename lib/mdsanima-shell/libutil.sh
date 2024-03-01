@@ -91,13 +91,12 @@ function util::is_first_char_special() {
 }
 
 function util::is_hex() {
-  local hex="$1"
-  local first="${hex:0:1}"
-  if [[ "$first" == "#" ]] && [[ "${#hex}" -eq 7 ]] && [[ "${hex:1}" =~ ^[0-9a-fA-F]+$ ]]; then
-    # echo "SUCCESS $hex is a valid hex"
+  local argument="$1"
+  if [[ "$argument" =~ ^#[0-9a-fA-F]{6}$ ]]; then
+    # echo "SUCCESS $argument is a valid hex"
     return 0
   else
-    # echo "ERROR $hex is not a valid hex"
+    # echo "ERROR $argument is not a valid hex"
     return 1
   fi
 }
