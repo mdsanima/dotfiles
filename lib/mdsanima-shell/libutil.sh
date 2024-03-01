@@ -90,6 +90,18 @@ function util::is_first_char_special() {
   fi
 }
 
+function util::is_hex() {
+  local hex="$1"
+  local first="${hex:0:1}"
+  if [[ "$first" == "#" ]] && [[ "${#hex}" -eq 7 ]] && [[ "${hex:1}" =~ ^[0-9a-fA-F]+$ ]]; then
+    # echo "SUCCESS $hex is a valid hex"
+    return 0
+  else
+    # echo "ERROR $hex is not a valid hex"
+    return 1
+  fi
+}
+
 function util::contains_special_char() {
   local argument="$1"
   if [[ "$argument" =~ [^[:alnum:]_] ]]; then
