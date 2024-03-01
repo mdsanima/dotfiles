@@ -41,12 +41,16 @@ Each file above contains appropriate documentation for each available function a
 - [`event::success`](./mdsanima-shell/libevent.sh#L23)
 - [`event::warning`](./mdsanima-shell/libevent.sh#L27)
 - [`print::color`](./mdsanima-shell/libprint.sh#L25)
-- [`util::is_integer`](./mdsanima-shell/libutil.sh#L8)
-- [`util::is_number`](./mdsanima-shell/libutil.sh#L17)
-- [`util::is_string`](./mdsanima-shell/libutil.sh#L22)
-- [`util::is_text`](./mdsanima-shell/libutil.sh#L31)
-- [`util::is_package_installed`](./mdsanima-shell/libutil.sh#L36)
-- [`util::one_line_progress`](./mdsanima-shell/libutil.sh#L46)
+- [`util::is_package_installed`](./mdsanima-shell/libutil.sh#L8)
+- [`util::is_installed`](./mdsanima-shell/libutil.sh#L20)
+- [`util::is_integer`](./mdsanima-shell/libutil.sh#L25)
+- [`util::is_float`](./mdsanima-shell/libutil.sh#L36)
+- [`util::is_number`](./mdsanima-shell/libutil.sh#L47)
+- [`util::is_string`](./mdsanima-shell/libutil.sh#L58)
+- [`util::is_special_char`](./mdsanima-shell/libutil.sh#L69)
+- [`util::is_first_char_special`](./mdsanima-shell/libutil.sh#L81)
+- [`util::contains_special_char`](./mdsanima-shell/libutil.sh#L93)
+- [`util::one_line_progress`](./mdsanima-shell/libutil.sh#L104)
 
 ### Example usages
 
