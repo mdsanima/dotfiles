@@ -11,7 +11,7 @@ Instructions for installing the dotfiles configuration. First, clone this reposi
 
 ### Linux
 
-Run the `./install.sh` script in the _Shell_ terminal to install the configuration on **GNU/Linux** systems like _Ubuntu_ or _Debian_. This script include the [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh/) installation and many more.
+Run the `./install.sh` script in the _Shell_ terminal to install the configuration on **GNU/Linux** systems like _Debian_ or _Ubuntu_. This script include the [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh/) installation and many more.
 
 ### Windows
 
