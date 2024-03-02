@@ -4,10 +4,9 @@
 # This is a custom configuration `.zshrc` file for Linux system. You can use
 # this script for all available hosts in your network.
 
-
 # Enable Powerlevel10k instant prompt
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
 # If you come from bash you might have to change your $PATH
@@ -35,6 +34,10 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Use case-sensitive completion
 CASE_SENSITIVE="true"
+
+# Remind me to update when it's time and how often in days
+zstyle ':omz:update' mode reminder
+zstyle ':omz:update' frequency 7
 
 # Enable command auto-correction
 ENABLE_CORRECTION="true"
@@ -74,8 +77,8 @@ predict-on
 # Async auto suggestions
 unset ZSH_AUTOSUGGEST_USE_ASYNC
 
-# Alias definitions
+# Aliases definition, run `alias` to see full list
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
 
-# Custom powerlevel10k settings
+# Custom powerlevel10k setup, run `p10k configure` to customize or edit `~/.p10k.zsh`
 [ -f "$HOME/.config/zsh/themes/mdsanima.zsh" ] && source "$HOME/.config/zsh/themes/mdsanima.zsh"
