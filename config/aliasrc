@@ -1,3 +1,5 @@
+# Aliases definition
+
 alias rpi0="ssh mdsanima@192.168.1.27"
 alias rpi1="ssh mdsanima@192.168.1.32"
 alias rpi2="ssh mdsanima@192.168.1.34"
@@ -6,6 +8,7 @@ alias rpi4="ssh mdsanima@192.168.1.33"
 alias rpi5="ssh mdsanima@192.168.1.37"
 alias rpi6="ssh mdsanima@192.168.1.35"
 alias rpi7="ssh mdsanima@192.168.1.36"
+alias rpi8="ssh mdsanima@192.168.1.111"
 alias jet1="ssh mdsanima@192.168.1.24"
 alias jet2="ssh mdsanima@192.168.1.30"
 alias macb="ssh mdsanima@192.168.1.44"

@@ -4,7 +4,6 @@
 " Custom `mdsanima` color theme. Based on the default `pablo` vim color file.
 " Run this command `vim -c 'edit $VIMRUNTIME/colors/pablo.vim'` for help.
 
-
 " Setup
 hi clear
 set notermguicolors
