@@ -25,7 +25,7 @@ max_line_length = 115
 [*.py]
 profile = black
 
-[*.{sh,bash,zsh,vim}]
+[*.{sh,bash,zsh*,vim}]
 indent_size = 2
 max_line_length = 80
 
