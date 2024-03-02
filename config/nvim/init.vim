@@ -3,6 +3,5 @@
 
 " Initial configuration for Neovim. Other configs will be loaded automatically.
 
-
 " Load color theme
 colorscheme mdsanima

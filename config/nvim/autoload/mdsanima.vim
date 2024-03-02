@@ -4,7 +4,6 @@
 " Autoloaded functions. Autoloading allows functions to be loaded on
 " demand, which makes startuptime faster and enforces function namespacing.
 
-
 " Testing
 function mdsanima#hello()
   echo 'Hello World'

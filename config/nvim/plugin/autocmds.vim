@@ -3,6 +3,5 @@
 
 " General autocommands.
 
-
 " Back to default terminal cursor style
 autocmd VimLeave * set guicursor=a:ver1-blinkon1

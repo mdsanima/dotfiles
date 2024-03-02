@@ -3,7 +3,6 @@
 
 " Custom `mdsanima` configuration setting options.
 
-
 " Setting
 set autoindent              " Indent from last line
 set autoread                " Read file on change
