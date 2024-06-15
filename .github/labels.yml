@@ -1,14 +1,21 @@
-# Defined labels
+# Defined labels for pull requests and issues.
 
+# General labels
 - name: bug
   color: B60205
   description: Something isn't working
 - name: ci
   color: 5AF3C0
-  description: Pull requests that update a workflow deps
+  description: Pull requests that update a GitHub Actions Workflow deps
 - name: database
   color: 097BA1
   description: The database tools
+- name: db
+  color: 98C3E1
+  description: The database tools
+- name: dependencies
+  color: 0066FF
+  description: Pull requests that update a dependency file
 - name: deps
   color: 0366D6
   description: Pull requests that update a dependency file
@@ -18,8 +25,14 @@
 - name: dev
   color: 0E8A16
   description: Tools for helping development
+- name: docker
+  color: 309D8D
+  description: Pull requests that update a Dockerfile deps
 - name: documentation
   color: 0075CA
+  description: Improvements or additions to documentation
+- name: docs
+  color: 20967C
   description: Improvements or additions to documentation
 - name: done
   color: 1D76DB
@@ -48,15 +61,21 @@
 - name: kubernetes
   color: 2CF1BA
   description: Container orchestration stuff
+- name: nodejs
+  color: E23983
+  description: Pull requests that update a Node.js deps
+- name: npm
+  color: 8EBA74
+  description: Pull requests that update a Node.js deps
 - name: pip
   color: 2E79F8
-  description: Pull requests that update a python deps
+  description: Pull requests that update a Python deps
 - name: prod
   color: 2D13F1
   description: Production environment
 - name: python
   color: 006B75
-  description: Pull requests that update a python deps
+  description: Pull requests that update a Python deps
 - name: question
   color: E54979
   description: Further information is requested
@@ -71,4 +90,4 @@
   description: This will not be worked on
 - name: workflow
   color: FD582D
-  description: Pull requests that update a workflow deps
+  description: Pull requests that update a GitHub Actions Workflow deps

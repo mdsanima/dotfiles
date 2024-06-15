@@ -1,4 +1,4 @@
-name: Sync Labels
+name: Syncing Repository Labels
 
 on:
   workflow_dispatch:
