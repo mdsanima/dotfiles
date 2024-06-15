@@ -6,13 +6,29 @@ updates:
     schedule:
       interval: daily
       timezone: Europe/Warsaw
-      time: "10:00"
-    labels: [deps, ci, workflow]
+      time: "12:00"
+    labels: [dependencies, workflow]
 
-  - package-ecosystem: pip
-    directory: /
-    schedule:
-      interval: daily
-      timezone: Europe/Warsaw
-      time: "11:00"
-    labels: [deps, python, pip]
+  # - package-ecosystem: docker
+  #   directory: /
+  #   schedule:
+  #     interval: daily
+  #     timezone: Europe/Warsaw
+  #     time: "12:00"
+  #   labels: [dependencies, docker]
+
+  # - package-ecosystem: pip
+  #   directory: /
+  #   schedule:
+  #     interval: daily
+  #     timezone: Europe/Warsaw
+  #     time: "12:00"
+  #   labels: [dependencies, pip]
+
+  # - package-ecosystem: npm
+  #   directory: /
+  #   schedule:
+  #     interval: daily
+  #     timezone: Europe/Warsaw
+  #     time: "12:00"
+  #   labels: [dependencies, npm]
