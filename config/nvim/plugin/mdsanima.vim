@@ -1,18 +1,20 @@
 " Copyright (c) 2024 MDSANIMA DEV. All rights reserved.
 " Licensed under the MIT license.
 
-" Custom `mdsanima` configuration setting options.
+" Custom `mdsanima` configuration setting options for NeoVim editor.
 
 " Setting
 set autoindent              " Indent from last line
 set autoread                " Read file on change
 set backup                  " Make backups files
 set clipboard=unnamedplus   " Use system clipboard
+set colorcolumn=100         " Vertical line max
 set encoding=utf-8          " Character encoding
 set expandtab               " Override mode for TAB
 set history=1000            " Lines to keep in history
 set ignorecase              " Case insensitive search
 set incsearch               " Incremental search
+set linespace=100           " Maximu characters in line
 set linebreak               " Wrap long lines
 set list                    " Show special characters
 set listchars+=extends:→,   " Show right arrow
@@ -23,7 +25,7 @@ set listchars+=trail:·,     " Show trailing spaces
 set mouse=a                 " Mouse support
 set number                  " Show line numbering
 set relativenumber          " Relative number of lines
-set scrolloff=10            " Lines after before cursor
+set scrolloff=20            " Lines after before cursor
 set shiftwidth=4            " Offset spaces
 set showbreak=↪\            " Show break character
 set smartcase               " Smart case search

@@ -1,8 +1,8 @@
 " Copyright (c) 2024 MDSANIMA DEV. All rights reserved.
 " Licensed under the MIT license.
 
-" Custom `mdsanima` color theme. Based on the default `pablo` vim color file.
-" Run this command `vim -c 'edit $VIMRUNTIME/colors/pablo.vim'` for help.
+" Custom `mdsanima` color theme.  Based on the default `pablo` vim color file.  Run this command on
+" your terminal shell `vim -c 'edit $VIMRUNTIME/colors/pablo.vim'` for help.
 
 " Setup
 hi clear
