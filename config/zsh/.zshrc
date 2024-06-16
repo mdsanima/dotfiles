@@ -1,12 +1,12 @@
 # Copyright (c) 2024 MDSANIMA DEV. All rights reserved.
 # Licensed under the MIT license.
 
-# This is a custom configuration `.zshrc` file for Linux system. You can use
-# this script for all available hosts in your network.
+# This is a custom configuration `.zshrc` file for GNU/Linux systems like Debian or Ubuntu.  You can
+# use this script for all available hosts in your network.
 
 # Enable Powerlevel10k instant prompt
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-$(whoami).zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-$(whoami).zsh"
 fi
 
 # If you come from bash you might have to change your $PATH
@@ -24,8 +24,12 @@ export TERM="xterm-256color"
 # For the locale
 export LC_ALL="C"
 
-# Disabled underline
-(( ${+ZSH_HIGHLIGHT_STYLES} )) || typeset -A ZSH_HIGHLIGHT_STYLES
+# Disabled underline style
+if [[ -z "${ZSH_HIGHLIGHT_STYLES+x}" ]]; then
+  typeset -A ZSH_HIGHLIGHT_STYLES
+fi
+
+# Set undarline style
 ZSH_HIGHLIGHT_STYLES[path]=none
 ZSH_HIGHLIGHT_STYLES[path_prefix]=none
 
@@ -61,6 +65,7 @@ HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S   "
 
 # Share history between terminals
 setopt SHARE_HISTORY
+
 # Don't store history entries that start with a space
 setopt HIST_IGNORE_SPACE
 
@@ -70,7 +75,7 @@ plugins=(git zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlig
 # Add zsh terminal
 source "$ZSH/oh-my-zsh.sh"
 
-# You can turn this off if you don't want to use it, just type predict-off
+# You can turn this off if you don't want to use it, just type `predict-off` in the terminal
 autoload predict-on
 predict-on
 
@@ -80,5 +85,5 @@ unset ZSH_AUTOSUGGEST_USE_ASYNC
 # Aliases definition, run `alias` to see full list
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
 
-# Custom powerlevel10k setup, run `p10k configure` to customize or edit `~/.p10k.zsh`
+# Custom theme for Powerlevel10k, run `p10k configure` to customize or edit theme file
 [ -f "$HOME/.config/zsh/themes/mdsanima.zsh" ] && source "$HOME/.config/zsh/themes/mdsanima.zsh"
