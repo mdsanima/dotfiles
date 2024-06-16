@@ -1,3 +1,6 @@
+# Defined base templates for ignore files for eslint.
+
+# Default
 **/node_modules/**
-**/apps/**/*.d.ts
-**/next.config.js
+**/**/*.d.ts
+**/**/next.config.*js
