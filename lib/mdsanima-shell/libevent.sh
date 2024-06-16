@@ -1,7 +1,7 @@
 # Copyright (c) 2024 MDSANIMA DEV. All rights reserved.
 # Licensed under the MIT license.
 
-# Library for event logging functions.
+# Library for event logging functions.  This is still work in progress.
 
 function event::debug() {
   print::color -fg ${BLACK} -bg ${GRAY} -b " DEBUG "

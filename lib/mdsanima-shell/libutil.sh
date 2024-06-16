@@ -1,7 +1,7 @@
 # Copyright (c) 2024 MDSANIMA DEV. All rights reserved.
 # Licensed under the MIT license.
 
-# Library for utility functions.
+# Library for utility functions.  This is still work in progress.
 
 readonly clean_line_seq="\r\e[0K"
 

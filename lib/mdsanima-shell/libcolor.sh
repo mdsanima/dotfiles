@@ -1,11 +1,9 @@
 # Copyright (c) 2024 MDSANIMA DEV. All rights reserved.
 # Licensed under the MIT license.
 
-# Library for color palette definition.
+# Library for color palette definition.  This is still work in progress.
 
-#-------------------------------------------------------------------------------
 # Global main default color names
-#-------------------------------------------------------------------------------
 readonly WHITE=15
 readonly BLACK=16
 readonly LIGHT=252
@@ -41,9 +39,7 @@ readonly NEUTRAL=240
 readonly BASIC=242
 readonly STONE=244
 
-#-------------------------------------------------------------------------------
 # Global base integer color names
-#-------------------------------------------------------------------------------
 readonly INT_WHITE=${WHITE}
 readonly INT_BLACK=${BLACK}
 readonly INT_LIGHT=${LIGHT}
@@ -79,9 +75,7 @@ readonly INT_NEUTRAL=${NEUTRAL}
 readonly INT_BASIC=${BASIC}
 readonly INT_STONE=${STONE}
 
-#-------------------------------------------------------------------------------
 # Global base hexadecimal color names
-#-------------------------------------------------------------------------------
 readonly HEX_WHITE="#ffffff"
 readonly HEX_BLACK="#000000"
 readonly HEX_LIGHT="#cad1d9"
