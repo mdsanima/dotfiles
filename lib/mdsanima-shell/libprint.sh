@@ -1,11 +1,11 @@
 # Copyright (c) 2024 MDSANIMA DEV. All rights reserved.
 # Licensed under the MIT license.
 
-# Library for printing functions.
+# Library for printing functions.  This is still work in progress.
 
-#-------------------------------------------------------------------------------
-# This function provides a simple way to print text with colors on the terminal
-# bash script outputs. The color mode may be number, name or HEX code.
+#---------------------------------------------------------------------------------------------------
+# This function provides a simple way to print the text with colors on the terminal bash script
+# outputs.  The color mode may be number, name or HEX code.
 #
 # Arguments:
 #   -fg <color>     Foreground color mode, optional, default to none
@@ -22,7 +22,7 @@
 #   print::color -fg ${BLACK} -bg ${INT_RED} "Black text on red background"
 #   print::color -fg ${HEX_YELLOW} -i "Italic yellow text"
 #   print::color -fg "#f97316" -b "Bold orange text"
-#-------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------
 function print::color() {
   local fg_color
   local bg_color
