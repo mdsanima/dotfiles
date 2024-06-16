@@ -1,16 +1,62 @@
-[MASTER]
-ignore=.git,flake8.egg-info,conf.py
-ignore-patterns=.*_test.py,.*_tmp.py
+# Linter configuration file for Python.
+
+# Pylint is a static code analyser tool for Python.  Pylint analyses your code without actually
+# running it.  It checks for errors, enforces a coding standard, looks for code smells, and can make
+# suggestions about how the code could be refactored.  See doc: https://github.com/pylint-dev/pylint
+
+
+[MAIN]
+
+# Files or directories to be skipped
+ignore=.git,flake8.egg-info
+
+# Files or directories matching the regex patterns are skipped
+ignore-patterns=^\w+_test,^\w+_tmp
+
+# Use multiple processes to speed up Pylint, 0 will detect the number of processors available to use
 jobs=4
 
+# Minimum supported Python version
+py-version=3.10.0
+
+
 [FORMAT]
-max-line-length=120
-ignore-long-lines=^\s+:([A-Za-z]+( [A-Za-z]+)+)_[A-Za-z]+:.*$
-max-module-lines=1000
+
+# Maximum number of characters on a single line
+max-line-length=100
+
+# Regexp for a line that is allowed to be longer than the limit
+ignore-long-lines=^\s+(# )?(.+)?\s(https://)(.+)?$
+
+# Maximum number of lines in a module
+max-module-lines=2000
+
+
+[BASIC]
+
+# Good variable names which should always be accepted, separated by a comma
+good-names=i,j,k,ex,_
+
+# Naming style matching correct function names
+function-naming-style=snake_case
+
+# Naming style matching correct variable names
+variable-naming-style=snake_case
+
 
 [DESIGN]
+
+# Maximum number of arguments for function / method
 max-args=20
-max-locals=30
-max-returns=6
+
+# Maximum number of branch for function / method body
 max-branches=20
+
+# Maximum number of locals for function / method body
+max-locals=30
+
+# Maximum number of return / yield for function / method body
+max-returns=10
+
+# Maximum number of statements in function / method body
 max-statements=50

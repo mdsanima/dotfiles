@@ -1,11 +1,11 @@
 {
-  "extends": "eslint:recommended",
+  "extends": ["next/core-web-vitals", "eslint:recommended"],
   "plugins": ["header"],
   "rules": {
-    "indent": ["error", 2],
+    "indent": ["error", 4],
     "linebreak-style": ["error", "unix"],
     "quotes": ["error", "double"],
-    "semi": ["error", "never"],
+    "semi": ["error", "always"],
     "header/header": ["error", "line", [
       " Copyright (c) 2024 MDSANIMA DEV. All rights reserved.",
       " Licensed under the MIT license."

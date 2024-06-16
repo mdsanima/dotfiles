@@ -1,3 +1,10 @@
+# Linter configuration file for Python.
+
+# Flake8 is a Python tool that glues together pycodestyle, pyflakes, mccabe, and third-party plugins
+# to check the style and quality of some Python code.  See doc: https://github.com/PyCQA/flake8
+
+
 [flake8]
-max-line-length = 120
-per-file-ignores = *.py: E501
+
+# Maximum number of characters on a single line
+max-line-length=100

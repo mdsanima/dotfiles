@@ -1,9 +1,15 @@
+# Maintain consistent coding style across the entire project.
+
+# This file is a configuration file for clang-tidy checks.
+
+# Default checks to enable
 Checks: "-*,
   modernize-*,
   readability-*,
   performance-*,
   bugprone-*"
 
+# Default check options to enable
 CheckOptions:
   - key: readability-identifier-naming.ClassCase
     value: CamelCase
@@ -24,4 +30,5 @@ CheckOptions:
   - key: readability-identifier-naming.VariableCase
     value: camelBack
 
+# Default warnings to enable
 WarningsAsErrors: "*"

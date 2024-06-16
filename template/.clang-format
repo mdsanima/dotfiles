@@ -1,6 +1,62 @@
+# Maintain consistent coding style across the entire project.
+
+# This is a configuration file for clang-format.  The rules here are applied to all code in the
+# entire project, including all the C++ example demo programs, and the main C demo project and
+# library.  The rules are still work in progress and subject to change.  I still need to think
+# about this.
+
+# C Language specifics
 Language: Cpp
 
+# Based on Google's C++ style guide.  Customized for my own preferences
 BasedOnStyle: Google
-ColumnLimit: 80
-IndentWidth: 2
+
+# These settings are mirrored in .editorconfig.  Keep them in sync
+ColumnLimit: 100
+IndentWidth: 4
+UseTab: Never
+
+# Align consecutive assignments
+#   const char *foo  = "bar";
+#   const int bar    = 1;
+#   const double baz = 2.0;
+AlignConsecutiveAssignments: true
+
+# Align consecutive declarations
+#   const char  *foo = "bar";
+#   const int    bar = 1;
+#   const double baz = 2.0;
+AlignConsecutiveDeclarations: false
+
+# Align escaped newlines for the left
+AlignEscapedNewlinesLeft: true
+
+# Align trailing comments
+#   const int foo;      // Comment foo
+#   const int bar = 2;  // Comment bar
+AlignTrailingComments: true
+
+# Don't allow this rule
+AllowShortFunctionsOnASingleLine: false
+
+# Braces to surrounding context
+BraceWrapping:
+  AfterClass: true
+  AfterControlStatement: true
+  AfterFunction: true
+  AfterNamespace: false
+  BeforeCatch: true
+  BeforeElse: true
+BreakBeforeBraces: Custom
+
+# Update namespace comments
+FixNamespaceComments: true
+
+# Align pointer to the right
+PointerAlignment: Right
+
+# Same as Black for Python
 SpacesBeforeTrailingComments: 2
+
+# Allow this rule
+SortIncludes: true

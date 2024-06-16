@@ -1,25 +1,16 @@
+# Defined base templates for ignore files for docker build.
+
 # Dependency
-node_modules
+node_modules/
 npm-debug.log
 
 # Container
 Dockerfile
-Dockerfile.dev
-Dockerfile.prod
-Dockerfile.test
-
+Dockerfile.*
 *.dockerfile
-*.dockerfile.dev
-*.dockerfile.prod
-*.dockerfile.test
 
 # Kubernetes
-manifest.yaml
-deploy.yaml
-
-manifest.yml
-deploy.yml
-
+*deploy*.y*ml
 nginx.config
 
 # Markdown
@@ -28,39 +19,21 @@ CHANGELOG.md
 
 # Environment
 .env
-
-.env.test
-.env.local
-.env.secret
-.env.development
-.env.staging
-.env.production
-.env.dev
-.env.stage
-.env.prod
-.env.ci
-.env.demo
-.env.backup
-
-.env.*.test
-.env.*.local
-.env.*.secret
-.env.*.development
-.env.*.staging
-.env.*.production
-.env.*.dev
-.env.*.stage
-.env.*.prod
-.env.*.ci
-.env.*.demo
-.env.*.backup
+.env.*
 
 # Other
 build*
-.next
-.git
-.gitignore
-.dockerignore
-.mypy_cache
+manifest*
 .cache
 .docker
+.dockerignore
+.editorconfig
+.eslintcache
+.eslintignore
+.eslintrc
+.git
+.gitignore
+.next
+.mypy_cache
+.prettierrc
+.versionrc
