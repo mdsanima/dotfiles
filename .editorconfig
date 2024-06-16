@@ -1,4 +1,8 @@
-# Maintain consistent coding style
+# Maintain consistent coding style across the entire project.
+
+# This is a configuration file for EditorConfig.  The settings for JavaScript, Python and C/C++
+# files are mirrored by languages in .prettierrc, .eslintrc, .flake8, .pylintrc, pyproject.toml and
+# .clang-format files that is shared accros all my codebase projects.  Keep them in sync.
 
 root = true
 
@@ -9,37 +13,32 @@ indent_size = 4
 indent_style = space
 insert_final_newline = true
 trim_trailing_whitespace = true
-max_line_length = 120
 quote_type = double
 
-[*.{commitlintrc,eslint*,js,jsx,json,md,mjs,ts,tsx,versionrc,todo}]
+[*.{bash,eslint*,json*,md*,prettier*,sh,svg,todo,version*,vim,xml,yaml,yml,zsh*}]
 indent_size = 2
+max_line_length = 100
 
-[*.{html,yml,yaml}]
-indent_size = 2
-max_line_length = off
-
-[*.{ps1,psm1,psd1}]
-max_line_length = 115
+[*.{css,html,js,jsx,mjs,ps1,psd1,psm1,scss,ts,tsx}]
+indent_size = 4
+max_line_length = 100
 
 [*.py]
 profile = black
-
-[*.{sh,bash,zsh*,vim}]
-indent_size = 2
-max_line_length = 80
-
-[{*.svg,.env*}]
-insert_final_newline = false
-max_line_length = off
+indent_size = 4
+max_line_length = 100
 
 [{.clang-format,.clang-tidy}]
 indent_size = 2
+max_line_length = 100
 
 [{CMakeLists.txt,*.{cmake,c,h,cc,hh,cpp,hpp,cxx,hxx}}]
-indent_size = 2
-max_line_length = 80
+indent_size = 4
+max_line_length = 100
 
 [{Makefile,.gitattributes,.gitconfig,.gitcredentials,.gitmessage,.gitmodules}]
 indent_size = 8
 indent_style = tab
+
+[COMMIT_EDITMSG]
+max_line_length = 72
