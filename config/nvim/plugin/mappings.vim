@@ -1,13 +1,14 @@
 " Copyright (c) 2024 MDSANIMA DEV. All rights reserved.
 " Licensed under the MIT license.
 
-" Key mappings.
+" Key mappings.  These are loaded on demand.  This is a good place to put key mappings that you want
+" to run on every startup.
 
 " General
 map <C-S> :w<CR>            " CTRL+S to Save file
 map <C-Q> :q<CR>            " CTRL+Q to Quit file
 
-" Get folding working with vscode neovim plugin
+" Get folding working with Visual Studio Code and Neovim extension
 if(exists('g:vscode'))
   nnoremap zM :call VSCodeNotify('editor.foldAll')<CR>
   nnoremap zR :call VSCodeNotify('editor.unfoldAll')<CR>
