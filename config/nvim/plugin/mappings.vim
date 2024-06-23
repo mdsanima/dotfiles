@@ -4,9 +4,13 @@
 " Key mappings.  These are loaded on demand.  This is a good place to put key mappings that you want
 " to run on every startup.
 
+" NOTE: The key mapping for the 'Visual Block' is not working on Windows Terminal with the `CTRL+V`
+" keyboard shortcut and the solution is to use `CTRL+Q` instead.  On the Visual Studio Code and
+" Neovim extension the `CTRL+V` keyboard shortcut is working normally.  You can unbind the `CTRL+V`
+" on the Windows Terminal and bind `CTRL+SHIFT+V` instead for the copy text.
+
 " General
-map <C-S> :w<CR>            " CTRL+S to Save file
-map <C-Q> :q<CR>            " CTRL+Q to Quit file
+map <C-S> :w<CR>  " CTRL+S to Save file
 
 " Get folding working with Visual Studio Code and Neovim extension
 if(exists('g:vscode'))
