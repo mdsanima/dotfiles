@@ -3,5 +3,5 @@
 
 " General autocommands.  This is a good place to put commands that you want to run on every startup.
 
-" Back to default terminal cursor style
+" Back to default terminal cursor style blinking bar when leaving the Vim editor
 autocmd VimLeave * set guicursor=a:ver1-blinkon1

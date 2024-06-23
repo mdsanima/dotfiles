@@ -1,7 +1,7 @@
 " Copyright (c) 2024 MDSANIMA DEV. All rights reserved.
 " Licensed under the MIT license.
 
-" Custom `mdsanima` configuration setting options for NeoVim editor.
+" Custom MDSANIMA configuration setting options for Neovim editor.
 
 " Setting
 set autoindent              " Indent from last line
@@ -25,7 +25,7 @@ set listchars+=trail:·,     " Show trailing spaces
 set mouse=a                 " Mouse support
 set number                  " Show line numbering
 set relativenumber          " Relative number of lines
-set scrolloff=20            " Lines after before cursor
+set scrolloff=14            " Lines after before cursor
 set shiftwidth=4            " Offset spaces
 set showbreak=↪\            " Show break character
 set smartcase               " Smart case search
