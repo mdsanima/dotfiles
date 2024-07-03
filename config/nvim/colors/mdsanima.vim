@@ -7,7 +7,7 @@
 " this and the Neovim configuration.  May be I should just use the default color scheme.  I think to
 " setup the config with LazyVim or NormalVim.  I will need to test it.
 
-" Setup
+" Basic initial setup
 hi clear
 set notermguicolors
 set background=dark
@@ -15,7 +15,7 @@ let g:colors_name = 'mdsanima'
 
 " Basic color scheme definitions
 hi Boolean        cterm=none  ctermfg=202  ctermbg=none
-hi ColorColumn    cterm=none  ctermfg=0    ctermbg=39
+hi ColorColumn    cterm=none  ctermfg=0    ctermbg=8
 hi Comment        cterm=none  ctermfg=8    ctermbg=none
 hi Constant       cterm=none  ctermfg=222  ctermbg=none
 hi Directory      cterm=none  ctermfg=2    ctermbg=none

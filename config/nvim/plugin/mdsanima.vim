@@ -25,7 +25,7 @@ set listchars+=trail:·,     " Show trailing spaces
 set mouse=a                 " Mouse support
 set number                  " Show line numbering
 set relativenumber          " Relative number of lines
-set scrolloff=14            " Lines after before cursor
+set scrolloff=8             " Lines after before cursor
 set shiftwidth=4            " Offset spaces
 set showbreak=↪\            " Show break character
 set smartcase               " Smart case search
