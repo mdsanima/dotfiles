@@ -18,5 +18,4 @@ alias macb="ssh mdsanima@192.168.1.44"
 alias k="kubectl"
 
 # Editor
-alias vi="nvim"
 alias vim="nvim"

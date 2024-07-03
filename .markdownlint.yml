@@ -18,7 +18,8 @@ MD026:
 MD027: true
 
 # Inline HTML
-MD033: false
+MD033:
+  allowed_elements: [center, details, div, h1, h2, strong, sub, summary]
 
 # Emphasis heading
 MD036:
