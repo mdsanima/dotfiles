@@ -1,0 +1,18 @@
+# Maintain a consistent coding style across the entire project by maintaining a consistent style.
+
+# Linter configuration for YAML files.  This tool uses a set of rules to check source files for
+# problems such as lines length, trailing spaces, indentation and more.  The tool is available as
+# command line tool and is written in Python.  See docs: https://github.com/adrienverge/yamllint
+
+# The rules are still a work in progress and subject to change.  I still need to think about this.
+
+---
+extends: default
+
+rules:
+
+  line-length:
+    max: 100
+    level: warning
+
+  indentation: enable
