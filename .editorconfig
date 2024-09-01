@@ -1,8 +1,10 @@
-# Maintain consistent coding style across the entire project.
+# Maintain a consistent coding style across the entire project by maintaining a consistent style.
 
 # This is a configuration file for EditorConfig.  The settings for JavaScript, Python and C/C++
 # files are mirrored by languages in .prettierrc, .eslintrc, .flake8, .pylintrc, pyproject.toml and
 # .clang-format files that is shared accros all my codebase projects.  Keep them in sync.
+
+# The rules are still a work in progress and subject to change.  I still need to think about this.
 
 root = true
 
