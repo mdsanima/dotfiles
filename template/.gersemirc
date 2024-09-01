@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/BlankSpruce/gersemi/master/gersemi/configuration.schema.json
+
+# Maintain a consistent coding style across the entire project by maintaining a consistent style.
+
+# This file is for formatting code in CMakeLists.txt files.  A formatter to make your CMake code the
+# real treasure.  See docs: https://github.com//BlankSpruce/gersemi
+
+# The rules are still a work in progress and subject to change.  I still need to think about this.
+
+cache: true
+color: false
+definitions: []
+indent: 4
+line_length: 100
+list_expansion: favour-inlining
+quiet: false
+unsafe: false
+warn_about_unknown_commands: true
+workers: 8
