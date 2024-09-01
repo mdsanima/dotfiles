@@ -106,18 +106,18 @@
 
   # ====================================================================>> CONTEXT USERNAME <<======
   typeset -g POWERLEVEL9K_CONTEXT_ROOT_FOREGROUND=1
-  typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_FOREGROUND=45
-  typeset -g POWERLEVEL9K_CONTEXT_FOREGROUND=45
+  typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_FOREGROUND=27
+  typeset -g POWERLEVEL9K_CONTEXT_FOREGROUND=27
   typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE='%n'
   typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_TEMPLATE='%n'
   typeset -g POWERLEVEL9K_CONTEXT_TEMPLATE='%n'
 
   # ===================================================================>> CURRENT DIRECTORY <<======
-  typeset -g POWERLEVEL9K_DIR_FOREGROUND=27
-  typeset -g POWERLEVEL9K_SHORTEN_STRATEGY=truncate_to_unique
+  typeset -g POWERLEVEL9K_DIR_FOREGROUND=196
+  typeset -g POWERLEVEL9K_SHORTEN_STRATEGY=truncate_to_unique  # truncate_to_last
   typeset -g POWERLEVEL9K_SHORTEN_DELIMITER=
-  typeset -g POWERLEVEL9K_DIR_SHORTENED_FOREGROUND=25
-  typeset -g POWERLEVEL9K_DIR_ANCHOR_FOREGROUND=37
+  typeset -g POWERLEVEL9K_DIR_SHORTENED_FOREGROUND=202
+  typeset -g POWERLEVEL9K_DIR_ANCHOR_FOREGROUND=24
   typeset -g POWERLEVEL9K_DIR_ANCHOR_BOLD=true
 
   # Don't shorten directories that contain any of these files. They are anchors.
@@ -156,7 +156,7 @@
   typeset -g POWERLEVEL9K_DIR_HYPERLINK=false
   typeset -g POWERLEVEL9K_DIR_SHOW_WRITABLE=v3
   typeset -g POWERLEVEL9K_LOCK_ICON='🔒'
-  typeset -g POWERLEVEL9K_DIR_PREFIX='%fin '
+  typeset -g POWERLEVEL9K_DIR_PREFIX=''
 
   # Custom icons and colors for different directories.
   typeset -g POWERLEVEL9K_DIR_CLASSES=(
@@ -167,15 +167,15 @@
 
   # Styling for custom WORKSPACE directory.
   typeset -g POWERLEVEL9K_DIR_WORKSPACE_VISUAL_IDENTIFIER_EXPANSION='💼'
-  typeset -g POWERLEVEL9K_DIR_WORKSPACE_FOREGROUND=50
-  typeset -g POWERLEVEL9K_DIR_WORKSPACE_SHORTENED_FOREGROUND=44
-  typeset -g POWERLEVEL9K_DIR_WORKSPACE_ANCHOR_FOREGROUND=39
+  # typeset -g POWERLEVEL9K_DIR_WORKSPACE_FOREGROUND=50
+  # typeset -g POWERLEVEL9K_DIR_WORKSPACE_SHORTENED_FOREGROUND=44
+  # typeset -g POWERLEVEL9K_DIR_WORKSPACE_ANCHOR_FOREGROUND=39
 
   # Styling for custom WORKSPACE_NOT_WRITABLE directory.
   typeset -g POWERLEVEL9K_DIR_WORKSPACE_NOT_WRITABLE_VISUAL_IDENTIFIER_EXPANSION='🧰'
-  typeset -g POWERLEVEL9K_DIR_WORKSPACE_NOT_WRITABLE_FOREGROUND=202
-  typeset -g POWERLEVEL9K_DIR_WORKSPACE_NOT_WRITABLE_SHORTENED_FOREGROUND=214
-  typeset -g POWERLEVEL9K_DIR_WORKSPACE_NOT_WRITABLE_ANCHOR_FOREGROUND=208
+  # typeset -g POWERLEVEL9K_DIR_WORKSPACE_NOT_WRITABLE_FOREGROUND=202
+  # typeset -g POWERLEVEL9K_DIR_WORKSPACE_NOT_WRITABLE_SHORTENED_FOREGROUND=214
+  # typeset -g POWERLEVEL9K_DIR_WORKSPACE_NOT_WRITABLE_ANCHOR_FOREGROUND=208
 
   # Styling for custom WORKSPACE_NON_EXISTENT directory.
   typeset -g POWERLEVEL9K_DIR_WORKSPACE_NON_EXISTENT_VISUAL_IDENTIFIER_EXPANSION='🚧'
@@ -185,12 +185,12 @@
 
   # Styling for custom HOME directory.
   typeset -g POWERLEVEL9K_DIR_HOME_VISUAL_IDENTIFIER_EXPANSION='🤿'
-  typeset -g POWERLEVEL9K_DIR_HOME_FOREGROUND=42
-  typeset -g POWERLEVEL9K_DIR_HOME_SHORTENED_FOREGROUND=36
-  typeset -g POWERLEVEL9K_DIR_HOME_ANCHOR_FOREGROUND=31
+  # typeset -g POWERLEVEL9K_DIR_HOME_FOREGROUND=42
+  # typeset -g POWERLEVEL9K_DIR_HOME_SHORTENED_FOREGROUND=36
+  # typeset -g POWERLEVEL9K_DIR_HOME_ANCHOR_FOREGROUND=31
 
   # ==========================================================================>> GIT STATUS <<======
-  typeset -g POWERLEVEL9K_VCS_BRANCH_ICON='\uF126 '
+  typeset -g POWERLEVEL9K_VCS_BRANCH_ICON=' \uF126 '
   typeset -g POWERLEVEL9K_VCS_UNTRACKED_ICON='?'
 
   # Formatter for Git status.
@@ -205,10 +205,10 @@
     if (( $1 )); then
       # Styling for up-to-date Git status.
       local       meta='%f'     # default foreground
-      local      clean='%30F'   # green foreground
-      local     staged='%202F'  # orange foreground
-      local   modified='%220F'  # yellow foreground
-      local  untracked='%39F'   # blue foreground
+      local      clean='%28F'   # green foreground
+      local     staged='%166F'  # orange foreground
+      local   modified='%216F'  # yellow foreground
+      local  untracked='%27F'   # blue foreground
       local conflicted='%196F'  # red foreground
     else
       # Styling for incomplete and stale Git status.
@@ -315,11 +315,11 @@
   typeset -g POWERLEVEL9K_VCS_{STAGED,UNSTAGED,UNTRACKED,CONFLICTED,COMMITS_AHEAD,COMMITS_BEHIND}_MAX_NUM=-1
 
   # Icon color.
-  typeset -g POWERLEVEL9K_VCS_VISUAL_IDENTIFIER_COLOR=8
-  typeset -g POWERLEVEL9K_VCS_LOADING_VISUAL_IDENTIFIER_COLOR=208
+  typeset -g POWERLEVEL9K_VCS_VISUAL_IDENTIFIER_COLOR=240
+  typeset -g POWERLEVEL9K_VCS_LOADING_VISUAL_IDENTIFIER_COLOR=202
 
   # Custom prefix.
-  typeset -g POWERLEVEL9K_VCS_PREFIX='%fon '
+  typeset -g POWERLEVEL9K_VCS_PREFIX=''
 
   # Show status of repositories of these types.
   typeset -g POWERLEVEL9K_VCS_BACKENDS=(git)
@@ -332,7 +332,7 @@
   # =======================================================================>> PROMPT SYMBOL <<======
   typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND=7
   typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND=196
-  typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VIINS_CONTENT_EXPANSION='❯'
+  typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VIINS_CONTENT_EXPANSION='$'
   typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VICMD_CONTENT_EXPANSION='❮'
   typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VIVIS_CONTENT_EXPANSION='V'
   typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VIOWR_CONTENT_EXPANSION='▶'
@@ -362,13 +362,13 @@
   # ==================================================================>> CMD EXECUTION TIME <<======
   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=1
   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_PRECISION=3
-  typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND=220
+  typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND=202
   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FORMAT='d h m s'
+  typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_VISUAL_IDENTIFIER_EXPANSION=
 
   # =====================================================================>> BACKGROUND JOBS <<======
   typeset -g POWERLEVEL9K_BACKGROUND_JOBS_VERBOSE=false
   typeset -g POWERLEVEL9K_BACKGROUND_JOBS_FOREGROUND=243
-  typeset -g POWERLEVEL9K_BACKGROUND_JOBS_VISUAL_IDENTIFIER_EXPANSION='🔧'
 
   # =============================================================>> VEVN PYTHON ENVIRONMENT <<======
   typeset -g POWERLEVEL9K_VIRTUALENV_FOREGROUND=35
@@ -385,11 +385,7 @@
 
   # ==================================================================>> KUBERNETES CONTEXT <<======
   typeset -g POWERLEVEL9K_KUBECONTEXT_SHOW_ON_COMMAND='kubectl|helm|kubens|kubectx|oc|istioctl|kogito|k9s|helmfile|flux|fluxctl|stern|kubeseal|skaffold|kubent|kubecolor|cmctl|sparkctl'
-  typeset -g POWERLEVEL9K_KUBECONTEXT_CLASSES=(
-    # '*prod*'  PROD    # These values are examples that are unlikely
-    # '*test*'  TEST    # to match your needs. Customize them as needed.
-    '*'       DEFAULT
-  )
+  typeset -g POWERLEVEL9K_KUBECONTEXT_CLASSES=('*'DEFAULT)
   typeset -g POWERLEVEL9K_KUBECONTEXT_DEFAULT_FOREGROUND=26
   typeset -g POWERLEVEL9K_KUBECONTEXT_DEFAULT_CONTENT_EXPANSION=
   POWERLEVEL9K_KUBECONTEXT_DEFAULT_CONTENT_EXPANSION+='${P9K_KUBECONTEXT_CLOUD_CLUSTER:-${P9K_KUBECONTEXT_NAME}}'
@@ -403,9 +399,10 @@
   typeset -g POWERLEVEL9K_GCLOUD_REFRESH_PROJECT_NAME_SECONDS=60
 
   # ========================================================================>> CURRENT TIME <<======
-  typeset -g POWERLEVEL9K_TIME_FOREGROUND=244
+  typeset -g POWERLEVEL9K_TIME_FOREGROUND=24
   typeset -g POWERLEVEL9K_TIME_FORMAT='%D{%H:%M:%S}'
   typeset -g POWERLEVEL9K_TIME_UPDATE_ON_COMMAND=false
+  typeset -g POWERLEVEL9K_TIME_VISUAL_IDENTIFIER_EXPANSION=
 
   # ========================================================================>> USER DEFINED <<======
   typeset -g POWERLEVEL9K_TRANSIENT_PROMPT=off
