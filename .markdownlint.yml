@@ -1,10 +1,12 @@
-# Maintain consistent coding style across the entire project.
+# Maintain a consistent coding style across the entire project by maintaining a consistent style.
 
 # Linter configuration file for Markdown and CommonMark files.  This tool is a style checker and
-# formatting tool for the files based on the CommonMark specification.  The tool is available as a
-# command line tool and works with Prettier.  See doc: https://github.com/DavidAnson/markdownlint
+# formatting tool for the files based on the CommonMark specification.  The tool is available as
+# command line tool and works with Prettier.  See docs: https://github.com/DavidAnson/markdownlint
 
-# Default state for all rules
+# The rules are still a work in progress and subject to change.  I still need to think about this.
+
+---
 default: true
 
 # Line length
@@ -19,7 +21,7 @@ MD027: true
 
 # Inline HTML
 MD033:
-  allowed_elements: [center, details, div, h1, h2, strong, sub, summary]
+  allowed_elements: [center, details, div, h1, h2, strong, sub, sup, summary]
 
 # Emphasis heading
 MD036:
