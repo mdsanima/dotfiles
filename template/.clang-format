@@ -1,48 +1,40 @@
-# Maintain consistent coding style across the entire project.
+# Maintain a consistent coding style across the entire project by maintaining a consistent style.
 
-# This is a configuration file for clang-format.  The rules here are applied to all code in the
-# entire project, including all the C++ example demo programs, and the main C demo project and
-# library.  The rules are still work in progress and subject to change.  I still need to think
-# about this.
+# This configuration is for the .clang-format file, which is a YAML file defining formatting styles
+# used by clang-format.  The rules are applied to all code in the entire project, including all CPP
+# example demo programs, the main C demo project, and the library that is developed on this
+# repository.  This configuration is based on Google CPP style guide, and customized for my own
+# preferences.  These settings are mirrored in .editorconfig file.  Keep them in sync.
 
-# C Language specifics
+# The rules are still a work in progress and subject to change.  I still need to think about this.
+
+---
 Language: Cpp
-
-# Based on Google's C++ style guide.  Customized for my own preferences
 BasedOnStyle: Google
 
-# These settings are mirrored in .editorconfig.  Keep them in sync
+# Custom preferences
 ColumnLimit: 100
 IndentWidth: 4
 UseTab: Never
 
-# Align consecutive assignments
-#   const char *foo  = "bar";
-#   const int bar    = 1;
-#   const double baz = 2.0;
-AlignConsecutiveAssignments: true
-
-# Align consecutive declarations
-#   const char  *foo = "bar";
-#   const int    bar = 1;
-#   const double baz = 2.0;
-AlignConsecutiveDeclarations: false
+# Align consecutives
+AlignConsecutiveAssignments: Consecutive
+AlignConsecutiveDeclarations: Consecutive
+AlignConsecutiveMacros: Consecutive
 
 # Align escaped newlines for the left
 AlignEscapedNewlinesLeft: true
 
 # Align trailing comments
-#   const int foo;      // Comment foo
-#   const int bar = 2;  // Comment bar
 AlignTrailingComments: true
 
-# Don't allow this rule
-AllowShortFunctionsOnASingleLine: false
+# Short function style
+AllowShortFunctionsOnASingleLine: None
 
 # Braces to surrounding context
 BraceWrapping:
   AfterClass: true
-  AfterControlStatement: true
+  AfterControlStatement: Always
   AfterFunction: true
   AfterNamespace: false
   BeforeCatch: true
@@ -55,8 +47,8 @@ FixNamespaceComments: true
 # Align pointer to the right
 PointerAlignment: Right
 
-# Same as Black for Python
+# Same as Black in Python
 SpacesBeforeTrailingComments: 2
 
-# Allow this rule
-SortIncludes: true
+# Sorting includes
+SortIncludes: CaseSensitive
