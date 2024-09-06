@@ -13,4 +13,16 @@ M.base46 = {
     },
 }
 
+M.mason = {
+    pkgs = {
+        "clang-format",
+        "clangd",
+        "cmake-language-server",
+        "commitlint",
+        "editorconfig-checker",
+        "gersemi",
+        "lua-language-server",
+    },
+}
+
 return M

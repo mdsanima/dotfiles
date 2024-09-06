@@ -6,5 +6,6 @@ return {
             command = "commitlint",
             extra_args = { "--config", ".commitlintrc.mjs" },
         },
+        require("null-ls").builtins.diagnostics.editorconfig_checker,
     },
 }
