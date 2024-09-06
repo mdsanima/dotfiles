@@ -56,3 +56,4 @@ local null_conf = require "base.null"
 -- Custom options
 require("nvim-tree").setup(tree_conf)
 require("null-ls").setup(null_conf)
+require("highlight-undo").setup()
