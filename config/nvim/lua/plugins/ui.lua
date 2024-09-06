@@ -22,4 +22,14 @@ return {
             })
         end,
     },
+
+    -- Neovim tree file managing
+    -- URL: https://github.com/nvim-tree/nvim-tree.lua
+    {
+        "nvim-tree/nvim-tree.lua",
+        opts = require "base.tree",
+        config = function(_, opts)
+            require("nvim-tree").setup(opts)
+        end,
+    },
 }

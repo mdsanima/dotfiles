@@ -4,12 +4,10 @@ return {
     git = {
         ignore = false,
     },
-
     filters = {
         custom = { "^\\.git$" },
         dotfiles = false,
     },
-
     renderer = {
         icons = {
             glyphs = {
@@ -22,6 +20,7 @@ return {
                     deleted = "",
                     ignored = "",
                 },
+                default = "󰈚",
                 folder = {
                     arrow_closed = "",
                     arrow_open = "",
