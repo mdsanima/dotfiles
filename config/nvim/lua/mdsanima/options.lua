@@ -12,6 +12,7 @@ o.clipboard = "unnamedplus"
 o.colorcolumn = "100"
 o.encoding = "utf-8"
 o.expandtab = true
+o.guicursor = "n:blinkon200,i-ci-ve:ver25"
 o.history = 1000
 o.ignorecase = true
 o.incsearch = true
