@@ -7,5 +7,6 @@ return {
             extra_args = { "--config", ".commitlintrc.mjs" },
         },
         require("null-ls").builtins.diagnostics.editorconfig_checker,
+        require("null-ls").builtins.diagnostics.markdownlint,
     },
 }

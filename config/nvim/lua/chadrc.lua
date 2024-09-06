@@ -22,6 +22,7 @@ M.mason = {
         "editorconfig-checker",
         "gersemi",
         "lua-language-server",
+        "markdownlint",
     },
 }
 
