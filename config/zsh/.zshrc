@@ -40,8 +40,8 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 CASE_SENSITIVE="true"
 
 # Remind me to update when it's time and how often in days
-zstyle ':omz:update' mode reminder
-zstyle ':omz:update' frequency 7
+zstyle ":omz:update" mode reminder
+zstyle ":omz:update" frequency 7
 
 # Enable command auto-correction
 ENABLE_CORRECTION="true"
@@ -51,6 +51,11 @@ COMPLETION_WAITING_DOTS="true"
 
 # Adjustment to the right side
 ZLE_RPROMPT_INDENT=0
+
+# When Neovim is opened, customize the right prompt
+if [[ -n $MYVIMRC ]]; then
+  ZLE_RPROMPT_INDENT=2
+fi
 
 # Execution time stamp shown in the history command output
 HIST_STAMPS="yyyy-mm-dd"
