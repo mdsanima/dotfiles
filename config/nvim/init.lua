@@ -40,9 +40,6 @@ require("lazy").setup({
 dofile(vim.g.base46_cache .. "defaults")
 dofile(vim.g.base46_cache .. "statusline")
 
--- Load commands
-require "nvchad.autocmds"
-
 -- Custom modules
 require "mdsanima.autocmds"
 require "mdsanima.commands"

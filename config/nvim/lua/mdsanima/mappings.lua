@@ -10,28 +10,33 @@ require "nvchad.mappings"
 
 local map = vim.keymap.set
 
+-- General
 map("n", ";", ":", { desc = "CMD Enter command mode" })
 map("i", "jk", "<ESC>")
 
--- TODO:  Get folding working with Visual Studio Code and Neovim extension
--- NOTE:  Bellow is old Vim code
--- if(exists('g:vscode'))
---   nnoremap zM :call VSCodeNotify('editor.foldAll')<CR>
---   nnoremap zR :call VSCodeNotify('editor.unfoldAll')<CR>
---   nnoremap zc :call VSCodeNotify('editor.fold')<CR>
---   nnoremap zC :call VSCodeNotify('editor.foldRecursively')<CR>
---   nnoremap zo :call VSCodeNotify('editor.unfold')<CR>
---   nnoremap zO :call VSCodeNotify('editor.unfoldRecursively')<CR>
---   nnoremap za :call VSCodeNotify('editor.toggleFold')<CR>
---
---   function! MoveCursor(direction) abort
---     if(reg_recording() == '' && reg_executing() == '')
---       return 'g'.a:direction
---     else
---       return a:direction
---     endif
---   endfunction
---
---   nmap <expr> j MoveCursor('j')
---   nmap <expr> k MoveCursor('k')
--- endif
+-- Get folding working with Visual Studio Code and Neovim extension
+if vim.g.vscode then
+    local vsmap = vim.api.nvim_set_keymap
+
+    -- Mappings for folding and unfolding
+    vsmap("n", "zM", ":call VSCodeNotify('editor.foldAll')<CR>", { noremap = true })
+    vsmap("n", "zR", ":call VSCodeNotify('editor.unfoldAll')<CR>", { noremap = true })
+    vsmap("n", "zc", ":call VSCodeNotify('editor.fold')<CR>", { noremap = true })
+    vsmap("n", "zC", ":call VSCodeNotify('editor.foldRecursively')<CR>", { noremap = true })
+    vsmap("n", "zo", ":call VSCodeNotify('editor.unfold')<CR>", { noremap = true })
+    vsmap("n", "zO", ":call VSCodeNotify('editor.unfoldRecursively')<CR>", { noremap = true })
+    vsmap("n", "za", ":call VSCodeNotify('editor.toggleFold')<CR>", { noremap = true })
+
+    -- Function for move cursor with macro recording
+    function MoveCursor(directrion)
+        if vim.fn.reg_recording() == "" and vim.fn.reg_executing() == "" then
+            return "g" .. directrion
+        else
+            return directrion
+        end
+    end
+
+    -- Mappings for moving with recording
+    vsmap("n", "j", "v:lua.MoveCursor('j')", { expr = true })
+    vsmap("n", "k", "v:lua.MoveCursor('k')", { expr = true })
+end
