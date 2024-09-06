@@ -62,15 +62,5 @@ return {
     -- URL: https://github.com/williamboman/mason.nvim
     {
         "williamboman/mason.nvim",
-        opts = {
-            ensure_installed = {
-                "clangd",
-                "clang-format",
-                "commitlint",
-                "gersemi",
-                "cmake-language-server",
-                "lua-language-server",
-            },
-        },
     },
 }
