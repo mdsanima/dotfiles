@@ -23,6 +23,8 @@ M.mason = {
         "gersemi",
         "lua-language-server",
         "markdownlint",
+        "yaml-language-server",
+        "yamllint",
     },
 }
 

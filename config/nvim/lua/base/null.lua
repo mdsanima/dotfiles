@@ -10,5 +10,6 @@ return {
             disabled_filetypes = { "gitcommit" },
         },
         require("null-ls").builtins.diagnostics.markdownlint,
+        require("null-ls").builtins.diagnostics.yamllint,
     },
 }
