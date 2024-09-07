@@ -15,15 +15,22 @@ M.base46 = {
 
 M.mason = {
     pkgs = {
+        "bash-language-server",
+        "black",
         "clang-format",
         "clangd",
         "cmake-language-server",
         "commitlint",
         "editorconfig-checker",
         "gersemi",
+        "isort",
         "lua-language-server",
         "markdownlint",
+        "prettierd",
+        "shellcheck",
+        "shfmt",
         "yaml-language-server",
+        "yamlfmt",
         "yamllint",
     },
 }
