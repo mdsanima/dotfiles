@@ -1,6 +1,7 @@
-# Defined labels for pull requests and issues.
+# The repository default labels for pull requests and issues.
 
 # General labels
+---
 - name: bug
   color: B60205
   description: Something isn't working

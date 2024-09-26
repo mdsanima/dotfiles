@@ -1,3 +1,7 @@
+# Dependabot that automatically updates the packages to the latest version.
+
+# Default config
+---
 version: 2
 
 updates:

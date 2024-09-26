@@ -1,4 +1,8 @@
-name: Linting Commit Messages
+# Linting commit messages on pull requests that follow the configuration.
+
+# Default config
+---
+name: Linting commit messages
 
 on: [pull_request]
 
@@ -9,7 +13,7 @@ permissions:
 jobs:
   commitlint:
     name: Commitlint
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Checkout
