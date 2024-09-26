@@ -1,10 +1,13 @@
-# Maintain a consistent coding style across the entire project by maintaining a consistent style.
+# Maintain a consistent coding style throughout the entire project codebase to
+# ensure readability and maintainability.  Consistent style not only improves
+# collaboration but also makes the code easier to review and debug.
 
-# This file is a configuration for clang-tidy check options that allow to write height quality code,
-# and better readability naming for better understanding the codebase, and the problem that you are
-# going to solve.
+# This file is a configuration for clang-tidy check options that allow to write
+# height quality C/C++ code, and better readability naming for better
+# understanding the codebase, and the problem that you are going to solve.
 
-# The rules are still a work in progress and subject to change.  I still need to think about this.
+# The rules are still a work in progress and subject to change.  I still need
+# to think about this configuration, and for now this is a base template.
 
 ---
 Checks: "-*,
@@ -15,6 +18,7 @@ Checks: "-*,
   "
 
 CheckOptions:
+  # Naming checking options
   - key: readability-identifier-naming.ClassCase
     value: CamelCase
   - key: readability-identifier-naming.EnumCase
@@ -27,6 +31,8 @@ CheckOptions:
     value: UPPER_CASE
   - key: readability-identifier-naming.MemberCase
     value: camelBack
+  - key: readability-identifier-naming.ParameterCase
+    value: camelBack
   - key: readability-identifier-naming.StructCase
     value: camelBack
   - key: readability-identifier-naming.UnionCase
@@ -34,4 +40,8 @@ CheckOptions:
   - key: readability-identifier-naming.VariableCase
     value: camelBack
 
-WarningsAsErrors: "*"
+  # Length checking options
+  - key: readability-identifier-length.MinimumParameterNameLength
+    value: 3
+  - key: readability-identifier-length.IgnoredParameterNames
+    value: ^(x|y|z)$

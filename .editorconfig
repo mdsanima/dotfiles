@@ -1,10 +1,15 @@
-# Maintain a consistent coding style across the entire project by maintaining a consistent style.
+# Maintain a consistent coding style throughout the entire project codebase to
+# ensure readability and maintainability.  Consistent style not only improves
+# collaboration but also makes the code easier to review and debug.
 
-# This is a configuration file for EditorConfig.  The settings for JavaScript, Python and C/C++
-# files are mirrored by languages in .prettierrc, .eslintrc, .flake8, .pylintrc, pyproject.toml and
-# .clang-format files that is shared accros all my codebase projects.  Keep them in sync.
+# Configuration file for EditorConfig format.  The settings for JavaScript,
+# Python and C/C++ files are mirrored by languages in .prettierrc, .eslintrc,
+# .flake8, .pylintrc, pyproject.toml and .clang-format files that is shared
+# accros all my codebase projects.  Keep them in sync.  For more information
+# about, refer to the documentation, see here: https://editorconfig.org
 
-# The rules are still a work in progress and subject to change.  I still need to think about this.
+# The rules are still a work in progress and subject to change.  I still need
+# to think about this configuration, and for now this is a base template.
 
 root = true
 
@@ -17,30 +22,31 @@ insert_final_newline = true
 trim_trailing_whitespace = true
 quote_type = double
 
-[*.{bash,eslint*,json*,md*,prettier*,sh,svg,todo,version*,vim,xml,yaml,yml,zsh*}]
+[*.{eslint*,json*,md*,prettier*,svg,todo,version*,vim,xml,yaml,yml}]
 indent_size = 2
-max_line_length = 100
+max_line_length = 80
 
-[*.{css,html,js,jsx,mjs,ps1,psd1,psm1,scss,ts,tsx}]
+[*.{bash,css,html,js,jsx,mjs,ps1,psd1,psm1,scss,sh,ts,tsx,zsh*}]
 indent_size = 4
-max_line_length = 100
+max_line_length = 80
 
 [*.py]
 profile = black
 indent_size = 4
-max_line_length = 100
+max_line_length = 80
 
 [{.clang-format,.clang-tidy}]
 indent_size = 2
-max_line_length = 100
+max_line_length = 80
 
 [{CMakeLists.txt,*.{cmake,c,h,cc,hh,cpp,hpp,cxx,hxx}}]
 indent_size = 4
-max_line_length = 100
+max_line_length = 80
 
 [{Makefile,.gitattributes,.gitconfig,.gitcredentials,.gitmessage,.gitmodules}]
 indent_size = 8
 indent_style = tab
 
 [COMMIT_EDITMSG]
+indent_size = unset
 max_line_length = 72

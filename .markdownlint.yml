@@ -1,10 +1,19 @@
-# Maintain a consistent coding style across the entire project by maintaining a consistent style.
+# Maintain a consistent coding style throughout the entire project codebase to
+# ensure readability and maintainability.  Consistent style not only improves
+# collaboration but also makes the code easier to review and debug.
 
-# Linter configuration file for Markdown and CommonMark files.  This tool is a style checker and
-# formatting tool for the files based on the CommonMark specification.  The tool is available as
-# command line tool and works with Prettier.  See docs: https://github.com/DavidAnson/markdownlint
+# Linter configuration for Markdown and CommonMark files.  This tool is a style
+# checker that uses a predefined set of rules to check source files for issues
+# such as line length, trailing spaces, indention and more to check and format
+# files based on the CommonMark specification.  It is available as command line
+# tool and work with Prettier for formatting. It can also integrate with your
+# editor to display diagnostics like warnings or errors from the Markdown
+# language server.  These diagnostics are based on the rules defined in this
+# configuration file.  For more information about, refer to the docs and source
+# code, see here: https://github.com/DavidAnson/markdownlint
 
-# The rules are still a work in progress and subject to change.  I still need to think about this.
+# The rules are still a work in progress and subject to change.  I still need
+# to think about this configuration, and for now this is a base template.
 
 ---
 default: true
@@ -30,11 +39,11 @@ MD036:
 # Link fragments
 MD051: true
 
-# Max line length
+# Maximum line length
 line-length:
-  line_length: 100
-  heading_line_length: 60
-  code_block_line_length: 100
+  line_length: 80
+  heading_line_length: 64
+  code_block_line_length: 80
   code_blocks: false
   tables: false
   headings: true

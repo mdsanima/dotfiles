@@ -1,6 +1,6 @@
 {
   "endOfLine": "lf",
-  "printWidth": 100,
+  "printWidth": 80,
   "semi": true,
   "singleQuote": false,
   "tabWidth": 4,
@@ -14,7 +14,7 @@
         "arrowParens": "always",
         "bracketSpacing": true,
         "endOfLine": "lf",
-        "printWidth": 100,
+        "printWidth": 80,
         "proseWrap": "always",
         "semi": false,
         "singleQuote": false,
@@ -24,7 +24,15 @@
       }
     },
     {
-      "files": [".clang*", ".eslint*", ".prettierrc", "*.json", "*.yaml", "*.yml"],
+      "files": [
+        ".clang*",
+        ".eslint*",
+        ".prettier*",
+        "*.json",
+        "*.yaml",
+        "*.yml",
+        "CHANGELOG.md"
+      ],
       "options": {
         "tabWidth": 2
       }

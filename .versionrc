@@ -1,6 +1,6 @@
 {
   "infile": "CHANGELOG.md",
-  "header": "# Changelog\n\n<!-- markdownlint-disable -->\n\nAll notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org/) for commit guidelines.\n",
+  "header": "# Changelog\n\n<!-- markdownlint-disable -->\n\n<!-- editorconfig-checker-disable-file -->\n\nAll notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org/) site for the commit guidelines.\n",
   "skip": { "bump": false, "changelog": false, "commit": true, "tag": true },
   "bumpFiles": [
     { "type": "json",      "filename": "manifest.json"                     }
