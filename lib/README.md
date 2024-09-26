@@ -1,7 +1,7 @@
 # Libraries
 
-Below is documentation for the libraries included in this project, which you can utilize in your own
-projects. The installation script is still work in progress.
+Below is documentation for the libraries included in this project, which you can
+utilize in your own projects. The installation script is still work in progress.
 
 <details>
 <summary><strong>Table of Contents</strong> (click to expand)</summary>
@@ -16,14 +16,14 @@ projects. The installation script is still work in progress.
 
 ## mdsanima-shell
 
-This package contains libraries for functions that help execute _Shell Scripts_ on **GNU/Linux**
-systems like _Debian_ or _Ubuntu_.
+This package contains libraries for functions that help execute _Shell Scripts_
+on **GNU/Linux** systems like _Debian_ or _Ubuntu_.
 
 > [!NOTE]
 >
-> Currently, the libraries are only available within this project and cannot be installed as a
-> package using `apt install` command. However, there are plans to make it available as a standalone
-> package in the future.
+> Currently, the libraries are only available within this project and cannot be
+> installed as a package using `apt install` command. However, there are plans
+> to make it available as a standalone package in the future.
 
 The package might be deleted in the future.
 
@@ -31,18 +31,19 @@ The package might be deleted in the future.
 
 This package contains the following libraries:
 
-- [`libcolor.sh`](./mdsanima-shell/libcolor.sh): Color palette definition that will be used
-  throughout a project for consistent styling.
-- [`libconvert.sh`](./mdsanima-shell/libconvert.sh): Converting data or values from one format or
-  type to another.
-- [`libevent.sh`](./mdsanima-shell/libevent.sh): Logging events or actions within a program for
-  debugging or monitoring purposes.
-- [`libprint.sh`](./mdsanima-shell/libprint.sh): Printing formatted text or data to the shell
-  console or another output stream.
-- [`libutil.sh`](./mdsanima-shell/libutil.sh): Utility that perform common tasks or operations
-  needed across different parts of a project.
+- [`libcolor.sh`](./mdsanima-shell/libcolor.sh): Color palette definition that
+  will be used throughout a project for consistent styling.
+- [`libconvert.sh`](./mdsanima-shell/libconvert.sh): Converting data or values
+  from one format or type to another.
+- [`libevent.sh`](./mdsanima-shell/libevent.sh): Logging events or actions
+  within a program for debugging or monitoring purposes.
+- [`libprint.sh`](./mdsanima-shell/libprint.sh): Printing formatted text or data
+  to the shell console or another output stream.
+- [`libutil.sh`](./mdsanima-shell/libutil.sh): Utility that perform common tasks
+  or operations needed across different parts of a project.
 
-Each file above contains appropriate documentation for each available function and how to use it.
+Each file above contains appropriate documentation for each available function
+and how to use it.
 
 ### Available functions
 
@@ -70,17 +71,18 @@ Here is a list of available functions:
 
 ### Example usages
 
-If you want to use this library files you can simple sourced this file on your bash script like this
-example:
+If you want to use this library files you can simple sourced this file on your
+bash script like this example:
 
 ```shell
 source "$PWD/lib/mdsanima-shell/libcolor.sh"
 ```
 
-In the above example, I used `$PWD` to get the path to the file directory. This example is executed
-in the directory where our libraries must be located, for example `$HOME/workspace/dotfiles/` the
-current repository and the script file in which we want to use our libraries is in the root of this
-directory like `install.sh` script.
+In the above example, I used `$PWD` to get the path to the file directory. This
+example is executed in the directory where our libraries must be located, for
+example `$HOME/workspace/dotfiles/` the current repository and the script file
+in which we want to use our libraries is in the root of this directory like
+`install.sh` script.
 
 Example script file `test.sh` must be located on the root of this repository:
 
@@ -117,10 +119,11 @@ print::color -fg 27 " Blue text next to other"
 # Test util library
 util::one_line_progress sudo apt update
 if util::is_installed git; then
-  echo "Package git is installed!"
+    echo "Package git is installed!"
 else
-  echo "Package git is not installed!"
+    echo "Package git is not installed!"
 fi
 ```
 
-If you want to use this on other directory you must give the correct path to the libraries.
+If you want to use this on other directory you must give the correct path to the
+libraries.
