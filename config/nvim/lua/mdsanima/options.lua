@@ -1,6 +1,6 @@
 -- Custom configuration setting options.
 
-require "nvchad.options"
+require("nvchad.options")
 
 local o = vim.o
 
@@ -9,14 +9,14 @@ o.autoindent = true
 o.autoread = true
 o.backup = true
 o.clipboard = "unnamedplus"
-o.colorcolumn = "100"
+o.colorcolumn = "80"
 o.encoding = "utf-8"
 o.expandtab = true
 o.guicursor = "n:blinkon200,i-ci-ve:ver25"
 o.history = 1000
 o.ignorecase = true
 o.incsearch = true
-o.linespace = 100
+o.linespace = 80
 o.linebreak = true
 o.list = true
 o.listchars = "extends:→,precedes:←,nbsp:·,trail:·,tab:» ,"
@@ -34,7 +34,7 @@ o.undofile = true
 o.writebackup = true
 
 -- Base dirs
-o.backupdir = vim.fn.stdpath "cache" .. "/backup/"
-o.directory = vim.fn.stdpath "cache" .. "/swap/"
-o.undodir = vim.fn.stdpath "cache" .. "/undo/"
-o.viewdir = vim.fn.stdpath "cache" .. "/view/"
+o.backupdir = vim.fn.stdpath("cache") .. "/backup/"
+o.directory = vim.fn.stdpath("cache") .. "/swap/"
+o.undodir = vim.fn.stdpath("cache") .. "/undo/"
+o.viewdir = vim.fn.stdpath("cache") .. "/view/"
