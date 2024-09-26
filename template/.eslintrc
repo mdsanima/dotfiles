@@ -7,7 +7,7 @@
     "quotes": ["error", "double"],
     "semi": ["error", "always"],
     "header/header": ["error", "line", [
-      " Copyright (c) 2024 MDSANIMA DEV. All rights reserved.",
+      " Copyright (c) 2024 MDSANIMA LAB. All rights reserved.",
       " Licensed under the MIT license."
     ], 2]
   },
