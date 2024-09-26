@@ -1,4 +1,6 @@
-# Maintain a consistent coding style across the entire project by maintaining a consistent style.
+# Maintain a consistent coding style throughout the entire project codebase to
+# ensure readability and maintainability.  Consistent style not only improves
+# collaboration but also makes the code easier to review and debug.
 
 # This is simple configuration file for code styling in lua language.
 
@@ -9,4 +11,4 @@ call_parentheses = "None"
 
 indent_type = "Spaces"
 indent_width = 4
-column_width = 100
+column_width = 80

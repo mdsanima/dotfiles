@@ -47,5 +47,5 @@ return {
         },
     },
 
-    lockfile = vim.fn.stdpath "cache" .. "/lazy-lock.json",
+    lockfile = vim.fn.stdpath("cache") .. "/lazy-lock.json",
 }
