@@ -1,12 +1,12 @@
-# Copyright (c) 2024 MDSANIMA DEV. All rights reserved.
+# Copyright (c) 2024 MDSANIMA LAB. All rights reserved.
 # Licensed under the MIT license.
 
-# This is a custom configuration `.zshrc` file for GNU/Linux systems like Debian or Ubuntu.  You can
-# use this script for all available hosts in your network.
+# This is a custom configuration `.zshrc` file for GNU/Linux systems like Debian
+# or Ubuntu.  You can use this script for all available hosts in your network.
 
 # Enable Powerlevel10k instant prompt
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-$(whoami).zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-$(whoami).zsh"
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-prompt-$(whoami).zsh" ]]; then
+    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-prompt-$(whoami).zsh"
 fi
 
 # If you come from bash you might have to change your $PATH
@@ -26,7 +26,7 @@ export LC_ALL="C"
 
 # Disabled underline style
 if [[ -z "${ZSH_HIGHLIGHT_STYLES+x}" ]]; then
-  typeset -A ZSH_HIGHLIGHT_STYLES
+    typeset -A ZSH_HIGHLIGHT_STYLES
 fi
 
 # Set undarline style
@@ -52,9 +52,9 @@ COMPLETION_WAITING_DOTS="true"
 # Adjustment to the right side
 ZLE_RPROMPT_INDENT=0
 
-# When Neovim is opened, customize the right prompt
+# When Neovim is opened with NvChad configuration, customize the right prompt
 if [[ -n $MYVIMRC ]]; then
-  ZLE_RPROMPT_INDENT=2
+    ZLE_RPROMPT_INDENT=2
 fi
 
 # Execution time stamp shown in the history command output
@@ -75,12 +75,14 @@ setopt SHARE_HISTORY
 setopt HIST_IGNORE_SPACE
 
 # Custom plugins to load
-plugins=(git zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting)
+plugins=(
+    git zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting
+)
 
 # Add zsh terminal
 source "$ZSH/oh-my-zsh.sh"
 
-# You can turn this off if you don't want to use it, just type `predict-off` in the terminal
+# You can turn this off, just type `predict-off` in the terminal
 autoload predict-on
 predict-on
 
@@ -90,5 +92,6 @@ unset ZSH_AUTOSUGGEST_USE_ASYNC
 # Aliases definition, run `alias` to see full list
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
 
-# Custom theme for Powerlevel10k, run `p10k configure` to customize or edit theme file
-[ -f "$HOME/.config/zsh/themes/mdsanima.zsh" ] && source "$HOME/.config/zsh/themes/mdsanima.zsh"
+# Custom theme, run `p10k configure` to customize or edit theme file
+local MDSANIMA_THEME="$HOME/.config/zsh/themes/mdsanima.zsh"
+[ -f $MDSANIMA_THEME ] && source $MDSANIMA_THEME
