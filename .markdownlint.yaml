@@ -36,6 +36,10 @@ MD033:
 MD036:
   punctuation: .,;:!?。，；：！？
 
+# Code block style
+MD046:
+  style: "fenced"
+
 # Link fragments
 MD051: true
 
