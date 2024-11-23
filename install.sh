@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Copyright (c) 2024 MDSANIMA DEV. All rights reserved.
+# Copyright (c) 2024 Marcin Różewski, MDSANIMA LAB. All rights reserved.
 # Licensed under the MIT license.
 
 # Installation script for dotfiles for GNU/Linux systems like Debian or Ubuntu.
@@ -22,8 +22,8 @@ success=$(event::success)
 
 # Check the user
 if [[ "$USER" == "root" ]]; then
-  echo -e "${error} Do not run 'install.sh' script as root." >&2
-  exit 1
+    echo -e "${error} Do not run 'install.sh' script as root." >&2
+    exit 1
 fi
 
 # List of packages to install
@@ -35,10 +35,10 @@ CURRENT_GIT_TAG=$(git describe --tags)
 LATEST_GIT_TAG=$(git describe --tags --abbrev=0)
 
 function dotfiles_installer_info() {
-  print::color -fg ${GRAY} "Copyright (c) 2024 MDSANIMA DEV. All rights reserved. Licensed under the MIT license.\n"
-  print::color -fg ${SKY} -b -n "  MDSANIMA-SHELL"
-  print::color -fg ${BLUE} " dotfiles ${CURRENT_GIT_TAG}"
-  print::color -fg ${ORANGE} "  This installer is only available for GNU/Linux systems like Debian or Ubuntu\n"
+    print::color -fg ${GRAY} "Copyright (c) 2024 Marcin Różewski, MDSANIMA LAB. All rights reserved. Licensed under the MIT license.\n"
+    print::color -fg ${SKY} -b -n "  MDSANIMA-SHELL"
+    print::color -fg ${BLUE} " dotfiles ${CURRENT_GIT_TAG}"
+    print::color -fg ${ORANGE} "  This installer is only available for GNU/Linux systems like Debian or Ubuntu.\n"
 }
 
 dotfiles_installer_info

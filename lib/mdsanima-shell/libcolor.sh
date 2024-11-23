@@ -1,4 +1,4 @@
-# Copyright (c) 2024 MDSANIMA DEV. All rights reserved.
+# Copyright (c) 2024 Marcin Różewski, MDSANIMA LAB. All rights reserved.
 # Licensed under the MIT license.
 
 # Library for color palette definition.  This is still work in progress.
