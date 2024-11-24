@@ -7,7 +7,8 @@ readonly clean_line_seq="\r\e[0K"
 
 function util::is_package_installed() {
     local package="$1"
-    local query=$(dpkg-query -W -f='${Status}' "${package}" 2>/dev/null)
+    local query
+    query=$(dpkg-query -W -f='${Status}' "${package}" 2>/dev/null)
     if echo "${query}" | grep -q "install ok installed"; then
         # echo "SUCCESS $package is installed"
         return 0
@@ -69,7 +70,7 @@ function util::is_string() {
 function util::is_special_char() {
     local argument="$1"
     local special_chars="!@#$%^&*()_+-=[]{}|;:,.<>/?~'\"\\\ "
-    if [[ "$special_chars" =~ "$argument" ]]; then
+    if [[ "$special_chars" =~ $argument ]]; then
         # echo "SUCCESS $argument is a special char"
         return 0
     else
@@ -113,7 +114,7 @@ function util::contains_special_char() {
 }
 
 function util::one_line_progress() {
-    local command="$@"
+    local command="$*"
     ${command} 2>&1 | while IFS= read -r line; do
         echo -n -e "${clean_line_seq}${line}"
     done

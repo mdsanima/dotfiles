@@ -81,20 +81,20 @@ function print::color() {
     while [[ $# -gt 0 ]]; do
         case "$1" in
         -fg)
-            set_color_mode $2
+            set_color_mode "$2"
             if [[ "$hex_mode" == true ]]; then
                 fg_seq="\e[38;2;"
-                fg_color=$(convert::hex_to_rgb $2)
+                fg_color=$(convert::hex_to_rgb "$2")
             else
                 fg_color="$2"
             fi
             shift 2
             ;;
         -bg)
-            set_color_mode $2
+            set_color_mode "$2"
             if [[ "$hex_mode" == true ]]; then
                 bg_seq="\e[48;2;"
-                bg_color=$(convert::hex_to_rgb $2)
+                bg_color=$(convert::hex_to_rgb "$2")
             else
                 bg_color="$2"
             fi
@@ -132,7 +132,7 @@ function print::color() {
 
     # Set foreground
     local fg_code
-    if util::is_integer $fg_color || util::contains_special_char $fg_color; then
+    if util::is_integer "$fg_color" || util::contains_special_char "$fg_color"; then
         fg_code="${fg_seq}${fg_color}m"
     elif [[ -v "${fg_color}" ]]; then
         fg_code="${fg_seq}${!fg_color}m"
@@ -140,7 +140,7 @@ function print::color() {
 
     # Set background
     local bg_code
-    if util::is_integer $bg_color || util::contains_special_char $bg_color; then
+    if util::is_integer "$bg_color" || util::contains_special_char "$bg_color"; then
         bg_code="${bg_seq}${bg_color}m"
     elif [[ -v "${bg_color}" ]]; then
         bg_code="${bg_seq}${!bg_color}m"

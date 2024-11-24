@@ -16,13 +16,16 @@
 # -----------------------------------------------------------------------------
 function convert::hex_to_rgb() {
     local hex_color="$1"
-    local awk_cmd='{print strtonum("0x" $0)}'
+    local awk_cmd="{print strtonum('0x' $0)}"
 
     # Convert HEX to RGB
-    local r=$(echo "${hex_color:1:2}" | awk "${awk_cmd}")
-    local g=$(echo "${hex_color:3:2}" | awk "${awk_cmd}")
-    local b=$(echo "${hex_color:5:2}" | awk "${awk_cmd}")
+    local red
+    local green
+    local blue
+    red=$(echo "${hex_color:1:2}" | awk "${awk_cmd}")
+    green=$(echo "${hex_color:3:2}" | awk "${awk_cmd}")
+    blue=$(echo "${hex_color:5:2}" | awk "${awk_cmd}")
 
     # Return RGB
-    echo "${r};${g};${b}"
+    echo "${red};${green};${blue}"
 }
