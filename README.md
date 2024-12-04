@@ -1,4 +1,4 @@
-# dotfiles
+# Dotfiles
 
 These dotfiles include configuration settings for various tools for terminal
 customization, custom libraries, and many more. Additionally, this repository
