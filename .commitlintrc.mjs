@@ -5,7 +5,7 @@
 // Linter configuration for rules on commit messages that are checked on pull
 // requests, and before push to origin from local reposiotry.  For more
 // information about, refer to the commitlint official documentation for the
-// reference rules, see here: https://commitlint.js.org/#/reference-rules
+// reference rules, see here: https://commitlint.js.org/reference/rules.html
 
 // The rules are still a work in progress and subject to change.  I still need
 // to think about this configuration, and for now this is a base template.
@@ -29,14 +29,6 @@ const typesRule = [
     "test",
 ];
 
-/** The array of subject rules that are allowed in commit messages. */
-const subjectsRule = [
-    "upper-case",
-    "pascal-case",
-    "sentence-case",
-    "start-case",
-];
-
 /** The rules for commitlint that is used in GitHub Workflow Actions on PR. */
 const commitlintConfig = {
     rules: {
@@ -50,9 +42,11 @@ const commitlintConfig = {
         "header-max-length": [2, "always", 72],
         "body-case": [2, "always", "sentence-case"],
         "body-leading-blank": [2, "always"],
-        "body-max-line-length": [1, "always", 80],
+        "body-max-length": [2, "always", "Infinity"],
+        "body-max-line-length": [2, "always", 72],
         "footer-leading-blank": [2, "always"],
-        "footer-max-line-length": [1, "always", 80],
+        "footer-max-length": [2, "always", "Infinity"],
+        "footer-max-line-length": [2, "always", 72],
     },
 };
 
