@@ -72,9 +72,9 @@ Here is a list of available functions:
 ### Example usages
 
 If you want to use this library files you can simple sourced this file on your
-bash script like this example:
+Bash script like this example:
 
-```shell
+```sh
 source "$PWD/lib/mdsanima-shell/libcolor.sh"
 ```
 
@@ -82,12 +82,12 @@ In the above example, I used `$PWD` to get the path to the file directory. This
 example is executed in the directory where our libraries must be located, for
 example `$HOME/workspace/dotfiles/` the current repository and the script file
 in which we want to use our libraries is in the root of this directory like
-`install.sh` script.
+the `install.sh` script.
 
 Example script file `test.sh` must be located on the root of this repository:
 
-```shell
-#!/bin/bash
+```bash
+#!/usr/bin/env bash
 
 # Import library
 source "$PWD/lib/mdsanima-shell/libcolor.sh"
@@ -113,7 +113,7 @@ echo -e "${clean_line_seq}${done} Testing event functions was finished!"
 
 # Test print library
 print::color -fg 16 -bg 196 -bold "Bold black text on red background"
-print::color -fg ${BLACK} -bg ${INT_BLUE} -bold -nonewline " MDSANIMA "
+print::color -fg "${BLACK}" -bg "${INT_BLUE}" -bold -nonewline " MDSANIMA "
 print::color -fg 27 " Blue text next to other"
 
 # Test util library
@@ -125,5 +125,5 @@ else
 fi
 ```
 
-If you want to use this on other directory you must give the correct path to the
-libraries.
+If you want to use this example code on other directory you must give the
+correct path to the libraries.
