@@ -1,10 +1,11 @@
-# Copyright (c) 2024 Marcin Różewski, MDSANIMA LAB. All rights reserved.
-# Licensed under the MIT license.
+# Copyright (c) 2024 Marcin Różewski, MDSANIMA LAB
 
 # Library for utility functions.  This is still work in progress.
 
-readonly clean_line_seq="\r\e[0K"
+# =====> LIBUTIL <=============================================================
+readonly CLEAN_LINE_SEQ="\r\e[0K"
 
+# =====> LIBUTIL <=============================================================
 function util::is_package_installed() {
     local package="$1"
     local query
@@ -18,11 +19,13 @@ function util::is_package_installed() {
     fi
 }
 
+# =====> LIBUTIL <=============================================================
 function util::is_installed() {
     local package="$1"
     util::is_package_installed "$package"
 }
 
+# =====> LIBUTIL <=============================================================
 function util::is_integer() {
     local argument="$1"
     if [[ "$argument" =~ ^[0-9]+$ ]]; then
@@ -34,6 +37,7 @@ function util::is_integer() {
     fi
 }
 
+# =====> LIBUTIL <=============================================================
 function util::is_float() {
     local argument="$1"
     if [[ "$argument" =~ ^[0-9]+\.[0-9]+$ ]]; then
@@ -45,6 +49,7 @@ function util::is_float() {
     fi
 }
 
+# =====> LIBUTIL <=============================================================
 function util::is_number() {
     local argument="$1"
     if util::is_integer "$argument" || util::is_float "$argument"; then
@@ -56,6 +61,7 @@ function util::is_number() {
     fi
 }
 
+# =====> LIBUTIL <=============================================================
 function util::is_string() {
     local argument="$1"
     if [[ "$argument" =~ ^[a-zA-Z]+$ ]]; then
@@ -67,6 +73,7 @@ function util::is_string() {
     fi
 }
 
+# =====> LIBUTIL <=============================================================
 function util::is_special_char() {
     local argument="$1"
     local special_chars="!@#$%^&*()_+-=[]{}|;:,.<>/?~'\"\\\ "
@@ -79,6 +86,7 @@ function util::is_special_char() {
     fi
 }
 
+# =====> LIBUTIL <=============================================================
 function util::is_first_char_special() {
     local argument="$1"
     local first_char="${argument:0:1}"
@@ -91,6 +99,7 @@ function util::is_first_char_special() {
     fi
 }
 
+# =====> LIBUTIL <=============================================================
 function util::is_hex() {
     local argument="$1"
     if [[ "$argument" =~ ^#[0-9a-fA-F]{6}$ ]]; then
@@ -102,6 +111,7 @@ function util::is_hex() {
     fi
 }
 
+# =====> LIBUTIL <=============================================================
 function util::contains_special_char() {
     local argument="$1"
     if [[ "$argument" =~ [^[:alnum:]_] ]]; then
@@ -113,9 +123,10 @@ function util::contains_special_char() {
     fi
 }
 
+# =====> LIBUTIL <=============================================================
 function util::one_line_progress() {
     local command="$*"
     ${command} 2>&1 | while IFS= read -r line; do
-        echo -n -e "${clean_line_seq}${line}"
+        echo -n -e "${CLEAN_LINE_SEQ}${line}"
     done
 }

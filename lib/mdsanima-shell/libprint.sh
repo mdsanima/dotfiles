@@ -1,19 +1,10 @@
-# Copyright (c) 2024 Marcin Różewski, MDSANIMA LAB. All rights reserved.
-# Licensed under the MIT license.
+# Copyright (c) 2024 Marcin Różewski, MDSANIMA LAB
 
 # Library for printing functions.  This is still work in progress.
 
-#------------------------------------------------------------------------------
+# =====> DOCS <================================================================
 # This function provides a simple way to print the text with colors on the
-# terminal bash script outputs.  The color mode may be number, name or HEX code.
-#
-# Arguments:
-#   -fg <color>     Foreground color mode, optional, default to none
-#   -bg <color>     Background color mode, optional, default to none
-#   -bold, -b       Print the text in bold style, optional, default to false
-#   -italic, -i     Print the text in italic style, optional, default to false
-#   -nonewline, -n  Dont print a new line after text, optional, default to false
-#   <text>          The text to be printed in colors, required
+# terminal outputs.  The color mode may be number, name or the HEX code values.
 #
 # Usage:
 #   print::color -fg <color> -bg <color> -bold -italic -nonewline <text>
@@ -22,7 +13,19 @@
 #   print::color -fg ${BLACK} -bg ${INT_RED} "Black text on red background"
 #   print::color -fg ${HEX_YELLOW} -i "Italic yellow text"
 #   print::color -fg "#f97316" -b "Bold orange text"
-#------------------------------------------------------------------------------
+#
+# Arguments:
+#   -fg <color>     Foreground color mode, optional, default to none
+#   -bg <color>     Background color mode, optional, default to none
+#   -bold, -b       Print the text in bold style, optional, default to false
+#   -italic, -i     Print the text in italic style, optional, default to false
+#   -nonewline, -n  Dont print new line after text, optional, default to false
+#   <text>          The text to be printed in colors, required
+# Outputs:
+#   Output to STDOUT or STDERR
+# Returns:
+#   The nice colored text in your terminal
+# -----------------------------------------------------------------------------
 function print::color() {
     local fg_color
     local bg_color

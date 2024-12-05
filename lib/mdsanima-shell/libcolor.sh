@@ -1,7 +1,8 @@
-# Copyright (c) 2024 Marcin Różewski, MDSANIMA LAB. All rights reserved.
-# Licensed under the MIT license.
+# Copyright (c) 2024 Marcin Różewski, MDSANIMA LAB
 
 # Library for color palette definition.  This is still work in progress.
+
+# shellcheck disable=SC2034
 
 # Global main default color names
 readonly WHITE=15
