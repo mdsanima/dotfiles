@@ -1,0 +1,8 @@
+working_directory = "/home/mdsanima/"
+
+[window]
+dimensions = { columns = 120, lines = 32 }
+
+[font]
+normal = { family = "Terminess Nerd Font Propo", style = "Regular" }
+size = 16.0
