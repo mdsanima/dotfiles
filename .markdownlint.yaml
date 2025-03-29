@@ -1,17 +1,19 @@
 # Maintain a consistent coding style throughout the entire project codebase to
 # ensure readability and maintainability.  Consistent style not only improves
 # collaboration but also makes the code easier to review and debug.
-
+#
 # Linter configuration for Markdown and CommonMark files.  This tool is a style
 # checker that uses a predefined set of rules to check source files for issues
 # such as line length, trailing spaces, indention and more to check and format
 # files based on the CommonMark specification.  It is available as command line
-# tool and work with Prettier for formatting. It can also integrate with your
+# tool and work with Prettier for formatting.  It can also integrate with your
 # editor to display diagnostics like warnings or errors from the Markdown
 # language server.  These diagnostics are based on the rules defined in this
-# configuration file.  For more information about, refer to the docs and source
-# code, see here: https://github.com/DavidAnson/markdownlint
-
+# configuration file.  For more information about, refer to the official source
+# code repository at:
+#
+#       https://github.com/DavidAnson/markdownlint/
+#
 # The rules are still a work in progress and subject to change.  I still need
 # to think about this configuration, and for now this is a base template.
 
@@ -21,29 +23,30 @@ default: true
 # Line length
 MD013: true
 
-# Trailing heading
+# Trailing headings
 MD026:
   punctuation: .,;:!。，；：！
 
-# Multiple spaces blockquote
+# Multiple spaces
 MD027: true
 
 # Inline HTML
 MD033:
-  allowed_elements: [center, details, div, h1, h2, strong, sub, sup, summary]
+  allowed_elements:
+    [center, details, div, h1, h2, img, strong, sub, sup, summary]
 
-# Emphasis heading
+# Emphasis headings
 MD036:
   punctuation: .,;:!?。，；：！？
 
-# Code block style
+# Code blocks
 MD046:
-  style: "fenced"
+  style: fenced
 
 # Link fragments
 MD051: true
 
-# Maximum line length
+# Maximum lengths
 line-length:
   line_length: 80
   heading_line_length: 64
