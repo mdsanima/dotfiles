@@ -1,0 +1,49 @@
+# Maintain a consistent coding style throughout the entire project codebase to
+# ensure readability and maintainability.  Consistent style not only improves
+# collaboration but also makes the code easier to review and debug.
+#
+# Linter configuration for rules on commit messages that are checked on pull
+# requests, and before push to origin from local reposiotry.  These rules are
+# used to check if the commit message contains a type.  The type is the first
+# word in the commit message and must match one of the types defined in the
+# types array in this configuration file.  For more information about, refer to
+# the official documentation at:
+#
+#       https://commitlint.js.org/reference/rules.html
+#
+# The rules are still a work in progress and subject to change.  I still need
+# to think about this configuration, and for now this is a base template.
+
+---
+extends: ["@commitlint/config-conventional"]
+
+types: &base
+  - build
+  - chore
+  - ci
+  - docs
+  - feat
+  - fix
+  - perf
+  - refactor
+  - revert
+  - style
+  - test
+length: &max 72
+
+rules:
+  type-enum: [2, always, *base]
+  type-case: [2, always, lower-case]
+  type-empty: [2, never]
+  scope-case: [2, always, kebab-case]
+  subject-case: [2, always, sentence-case]
+  subject-empty: [2, never]
+  subject-full-stop: [2, never, "."]
+  header-max-length: [2, always, *max]
+  body-case: [2, always, sentence-case]
+  body-leading-blank: [2, always]
+  body-max-length: [2, always, Infinity]
+  body-max-line-length: [2, always, *max]
+  footer-leading-blank: [2, always]
+  footer-max-length: [2, always, Infinity]
+  footer-max-line-length: [2, always, *max]
