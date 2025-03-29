@@ -1,34 +1,31 @@
-# Sync the repository default labels that is defined on configuration file.
+# Sync the repository default labels that is defined on configuration file in
+# the repository.  The labels should be defined in `.github/labels.yaml` file.
 
-# Default config
 ---
-name: Syncing repository labels
+name: Sync labels
 
 on:
-  workflow_dispatch:
-  schedule:
-    - cron: "0 0 1 * *"
   push:
     branches:
       - main
     paths:
       - .github/labels.yaml
       - .github/workflows/labeler.yaml
+  pull_request:
+    paths:
+      - .github/labels.yaml
+      - .github/workflows/labeler.yaml
 
 jobs:
   labeler:
-    name: Labeler
     runs-on: ubuntu-24.04
     permissions: write-all
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 1
-
       - name: Run labeler
         uses: crazy-max/ghaction-github-labeler@v5
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           yaml-file: .github/labels.yaml
+          dry-run: ${{ github.event_name == 'pull_request' }}
