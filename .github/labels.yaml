@@ -1,94 +1,128 @@
-# The repository default labels for pull requests and issues.
+# Default and custom labels for this repository, used for pull requests and
+# issues.  All labels defined here are synced with the repository using GitHub
+# Actions workflow in `.github/workflows/labeler.yaml` file.  The workflow is
+# triggered when this file is updated and pushed to main branch.
 
-# General labels
 ---
+# Default
 - name: bug
   color: B60205
   description: Something isn't working
-- name: ci
-  color: 5AF3C0
-  description: Pull requests that update a GitHub Actions Workflow deps
-- name: database
-  color: 097BA1
-  description: The database tools
-- name: db
-  color: 98C3E1
-  description: The database tools
-- name: dependencies
-  color: 0066FF
-  description: Pull requests that update a dependency file
-- name: deps
-  color: 0366D6
-  description: Pull requests that update a dependency file
-- name: deployment
-  color: D45E0E
-  description: Kubernetes deployment configuration
-- name: dev
-  color: 0E8A16
-  description: Tools for helping development
-- name: docker
-  color: 309D8D
-  description: Pull requests that update a Dockerfile deps
 - name: documentation
-  color: 0075CA
+  color: 0052CC
   description: Improvements or additions to documentation
-- name: docs
-  color: 20967C
-  description: Improvements or additions to documentation
-- name: done
-  color: 1D76DB
-  description: I can say it's finished
 - name: duplicate
-  color: CFD3D7
+  color: D93F0B
   description: This issue or pull request already exists
 - name: enhancement
-  color: A2EEEF
+  color: 006B75
   description: New feature or request
-- name: epic
-  color: FF7800
-  description: This is a cool idea
-- name: feature
-  color: 0086CC
-  description: New features ideas
 - name: good first issue
-  color: 7057FF
+  color: 5319E7
   description: Good for newcomers
 - name: help wanted
-  color: 008672
+  color: 9A05D2
   description: Extra attention is needed
 - name: invalid
-  color: E4E669
+  color: F60029
   description: This doesn't seem right
+- name: question
+  color: 4D5D10
+  description: Further information is requested
+- name: wontfix
+  color: FBCA04
+  description: This will not be worked on
+
+# Custom
+- name: ci
+  color: FBCA04
+  description: Continuous integration tools
+- name: database
+  color: 097BA1
+  description: Database task
+- name: db
+  color: 98C3E1
+  description: Database configuration
+- name: dependencies
+  color: 0033FF
+  description: Update dependencies in the project
+- name: deps
+  color: 2B3999
+  description: Dependencies updates
+- name: deployment
+  color: 0F3150
+  description: Kubernetes deployment configuration
+- name: dev
+  color: 0E8A86
+  description: Development environment
+- name: devel
+  color: F91386
+  description: Development task
+- name: docker
+  color: 0086CC
+  description: Docker configuration
+- name: docs
+  color: 20967C
+  description: Documentation updates
+- name: done
+  color: A1E752
+  description: Task is completed
+- name: epic
+  color: 7802EE
+  description: Cool idea for a new feature
+- name: feature
+  color: 0086CC
+  description: New feature
 - name: kubernetes
-  color: 2CF1BA
-  description: Container orchestration stuff
+  color: 12488A
+  description: Kubernetes configuration
 - name: nodejs
-  color: E23983
-  description: Pull requests that update a Node.js deps
+  color: 596E3D
+  description: Node.js configuration
 - name: npm
-  color: 8EBA74
-  description: Pull requests that update a Node.js deps
+  color: ABB062
+  description: Update Node.js dependencies
 - name: pip
   color: 2E79F8
-  description: Pull requests that update a Python deps
+  description: Update Python dependencies
 - name: prod
   color: 2D13F1
   description: Production environment
 - name: python
   color: 006B75
-  description: Pull requests that update a Python deps
-- name: question
-  color: E54979
-  description: Further information is requested
+  description: Python configuration
 - name: service
-  color: 3EFA45
+  color: 1ED5B6
   description: Kubernetes service configuration
 - name: task
-  color: EEFF00
+  color: 089DB8
   description: New task
-- name: wontfix
-  color: FBCA04
-  description: This will not be worked on
 - name: workflow
   color: FD582D
-  description: Pull requests that update a GitHub Actions Workflow deps
+  description: GitHub Actions workflow configuration
+
+# General
+- name: build
+  color: 074B2B
+  description: Build system or external dependencies
+- name: chore
+  color: 706ED7
+  description: Regular maintenance
+- name: performance
+  color: E36900
+  description: Optimize performance
+- name: refactor
+  color: 896CD6
+  description: Code refactoring
+- name: revert
+  color: E79263
+  description: Revert changes
+- name: security
+  color: D93F00
+  description: Security vulnerability
+- name: style
+  color: 4686B3
+  description: Code formatting
+- name: test
+  color: 8642B2
+  description: Add or update tests
