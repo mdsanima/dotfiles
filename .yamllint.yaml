@@ -1,15 +1,17 @@
 # Maintain a consistent coding style throughout the entire project codebase to
 # ensure readability and maintainability.  Consistent style not only improves
 # collaboration but also makes the code easier to review and debug.
-
-# Linter configuration for YAML files.  This tool uses a predefined set of rules
-# to check source files for issues such as line length, trailing spaces, and
-# indentation.  It is available as a Python based command line tool and can also
-# integrate with your editor to display diagnostics like warnings or errors from
-# the YAML language server.  These diagnostics are based on the rules defined in
-# this configuration file.  For more information about, refer to the docs and
-# source code, see here: https://github.com/adrienverge/yamllint
-
+#
+# Linter configuration for YAML files.  This tool uses a predefined set of
+# rules to check source files for issues such as line length, trailing spaces,
+# and indentation.  It is available as a Python based command line tool and can
+# also integrate with your editor to display diagnostics like warnings or
+# errors from the YAML language server.  These diagnostics are based on the
+# rules defined in this configuration file.  For more information about, refer
+# to the official source code repository at:
+#
+#       https://github.com/adrienverge/yamllint/
+#
 # The rules are still a work in progress and subject to change.  I still need
 # to think about this configuration, and for now this is a base template.
 
@@ -17,7 +19,16 @@
 extends: default
 
 rules:
+  comments:
+    min-spaces-from-content: 1
+  empty-lines:
+    max: 1
+    max-start: 0
+    max-end: 0
+  indentation:
+    spaces: 2
+    level: error
   line-length:
     max: 80
     level: warning
-  indentation: enable
+  truthy: disable
