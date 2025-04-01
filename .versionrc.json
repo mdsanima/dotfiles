@@ -1,21 +1,19 @@
 {
   "infile": "CHANGELOG.md",
-  "header": "# Changelog\n\n<!-- markdownlint-disable -->\n\n<!-- editorconfig-checker-disable-file -->\n\nAll notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org/) site for the commit guidelines.\n",
+  "header": "# Changelog\n\nAll notable changes to this project will be documented in this file.\n\nSee [Conventional Commits](https://conventionalcommits.org/) website, and\n[Standard Version](https://githgub.com/conventional-changelog/standard-version/)\nrepository for commit guidelines.\n\n<!-- markdownlint-disable -->\n<!-- editorconfig-checker-disable-file -->\n\n",
   "skip": { "bump": false, "changelog": false, "commit": true, "tag": true },
-  "bumpFiles": [
-    { "type": "json",      "filename": "manifest.json"                     }
-  ],
+  "bumpFiles": [{ "type": "json", "filename": "manifest.json" }],
   "types": [
-    { "type": "feat",      "section": "🤿 Enhancements",   "hidden": false },
-    { "type": "perf",      "section": "🚀 Performance",    "hidden": false },
-    { "type": "fix",       "section": "🚧 Fixes",          "hidden": false },
-    { "type": "refactor",  "section": "🎛️ Refactors",      "hidden": false },
-    { "type": "docs",      "section": "📚 Documentation",  "hidden": false },
-    { "type": "revert",    "section": "🧶 Revert",         "hidden": false },
-    { "type": "build",     "section": "📦 Build",          "hidden": false },
-    { "type": "style",     "section": "🧢 Style",          "hidden": false },
-    { "type": "chore",     "section": "📮 Chore",          "hidden": false },
-    { "type": "test",      "section": "🎮 Tests",          "hidden": false },
-    { "type": "ci",        "section": "🚆 CI",             "hidden": false }
+    { "type": "feat",     "section": "🚀 Enhancements",  "hidden": false },
+    { "type": "fix",      "section": "🧪 Fixes",         "hidden": false },
+    { "type": "perf",     "section": "🎸 Performance",   "hidden": false },
+    { "type": "docs",     "section": "📝 Documentation", "hidden": false },
+    { "type": "refactor", "section": "🛁 Refactors",     "hidden": false },
+    { "type": "chore",    "section": "👣 Chore",         "hidden": false },
+    { "type": "test",     "section": "🎳 Tests",         "hidden": false },
+    { "type": "build",    "section": "💼 Build",         "hidden": false },
+    { "type": "ci",       "section": "🚆 CI",            "hidden": false },
+    { "type": "style",    "section": "🧢 Style",         "hidden": false },
+    { "type": "revert",   "section": "🚧 Reverts",       "hidden": false }
   ]
 }
