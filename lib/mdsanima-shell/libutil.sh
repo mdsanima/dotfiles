@@ -1,6 +1,9 @@
-# Copyright (c) 2024 Marcin Różewski, MDSANIMA LAB
-
-# Library for utility functions.  This is still work in progress.
+# Copyright (c) 2024-2025 Marcin Różewski, Amarokelab.
+# All rights reserved.
+#
+# Library for utility functions.  This library is still work in progress and
+# subject to change.  I still need to think about this repository code, and for
+# now this is a base code.
 
 # =====> LIBUTIL <=============================================================
 readonly CLEAN_LINE_SEQ="\r\e[0K"
