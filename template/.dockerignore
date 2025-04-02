@@ -35,5 +35,5 @@ manifest*
 .gitignore
 .next
 .mypy_cache
-.prettierrc
-.versionrc
+.prettierrc*
+.versionrc*

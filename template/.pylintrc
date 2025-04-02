@@ -1,18 +1,19 @@
 # Maintain a consistent coding style throughout the entire project codebase to
 # ensure readability and maintainability.  Consistent style not only improves
 # collaboration but also makes the code easier to review and debug.
-
+#
 # Linter configuration file for Python.  Pylint is a static code analyser tool
 # for Python.  Pylint analyses your code without actually running it.  It checks
 # for errors, enforces a coding standard, looks for code smells, and can make
 # suggestions about how the code could be refactored.  For more information
-# about, refer to the source, see here: https://github.com/pylint-dev/pylint
-
+# about, refer to the official source code repository at:
+#
+#       https://github.com/pylint-dev/pylint/
+#
 # The rules are still a work in progress and subject to change.  I still need
 # to think about this configuration, and for now this is a base template.
 
-
-[MAIN]
+[MASTER]
 
 # Files or directories to be skipped
 ignore=.git,flake8.egg-info

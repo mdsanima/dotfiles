@@ -3,11 +3,13 @@
 # Maintain a consistent coding style throughout the entire project codebase to
 # ensure readability and maintainability.  Consistent style not only improves
 # collaboration but also makes the code easier to review and debug.
-
+#
 # Formatting code configuration for CMake files.  A formatter to make your CMake
-# code the real treasure.  For more information about, refer to the docs and
-# source code, see here: https://github.com/BlankSpruce/gersemi
-
+# code the real treasure.  For more information about, refer to the official
+# source code repository at:
+#
+#       https://github.com/BlankSpruce/gersemi/
+#
 # The rules are still a work in progress and subject to change.  I still need
 # to think about this configuration, and for now this is a base template.
 
