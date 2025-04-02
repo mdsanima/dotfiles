@@ -1,15 +1,18 @@
 # Maintain a consistent coding style throughout the entire project codebase to
 # ensure readability and maintainability.  Consistent style not only improves
 # collaboration but also makes the code easier to review and debug.
-
+#
 # Linter configuration file for Python.  Flake8 is a Python tool that glues
 # together pycodestyle, pyflakes, mccabe, and third-party plugins to check the
-# style and quality of Python code, see here: https://github.com/PyCQA/flake8
-
+# style and quality of Python code.  For more information about, refer to the
+# official source code repository at:
+#
+#       https://github.com/PyCQA/flake8/
+#
 # The rules are still a work in progress and subject to change.  I still need
 # to think about this configuration, and for now this is a base template.
 
 [flake8]
 
 # Maximum number of characters on a single line
-max-line-length=80
+max-line-length = 80

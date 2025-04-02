@@ -2,13 +2,14 @@
   "extends": ["next/core-web-vitals", "eslint:recommended"],
   "plugins": ["header"],
   "rules": {
+    "no-undef": "off",
     "indent": ["error", 4],
     "linebreak-style": ["error", "unix"],
     "quotes": ["error", "double"],
     "semi": ["error", "always"],
     "header/header": ["error", "line", [
-      " Copyright (c) 2024 MDSANIMA LAB. All rights reserved.",
-      " Licensed under the MIT license."
+      " Copyright (c) 2024-2025 Marcin Różewski, Amarokelab.",
+      " All rights reserved."
     ], 2]
   },
   "parserOptions": {
