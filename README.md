@@ -5,16 +5,26 @@ customization, custom libraries, and many more. Additionally, this repository
 contains template files that can be used for other repositories, such as _GitHub
 Actions Workflow_, _Dependabot_, _Labeler_, or other commonly used dotfiles.
 
+> [!CAUTION]
+>
+> The installation script and the library or others dotfiles in this repository
+> is still work in progress and subject to change. I still need to think about
+> the configuration, and for now this is a base code.
+
+You can use this code with restriction for now. A better code for the dotfiles
+and more configuration will be available here soon.
+
+## Install
+
+Instructions for installing the dotfiles configuration. First, clone this
+repository, then run the installation script for your operating system.
+
 > [!NOTE]
 >
 > Ensure that you have [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts/)
 > installed on your operating system.
 
-## Installing
-
-Instructions for installing the dotfiles configuration. First, clone this
-repository, then run the installation script for your operating system. The
-installation script is still work in progress.
+Select your system and run the installation script described below.
 
 ### Linux
 
