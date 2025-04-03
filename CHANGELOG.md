@@ -9,6 +9,84 @@ repository for commit guidelines.
 <!-- markdownlint-disable -->
 <!-- editorconfig-checker-disable-file -->
 
+## [0.3.0](https://github.com/mdsanima/dotfiles/compare/v0.2.0...v0.3.0) (_2025-04-03_)
+
+This release brings a refined setup for _Alacritty_, major improvements to
+_Neovim_, and enhanced configurations for _tmux_, _Zsh_, and _Shell_ scripts.
+Additionally, documentation, formatting, and _CI_ workflows have been updated
+for a more streamlined development experience.
+
+### 🚀 Enhancements
+
+- Add base configuration for Alacritty terminal ([#151](https://github.com/mdsanima/dotfiles/pull/151))
+- Add plugin for Neovim that flash on yank ([#126](https://github.com/mdsanima/dotfiles/pull/126))
+- **nvim:** Add checker for `.editorconfig` file ([#129](https://github.com/mdsanima/dotfiles/pull/129))
+- **nvim:** Add formatting on null-ls and mason pkgs ([#133](https://github.com/mdsanima/dotfiles/pull/133))
+- **nvim:** Add language server for YAML files ([#132](https://github.com/mdsanima/dotfiles/pull/132))
+- **nvim:** Add markdownlint diagnostics with `null-ls` plugin ([#130](https://github.com/mdsanima/dotfiles/pull/130))
+
+### 🧪 Fixes
+
+- Customize right prompt when Neovim is opened ([#125](https://github.com/mdsanima/dotfiles/pull/125))
+- **nvim:** Blinking cursor option ([#127](https://github.com/mdsanima/dotfiles/pull/127))
+- **nvim:** Checker with disabled gitcommit files ([#131](https://github.com/mdsanima/dotfiles/pull/131))
+- Set status style bold in tmux config ([#146](https://github.com/mdsanima/dotfiles/pull/146))
+
+### 📝 Documentation
+
+- Update information about this repository ([#169](https://github.com/mdsanima/dotfiles/pull/169))
+- Update some typos in Markdown docs ([#149](https://github.com/mdsanima/dotfiles/pull/149))
+
+### 🛁 Refactors
+
+- Neovim config in lua with NvChad and Lazy ([#124](https://github.com/mdsanima/dotfiles/pull/124))
+- **nvim:** Move config to core and ui ([#128](https://github.com/mdsanima/dotfiles/pull/128))
+- Rename `.yml` to `.yaml` extension files ([#137](https://github.com/mdsanima/dotfiles/pull/137))
+
+### 👣 Chore
+
+- Add Sponsors option for this project ([#138](https://github.com/mdsanima/dotfiles/pull/138))
+- Remove editor alias ([#142](https://github.com/mdsanima/dotfiles/pull/142))
+- Update comments and docs in Shell library ([#150](https://github.com/mdsanima/dotfiles/pull/150))
+- Update configuration for EditorConfig ([#152](https://github.com/mdsanima/dotfiles/pull/152))
+- Update default terminal for tmux to `alacritty` option ([#171](https://github.com/mdsanima/dotfiles/pull/171))
+- Update GitHub Sponsors comment ([#158](https://github.com/mdsanima/dotfiles/pull/158))
+- Update license ([#135](https://github.com/mdsanima/dotfiles/pull/135))
+- Update lincense year and name ([#154](https://github.com/mdsanima/dotfiles/pull/154))
+- Update max line length to 72 for commitlint config ([#148](https://github.com/mdsanima/dotfiles/pull/148))
+- Update Prettier config to YAML file ([#153](https://github.com/mdsanima/dotfiles/pull/153))
+- Update script with info about work in progress ([#165](https://github.com/mdsanima/dotfiles/pull/165))
+- Update some comments info about PowerShell ([#166](https://github.com/mdsanima/dotfiles/pull/166))
+- Update template dotifles with new config ([#170](https://github.com/mdsanima/dotfiles/pull/170))
+- Update TMUX status style colors ([#167](https://github.com/mdsanima/dotfiles/pull/167))
+- Update warning for Shell script in library ([#145](https://github.com/mdsanima/dotfiles/pull/145))
+- Update Zsh shell configuration ([#168](https://github.com/mdsanima/dotfiles/pull/168))
+
+### 🚆 CI
+
+- Remove unused config for dependabot config ([#159](https://github.com/mdsanima/dotfiles/pull/159))
+- Update labeler workflow with custom labels ([#157](https://github.com/mdsanima/dotfiles/pull/157))
+- Update linter commit message confit to YAML ([#155](https://github.com/mdsanima/dotfiles/pull/155))
+
+### 🧢 Style
+
+- Add code block style for markdownlint ([#143](https://github.com/mdsanima/dotfiles/pull/143))
+- Format Shell script library ([#144](https://github.com/mdsanima/dotfiles/pull/144))
+- Format zsh config to 80 max line length ([#141](https://github.com/mdsanima/dotfiles/pull/141))
+- Lua nvim config format to 80 max line length ([#140](https://github.com/mdsanima/dotfiles/pull/140))
+- Markdown files format to 80 max line length ([#136](https://github.com/mdsanima/dotfiles/pull/136))
+- Move CODEOWNERS file to root directory ([#156](https://github.com/mdsanima/dotfiles/pull/156))
+- Remove comma on header configuration ([#173](https://github.com/mdsanima/dotfiles/pull/173))
+- Update commens on `.gitignore` file config ([#162](https://github.com/mdsanima/dotfiles/pull/162))
+- Update comments in git ingored files ([#147](https://github.com/mdsanima/dotfiles/pull/147))
+- Update configuration for Markdown linter ([#160](https://github.com/mdsanima/dotfiles/pull/160))
+- Update configuration for YAML linter ([#161](https://github.com/mdsanima/dotfiles/pull/161))
+- Update copyright and comments info about library ([#172](https://github.com/mdsanima/dotfiles/pull/172))
+- Update emoji for generate `CHANGELOG.md` file ([#163](https://github.com/mdsanima/dotfiles/pull/163))
+- Update title comments with big font ([#164](https://github.com/mdsanima/dotfiles/pull/164))
+- Update TMUX comments ([#139](https://github.com/mdsanima/dotfiles/pull/139))
+- Use 80 chars max lines length ([#134](https://github.com/mdsanima/dotfiles/pull/134))
+
 ## [0.2.0](https://github.com/mdsanima/dotfiles/compare/v0.1.0...v0.2.0) (_2024-09-01_)
 
 Introduces various improvements, including configurations for `clang-format`,
