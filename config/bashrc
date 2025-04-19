@@ -1,0 +1,116 @@
+# Copyright (c) 2023-2025 Marcin Różewski, Amarokelab.
+# All rights reserved.
+#
+# Custom configuration file for Bash Shell in GNU/Linux systems.  You can use
+# this config file for all available hosts in your homelab networks.
+#
+# The rules are still a work in progress and subject to change.  I still need
+# to think about this configuration, and for now this is a base template.
+
+# If not running interactively, dont do anything
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+
+# Dont put duplicate lines or lines starting with space in the history
+HISTCONTROL=ignoreboth
+
+# Append to the history file, dont overwrite it
+shopt -s histappend
+
+# History settings
+HISTSIZE=500000                        # History lines stored in memory
+HISTFILESIZE=500000                    # History lines stored on disk
+HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S   "  # Adding date time before each commands
+
+# Check the window size after each command
+shopt -s checkwinsize
+
+# Make less more friendly for non-text input files
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+# Set variable identifying the chroot you work in used in the prompt below
+if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
+    debian_chroot=$(cat /etc/debian_chroot)
+fi
+
+# Set a fancy prompt
+case "$TERM" in
+    xterm-color|*-256color|alacritty) color_prompt=yes;;
+esac
+
+# Shell color prompt
+force_color_prompt=yes
+
+# Condition settings
+if [ -n "$force_color_prompt" ]; then
+    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+        color_prompt=yes
+    else
+        color_prompt=
+    fi
+fi
+
+# Shell color prompt for normal and root users
+if [ "$color_prompt" = yes ]; then
+    PS1="${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ "
+else
+    PS1="${debian_chroot:+($debian_chroot)}\u@\h:\w\$ "
+fi
+unset color_prompt force_color_prompt
+
+# If this is an xterm set the title to user@host:dir on host
+case "$TERM" in
+xterm*|rxvt*)
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    ;;
+*)
+    ;;
+esac
+
+# Enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+
+    alias ls="ls --color=auto"
+    alias dir="dir --color=auto"
+    alias vdir="vdir --color=auto"
+
+    alias grep="grep --color=auto"
+    alias fgrep="fgrep --color=auto"
+    alias egrep="egrep --color=auto"
+fi
+
+# Colored GCC warnings and errors
+export GCC_COLORS="error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01"
+
+# Some more ls aliases
+alias ll="ls -alF"
+alias la="ls -A"
+alias l="ls -CF"
+
+# Add an alert alias for long running commands
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+# Alias definitions for Bash Shell
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+# Alias definitions for Zsh Shell
+if [ -f ~/.aliases ]; then
+    . ~/.aliases
+fi
+
+# Enable programmable completion features
+if ! shopt -oq posix; then
+    if [ -f /usr/share/bash-completion/bash_completion ]; then
+        . /usr/share/bash-completion/bash_completion
+    elif [ -f /etc/bash_completion ]; then
+        . /etc/bash_completion
+    fi
+fi
+
+# Include ~/.local/bin in PATH
+export PATH=$HOME/.local/bin:$PATH
