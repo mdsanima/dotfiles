@@ -2,8 +2,9 @@
 
 These dotfiles include configuration settings for various tools for terminal
 customization, custom libraries, and many more. Additionally, this repository
-contains template files that can be used for other repositories, such as _GitHub
-Actions Workflow_, _Dependabot_, _Labeler_, or other commonly used dotfiles.
+contains template files that can be used for other repositories, such as
+_GitHub Actions Workflow_, _Dependabot_, _Labeler_, or other commonly used
+dotfiles.
 
 > [!CAUTION]
 >
@@ -24,7 +25,8 @@ repository, then run the installation script for your operating system.
 > Ensure that you have [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts/)
 > installed on your operating system.
 
-Select your system and run the installation script described below.
+Now, you can run the installation script described below for your operating
+system, like **Linux** or **Windows** systems.
 
 ### Linux
 
