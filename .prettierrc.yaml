@@ -29,29 +29,29 @@ overrides:
     excludeFiles: "CHANGELOG.md"
     options:
       parser: markdown
-      printWidth: 80
+      printWidth: 79
       proseWrap: always
       tabWidth: 2
   - files: "*.css"
     options:
       parser: css
-      printWidth: 80
+      printWidth: 79
   - files: "*.scss"
     options:
       parser: scss
-      printWidth: 80
+      printWidth: 79
   - files: "*.json"
     options:
       parser: json
-      printWidth: 80
+      printWidth: 79
       tabWidth: 2
   - files: "*.jsonc"
     options:
       parser: jsonc
-      printWidth: 80
+      printWidth: 79
       tabWidth: 2
   - files: "*.yaml"
     options:
       parser: yaml
-      printWidth: 80
+      printWidth: 79
       tabWidth: 2
