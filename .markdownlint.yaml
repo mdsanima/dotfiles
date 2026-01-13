@@ -33,7 +33,7 @@ MD027: true
 # Inline HTML
 MD033:
   allowed_elements:
-    [center, details, div, h1, h2, img, strong, sub, sup, summary]
+    [aside, center, details, div, h1, h2, img, strong, sub, sup, summary]
 
 # Emphasis headings
 MD036:
@@ -48,9 +48,9 @@ MD051: true
 
 # Maximum lengths
 line-length:
-  line_length: 80
+  line_length: 79
   heading_line_length: 64
-  code_block_line_length: 80
+  code_block_line_length: 79
   code_blocks: false
   tables: false
   headings: true
