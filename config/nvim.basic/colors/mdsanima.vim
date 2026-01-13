@@ -19,30 +19,30 @@ set background=dark
 let g:colors_name = "mdsanima"
 
 " Basic colors definition
-hi Boolean        cterm=none  ctermfg=202  ctermbg=none
-hi ColorColumn    cterm=none  ctermfg=0    ctermbg=8
-hi Comment        cterm=none  ctermfg=8    ctermbg=none
-hi Constant       cterm=none  ctermfg=222  ctermbg=none
-hi Directory      cterm=none  ctermfg=2    ctermbg=none
-hi Error          cterm=bold  ctermfg=15   ctermbg=196
-hi ErrorMsg       cterm=bold  ctermfg=15   ctermbg=196
-hi Identifier     cterm=none  ctermfg=24   ctermbg=none
-hi LineNr         cterm=none  ctermfg=244  ctermbg=none
-hi Number         cterm=none  ctermfg=196  ctermbg=none
-hi Pmenu          cterm=none  ctermfg=0    ctermbg=27
-hi PreProc        cterm=none  ctermfg=48   ctermbg=none
-hi Search         cterm=none  ctermfg=16   ctermbg=9
-hi Special        cterm=none  ctermfg=33   ctermbg=none
-hi SpecialChar    cterm=none  ctermfg=45   ctermbg=none
-hi Statement      cterm=none  ctermfg=215  ctermbg=none
-hi StatusLine     cterm=bold  ctermfg=16   ctermbg=12
-hi Todo           cterm=bold  ctermfg=15   ctermbg=3
-hi Type           cterm=none  ctermfg=36   ctermbg=none
+hi Boolean        cterm=none    ctermbg=none    ctermfg=202
+hi ColorColumn    cterm=none    ctermbg=8       ctermfg=0
+hi Comment        cterm=none    ctermbg=none    ctermfg=8
+hi Constant       cterm=none    ctermbg=none    ctermfg=222
+hi Directory      cterm=none    ctermbg=none    ctermfg=2
+hi Error          cterm=bold    ctermbg=196     ctermfg=15
+hi ErrorMsg       cterm=bold    ctermbg=196     ctermfg=15
+hi Identifier     cterm=none    ctermbg=none    ctermfg=24
+hi LineNr         cterm=none    ctermbg=none    ctermfg=244
+hi Number         cterm=none    ctermbg=none    ctermfg=196
+hi Pmenu          cterm=none    ctermbg=27      ctermfg=0
+hi PreProc        cterm=none    ctermbg=none    ctermfg=48
+hi Search         cterm=none    ctermbg=9       ctermfg=16
+hi Special        cterm=none    ctermbg=none    ctermfg=33
+hi SpecialChar    cterm=none    ctermbg=none    ctermfg=45
+hi Statement      cterm=none    ctermbg=none    ctermfg=215
+hi StatusLine     cterm=bold    ctermbg=12      ctermfg=16
+hi Todo           cterm=bold    ctermbg=3       ctermfg=15
+hi Type           cterm=none    ctermbg=none    ctermfg=36
 
 " Basic colors definition for commit
-hi diffRemoved    cterm=none  ctermfg=196  ctermbg=none
-hi diffAdded      cterm=none  ctermfg=76   ctermbg=none
-hi diffChanged    cterm=none  ctermfg=202  ctermbg=none
-hi diffSubname    cterm=none  ctermfg=30   ctermbg=none
-hi diffOldFile    cterm=none  ctermfg=23   ctermbg=none
-hi diffNewFile    cterm=none  ctermfg=25   ctermbg=none
+hi diffRemoved    cterm=none    ctermbg=none    ctermfg=196
+hi diffAdded      cterm=none    ctermbg=none    ctermfg=76
+hi diffChanged    cterm=none    ctermbg=none    ctermfg=202
+hi diffSubname    cterm=none    ctermbg=none    ctermfg=30
+hi diffOldFile    cterm=none    ctermbg=none    ctermfg=23
+hi diffNewFile    cterm=none    ctermbg=none    ctermfg=25
