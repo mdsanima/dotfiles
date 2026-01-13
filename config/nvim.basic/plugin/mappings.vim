@@ -1,18 +1,21 @@
-" Copyright (c) 2024-2025 Marcin Różewski, Amarokelab.
+"
+" Copyright (c) 2023-2026 Marcin Różewski, Amarokelab
 " All rights reserved.
 "
-" Key mappings.  These are loaded on demand.  This is a good place to put key
-" mappings that you want to run on every startup.
+" Key mappings configuration.  These are loaded on demand.  This configuration
+" file is a good place to put key mappings that you want to run on every Neovim
+" editor startup.
 "
-" NOTE: The key mapping for the 'Visual Block' is not working on Windows
-" Terminal Preview with the `CTRL+V` keyboard shortcut and the solution is to
-" use `CTRL+Q` instead.  On the Visual Studio Code and Neovim extension the
-" `CTRL+V` keyboard shortcut is working normally.  You can unbind the `CTRL+V`
-" on the Windows Terminal Preview and bind `CTRL+SHIFT+V` instead for the copy
-" text.
+" NOTE: The key mapping for the 'Visual Block' cursor style is not working on
+" Windows Terminal Preview application with the 'CTRL+V' key shortcut, and the
+" solution is to use 'CTRL+Q' instead.  On the Visual Studio Code application
+" and Neovim extension the 'CTRL+V' key shortcut is working normally.  You can
+" unbind the key shortcut 'CTRL+V' on the Windows Terminal Preview application
+" and bind 'CTRL+SHIFT+V' keys instead for the copy text.
+"
 
 " General
-map <C-S> :w<CR>  " CTRL+S to Save file
+map <C-S> :w<CR>  " Save file    CTRL+S
 
 " Get folding working with Visual Studio Code and Neovim extension
 if(exists("g:vscode"))

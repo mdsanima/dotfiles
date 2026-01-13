@@ -1,9 +1,11 @@
-" Copyright (c) 2024-2025 Marcin Różewski, Amarokelab.
+"
+" Copyright (c) 2023-2026 Marcin Różewski, Amarokelab
 " All rights reserved.
 "
-" This is a custom MDSANIMA configuration setting options for Neovim editor.
+" This is a custom configuration setting options for the Neovim editor.
+"
 
-" Setting
+" General
 set autoindent              " Indent from last line
 set autoread                " Read file on change
 set backup                  " Make backups files
@@ -35,7 +37,7 @@ set tabstop=4               " Ident spaces
 set undofile                " Persistent undo
 set writebackup             " Make backups files
 
-" File
+" Cache files
 set backupdir=$HOME/.cache/nvim/backup//
 set directory=$HOME/.cache/nvim/swap//
 set undodir=$HOME/.cache/nvim/undo//

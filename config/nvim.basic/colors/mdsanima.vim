@@ -1,22 +1,24 @@
-" Copyright (c) 2024-2025 Marcin Różewski, Amarokelab.
+"
+" Copyright (c) 2023-2026 Marcin Różewski, Amarokelab
 " All rights reserved.
 "
-" Custom MDSANIMA color theme.  This config is based on the default 'pablo' Vim
-" color file.  Run this `vim -c 'edit $VIMRUNTIME/colors/pablo.vim'` command on
-" the terminal for more information about and help.  This config color scheme is
-" still work in progress and may change in the future.
+" Custom colors theme configuration.  This theme config is based on the default
+" file named 'pablo.vim' from Vim editor.  Run command below for more info:
 "
-" I still need to think about this and the Neovim configuration.  May be I
-" should just use the default color scheme.  I think to setup the configuration
-" with LazyVim or NormalVim.  I will need to test it.
+"     vim -c 'edit $VIMRUNTIME/colors/pablo.vim'
+"
+" This custom colors scheme configuration is still work in progress and may be
+" change in the future.  I still need to think about this basic configuration
+" for the Neovim editor.  May be I should just use the default colors scheme.
+"
 
-" Basic initial setup
+" Initial setup
 hi clear
 set notermguicolors
 set background=dark
 let g:colors_name = "mdsanima"
 
-" Basic color scheme definitions
+" Basic colors definition
 hi Boolean        cterm=none  ctermfg=202  ctermbg=none
 hi ColorColumn    cterm=none  ctermfg=0    ctermbg=8
 hi Comment        cterm=none  ctermfg=8    ctermbg=none
@@ -37,7 +39,7 @@ hi StatusLine     cterm=bold  ctermfg=16   ctermbg=12
 hi Todo           cterm=bold  ctermfg=15   ctermbg=3
 hi Type           cterm=none  ctermfg=36   ctermbg=none
 
-" Basic color for commits
+" Basic colors definition for commit
 hi diffRemoved    cterm=none  ctermfg=196  ctermbg=none
 hi diffAdded      cterm=none  ctermfg=76   ctermbg=none
 hi diffChanged    cterm=none  ctermfg=202  ctermbg=none
