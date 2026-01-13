@@ -16,7 +16,7 @@ set expandtab               " Override mode for TAB
 set history=1000            " Lines to keep in history
 set ignorecase              " Case insensitive search
 set incsearch               " Incremental search
-set linespace=80            " Maximum characters in line
+set linespace=79            " Maximum characters in line
 set linebreak               " Wrap long lines
 set list                    " Show special characters
 set listchars+=extends:→,   " Show right arrow
@@ -27,7 +27,7 @@ set listchars+=trail:·,     " Show trailing spaces
 set mouse=a                 " Mouse support
 set number                  " Show line numbering
 set relativenumber          " Relative number of lines
-set scrolloff=8             " Lines after before cursor
+set scrolloff=4             " Lines after before cursor
 set shiftwidth=4            " Offset spaces
 set showbreak=↪\            " Show break character
 set smartcase               " Smart case search
