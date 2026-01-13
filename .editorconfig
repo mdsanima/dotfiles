@@ -24,7 +24,7 @@ insert_final_newline = true
 trim_trailing_whitespace = true
 quote_type = double
 
-[*.{eslint*,json*,md*,prettier*,svg,todo,vim,xml,yaml,yml}]
+[*.{eslint*,json*,md*,prettier*,svg,todo,xml,yaml,yml}]
 indent_size = 2
 max_line_length = 79
 
@@ -36,7 +36,7 @@ max_line_length = 79
 indent_size = 4
 max_line_length = 120
 
-[*.{bash,ps1,psd1,psm1,sh,toml,zsh*}]
+[*.{bash,ps1,psd1,psm1,sh,toml,vim,zsh*}]
 indent_size = 4
 max_line_length = 79
 
