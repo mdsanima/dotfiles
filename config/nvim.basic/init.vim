@@ -13,5 +13,8 @@
 " to think about this configuration, and for now this is a basic template.
 "
 
+set exrc
+set secure
+
 " Load custom theme
 colorscheme mdsanima
