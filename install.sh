@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-
-# Copyright (c) 2024-2025 Marcin Różewski, Amarokelab.
+#
+# Copyright (c) 2023-2026 Marcin Różewski, Amarokelab
 # All rights reserved.
 #
 # Installation script for the dotfiles that support GNU/Linux systems like
@@ -8,6 +8,7 @@
 # write this script, and is including on this repository.  This script and the
 # library is still work in progress and subject to change.  I still need to
 # think about this repository code, and for now this is a base code.
+#
 
 # Exit immediately if a command exits with a non-zero status
 set -e
@@ -39,7 +40,7 @@ CURRENT_GIT_TAG=$(git describe --tags)
 _LATEST_GIT_TAG=$(git describe --tags --abbrev=0)
 
 function dotfiles_installer_info() {
-    print::color -fg ${GRAY} "Copyright (c) 2024-2025 Marcin Różewski, Amarokelab. All rights reserved.\n"
+    print::color -fg ${GRAY} "Copyright (c) 2023-2026 Marcin Różewski, Amarokelab. All rights reserved.\n"
     print::color -fg ${SKY} -b -n "  MDSANIMA-SHELL"
     print::color -fg ${BLUE} " dotfiles ${CURRENT_GIT_TAG}"
     print::color -fg ${TOKYO} "  This installer is only available for GNU/Linux systems.\n"
