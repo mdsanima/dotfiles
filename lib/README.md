@@ -1,7 +1,8 @@
 # Libraries
 
-Below is documentation for the libraries included in this project, which you can
-utilize in your own projects. The installation script is still work in progress.
+Below is documentation for the libraries included in this project, which you
+can utilize in your own projects. The installation script for this dotfiles is
+still work in progress.
 
 <details>
 <summary><strong>Table of Contents</strong> (click to expand)</summary>
@@ -37,10 +38,10 @@ This package contains the following libraries:
   from one format or type to another.
 - [`libevent.sh`](./mdsanima-shell/libevent.sh): Logging events or actions
   within a program for debugging or monitoring purposes.
-- [`libprint.sh`](./mdsanima-shell/libprint.sh): Printing formatted text or data
-  to the shell console or another output stream.
-- [`libutil.sh`](./mdsanima-shell/libutil.sh): Utility that perform common tasks
-  or operations needed across different parts of a project.
+- [`libprint.sh`](./mdsanima-shell/libprint.sh): Printing formatted text or
+  data to the shell console or another output stream.
+- [`libutil.sh`](./mdsanima-shell/libutil.sh): Utility that perform common
+  tasks or operations needed across different parts of a project.
 
 Each file above contains appropriate documentation for each available function
 and how to use it.
@@ -49,25 +50,25 @@ and how to use it.
 
 Here is a list of available functions:
 
-- [`convert::hex_to_rgb`](./mdsanima-shell/libconvert.sh#L17)
-- [`event::debug`](./mdsanima-shell/libevent.sh#L6)
-- [`event::dev`](./mdsanima-shell/libevent.sh#L10)
-- [`event::error`](./mdsanima-shell/libevent.sh#L14)
-- [`event::info`](./mdsanima-shell/libevent.sh#L18)
-- [`event::success`](./mdsanima-shell/libevent.sh#L22)
-- [`event::warning`](./mdsanima-shell/libevent.sh#L26)
-- [`print::color`](./mdsanima-shell/libprint.sh#L26)
-- [`util::is_package_installed`](./mdsanima-shell/libutil.sh#L8)
-- [`util::is_installed`](./mdsanima-shell/libutil.sh#L20)
-- [`util::is_integer`](./mdsanima-shell/libutil.sh#L25)
-- [`util::is_float`](./mdsanima-shell/libutil.sh#L36)
-- [`util::is_number`](./mdsanima-shell/libutil.sh#L47)
-- [`util::is_string`](./mdsanima-shell/libutil.sh#L58)
-- [`util::is_special_char`](./mdsanima-shell/libutil.sh#L69)
-- [`util::is_first_char_special`](./mdsanima-shell/libutil.sh#L81)
-- [`util::is_hex`](./mdsanima-shell/libutil.sh#L93)
-- [`util::contains_special_char`](./mdsanima-shell/libutil.sh#L104)
-- [`util::one_line_progress`](./mdsanima-shell/libutil.sh#L115)
+- [`convert::hex_to_rgb`](./mdsanima-shell/libconvert.sh#L27)
+- [`event::debug`](./mdsanima-shell/libevent.sh#L11)
+- [`event::dev`](./mdsanima-shell/libevent.sh#L16)
+- [`event::error`](./mdsanima-shell/libevent.sh#L21)
+- [`event::info`](./mdsanima-shell/libevent.sh#L26)
+- [`event::success`](./mdsanima-shell/libevent.sh#L31)
+- [`event::warning`](./mdsanima-shell/libevent.sh#L36)
+- [`print::color`](./mdsanima-shell/libprint.sh#L36)
+- [`util::is_package_installed`](./mdsanima-shell/libutil.sh#L14)
+- [`util::is_installed`](./mdsanima-shell/libutil.sh#L28)
+- [`util::is_integer`](./mdsanima-shell/libutil.sh#L34)
+- [`util::is_float`](./mdsanima-shell/libutil.sh#L48)
+- [`util::is_number`](./mdsanima-shell/libutil.sh#L56)
+- [`util::is_string`](./mdsanima-shell/libutil.sh#L70)
+- [`util::is_special_char`](./mdsanima-shell/libutil.sh#L82)
+- [`util::is_first_char_special`](./mdsanima-shell/libutil.sh#L95)
+- [`util::is_hex`](./mdsanima-shell/libutil.sh#L108)
+- [`util::contains_special_char`](./mdsanima-shell/libutil.sh#L120)
+- [`util::one_line_progress`](./mdsanima-shell/libutil.sh#L132)
 
 ### Example usages
 
@@ -81,8 +82,8 @@ source "$PWD/lib/mdsanima-shell/libcolor.sh"
 In the above example, I used `$PWD` to get the path to the file directory. This
 example is executed in the directory where our libraries must be located, for
 example `$HOME/workspace/dotfiles/` the current repository and the script file
-in which we want to use our libraries is in the root of this directory like
-the `install.sh` script.
+in which we want to use our libraries is in the root of this directory like the
+`install.sh` script.
 
 Example script file `test.sh` must be located on the root of this repository:
 
