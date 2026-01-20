@@ -1,9 +1,11 @@
-# Copyright (c) 2024-2025 Marcin Różewski, Amarokelab.
+#
+# Copyright (c) 2023-2026 Marcin Różewski, Amarokelab
 # All rights reserved.
 #
 # Library for printing functions.  This library is still work in progress and
 # subject to change.  I still need to think about this repository code, and for
 # now this is a base code.
+#
 
 # =====> DOCS <================================================================
 # This function provides a simple way to print the text with colors on the
