@@ -7,7 +7,7 @@
 # now this is a base code.
 #
 
-# =====> DOCS <================================================================
+# -----/ DOCS /----------------------------------------------------------------
 # This function is for converting HEX color code to RGB values.  The returned
 # values are separated by semicolon and will be used in another function.
 #
@@ -17,8 +17,10 @@
 #
 # Arguments:
 #   <hex_color>  The hexadecimal color code string, required
+#
 # Outputs:
 #   Output to STDOUT look like this '128;64;32' example
+#
 # Returns:
 #   The RGB integer values separated by semicolon
 # -----------------------------------------------------------------------------

@@ -7,7 +7,7 @@
 # now this is a base code.
 #
 
-# =====> DOCS <================================================================
+# -----/ DOCS /----------------------------------------------------------------
 # This function provides a simple way to print the text with colors on the
 # terminal outputs.  The color mode may be number, name or the HEX code values.
 #
@@ -26,8 +26,10 @@
 #   -italic, -i     Print the text in italic style, optional, default to false
 #   -nonewline, -n  Dont print new line after text, optional, default to false
 #   <text>          The text to be printed in colors, required
+#
 # Outputs:
 #   Output to STDOUT or STDERR
+#
 # Returns:
 #   The nice colored text in your terminal
 # -----------------------------------------------------------------------------

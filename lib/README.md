@@ -81,8 +81,8 @@ source "$PWD/lib/mdsanima-shell/libcolor.sh"
 In the above example, I used `$PWD` to get the path to the file directory. This
 example is executed in the directory where our libraries must be located, for
 example `$HOME/workspace/dotfiles/` the current repository and the script file
-in which we want to use our libraries is in the root of this directory like
-the `install.sh` script.
+in which we want to use our libraries is in the root of this directory like the
+`install.sh` script.
 
 Example script file `test.sh` must be located on the root of this repository:
 
