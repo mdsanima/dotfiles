@@ -13,7 +13,7 @@
 # to think about this configuration, and for now this is a base template.
 
 [window]
-dimensions = { columns = 120, lines = 32 }
+dimensions = { columns = 144, lines = 43 }
 opacity = 1.0
 decorations = "Full"
 decorations_theme_variant = "Dark"
@@ -36,6 +36,7 @@ blink_interval = 512
 blink_timeout = 16
 
 [font]
-# normal.family = "Departure Mono Nerd Font Mono"
-normal.family = "Terminess Nerd Font Propo"
-size = 16.0
+normal.family = "Departure Mono Nerd Font Mono"
+size = 8.0
+#normal.family = "Terminess Nerd Font Propo"
+#size = 11.0
