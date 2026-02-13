@@ -1,6 +1,6 @@
 {
   "infile": "CHANGELOG.md",
-  "header": "# Changelog\n\nAll notable changes to this project will be documented in this file.\n\nSee [Conventional Commits](https://conventionalcommits.org/) website and\n[Standard Version](https://githgub.com/conventional-changelog/standard-version/)\nrepository for commit guidelines.\n\n<!-- markdownlint-disable -->\n<!-- editorconfig-checker-disable-file -->\n\n",
+  "header": "# Changelog\n\nAll notable changes to this project will be documented in this file.\n\nSee the [Conventional Commits](https://conventionalcommits.org) website, and\n[Standard Version](https://github.com/conventional-changelog/standard-version)\nrepository for commit guidelines.\n\n<!-- markdownlint-disable -->\n<!-- editorconfig-checker-disable-file -->\n\n",
   "skip": { "bump": false, "changelog": false, "commit": true, "tag": true },
   "bumpFiles": [{ "type": "json", "filename": "manifest.json" }],
   "types": [
