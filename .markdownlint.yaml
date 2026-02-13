@@ -2,20 +2,20 @@
 # ensure readability and maintainability.  Consistent style not only improves
 # collaboration but also makes the code easier to review and debug.
 #
-# Linter configuration for Markdown and CommonMark files.  This tool is a style
+# Linter configuration for Markdown and CommonMark.  This tool is a style
 # checker that uses a predefined set of rules to check source files for issues
 # such as line length, trailing spaces, indention and more to check and format
-# files based on the CommonMark specification.  It is available as command line
-# tool and work with Prettier for formatting.  It can also integrate with your
-# editor to display diagnostics like warnings or errors from the Markdown
-# language server.  These diagnostics are based on the rules defined in this
-# configuration file.  For more information about, refer to the official source
-# code repository at:
+# files based on the CommonMark specification.  It is available as command
+# line tool and work with Prettier for formatting.  It can also integrate with
+# your editor to display diagnostics info like warnings or errors from the
+# Markdown language server.  These diagnostics are based on the rules defined
+# in this configuration file.  For more information about, refer to the
+# official source code at:
 #
 #       https://github.com/DavidAnson/markdownlint/
 #
 # The rules are still a work in progress and subject to change.  I still need
-# to think about this configuration, and for now this is a base template.
+# to think about this configuration file, and for now this is a base template.
 
 ---
 default: true

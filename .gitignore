@@ -3,22 +3,22 @@
 # collaboration but also makes the code easier to review and debug.
 #
 # Base template configuration for ignoring files on this repository.  Default
-# ignore files separated by language based on GitHub template.  The template
-# for specific language is sourced from GitHub by creating a new repository and
-# initializing it.  For more information about ignoring files, refer to the
-# official documentation at:
+# ignore file separated by language is based on GitHub template.  The template
+# for specific language is sourced from GitHub by creating a new repository
+# and initializing it.  For more information about ignoring files, refer to
+# the official documentation at:
 #
 #       https://help.github.com/articles/ignoring-files/
 #
 # The rules are still a work in progress and subject to change.  I still need
-# to think about this configuration, and for now this is a base template.
+# to think about this configuration file, and for now this is a base template.
 
-# ----> BASE : PYTHON <--------------------------------------------------------
-# ╭───────────────────────────────────────────────────────────────────────────╮
-# │░░░░░░░░░░░░░░░░░░░░░░░░░░█▀█░█░█░▀█▀░█░█░█▀█░█▀█░░░░░░░░░░░░░░░░░░░░░░░░░░│
-# │░░░░░░░░░░░░░░░░░░░░░░░░░░█▀▀░░█░░░█░░█▀█░█░█░█░█░░░░░░░░░░░░░░░░░░░░░░░░░░│
-# │░░░░░░░░░░░░░░░░░░░░░░░░░░▀░░░░▀░░░▀░░▀░▀░▀▀▀░▀░▀░░░░░░░░░░░░░░░░░░░░░░░░░░│
-# ╰───────────────────────────────────────────────────────────────────────────╯
+# ----/ BASE : PYTHON /-------------------------------------------------------
+# ╭──────────────────────────────────────────────────────────────────────────╮
+# │░░░░░░░░░░░░░░░░░░░░░░░░░█▀█░█░█░▀█▀░█░█░█▀█░█▀█░░░░░░░░░░░░░░░░░░░░░░░░░░│
+# │░░░░░░░░░░░░░░░░░░░░░░░░░█▀▀░░█░░░█░░█▀█░█░█░█░█░░░░░░░░░░░░░░░░░░░░░░░░░░│
+# │░░░░░░░░░░░░░░░░░░░░░░░░░▀░░░░▀░░░▀░░▀░▀░▀▀▀░▀░▀░░░░░░░░░░░░░░░░░░░░░░░░░░│
+# ╰──────────────────────────────────────────────────────────────────────────╯
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -105,30 +105,31 @@ ipython_config.py
 
 # pyenv
 #   For a library or package, you might want to ignore these files since the
-#   code is intended to run in multiple environments; otherwise, check them in:
-# .python-version
+#   code is intended to run in multiple environments; otherwise, check them
+#   in:
+#.python-version
 
 # pipenv
-#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock
-#   in version control. However, in case of collaboration, if having platform
+#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in
+#   version control.  However, in case of collaboration, if having platform
 #   specific dependencies or dependencies having no cross-platform support,
 #   pipenv may install dependencies that don't work, or not install all needed
 #   dependencies.
 #Pipfile.lock
 
 # poetry
-#   Similar to Pipfile.lock, it is generally recommended to include poetry.lock
-#   in version control. This is especially recommended for binary packages to
-#   ensure reproducibility, and is more commonly ignored for libraries.
-#   https://python-poetry.org/docs/basic-usage/
+#   Similar to Pipfile.lock, it is generally recommended to include
+#   poetry.lock in version control.  This is especially recommended for binary
+#   packages to ensure reproducibility, and is more commonly ignored for
+#   libraries.  https://python-poetry.org/docs/basic-usage/
 #poetry.lock
 
 # pdm
-#   Similar to Pipfile.lock, it is generally recommended to include pdm.lock in
-#   version control.
+#   Similar to Pipfile.lock, it is generally recommended to include pdm.lock
+#   in version control.
 #pdm.lock
 #   pdm stores project-wide configurations in .pdm.toml, but it is recommended
-#   to not include it in version control. https://pdm.fming.dev/#use-with-ide
+#   to not include it in version control.  https://pdm.fming.dev/#use-with-ide
 .pdm.toml
 
 # PEP 582 used by https://github.com/David-OConnor/pyflow/
@@ -175,12 +176,12 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-# ----> BASE : NODE.JS <-------------------------------------------------------
-# ╭───────────────────────────────────────────────────────────────────────────╮
-# │░░░░░░░░░░░░░░░░░░░░░░░░█▀█░█▀█░█▀▄░█▀▀░░░░▀▀█░█▀▀░░░░░░░░░░░░░░░░░░░░░░░░░│
-# │░░░░░░░░░░░░░░░░░░░░░░░░█░█░█░█░█░█░█▀▀░░░░░░█░▀▀█░░░░░░░░░░░░░░░░░░░░░░░░░│
-# │░░░░░░░░░░░░░░░░░░░░░░░░▀░▀░▀▀▀░▀▀░░▀▀▀░▀░░▀▀░░▀▀▀░░░░░░░░░░░░░░░░░░░░░░░░░│
-# ╰───────────────────────────────────────────────────────────────────────────╯
+# ----/ BASE : NODE.JS /------------------------------------------------------
+# ╭──────────────────────────────────────────────────────────────────────────╮
+# │░░░░░░░░░░░░░░░░░░░░░░░░█▀█░█▀█░█▀▄░█▀▀░░░░▀▀█░█▀▀░░░░░░░░░░░░░░░░░░░░░░░░│
+# │░░░░░░░░░░░░░░░░░░░░░░░░█░█░█░█░█░█░█▀▀░░░░░░█░▀▀█░░░░░░░░░░░░░░░░░░░░░░░░│
+# │░░░░░░░░░░░░░░░░░░░░░░░░▀░▀░▀▀▀░▀▀░░▀▀▀░▀░░▀▀░░▀▀▀░░░░░░░░░░░░░░░░░░░░░░░░│
+# ╰──────────────────────────────────────────────────────────────────────────╯
 
 # Logs
 !logs
@@ -311,12 +312,12 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-# ----> BASE : CMAKE <---------------------------------------------------------
-# ╭───────────────────────────────────────────────────────────────────────────╮
-# │░░░░░░░░░░░░░░░░░░░░░░░░░░░░█▀▀░█▄█░█▀█░█░█░█▀▀░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
-# │░░░░░░░░░░░░░░░░░░░░░░░░░░░░█░░░█░█░█▀█░█▀▄░█▀▀░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
-# │░░░░░░░░░░░░░░░░░░░░░░░░░░░░▀▀▀░▀░▀░▀░▀░▀░▀░▀▀▀░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
-# ╰───────────────────────────────────────────────────────────────────────────╯
+# ----/ BASE : CMAKE /--------------------------------------------------------
+# ╭──────────────────────────────────────────────────────────────────────────╮
+# │░░░░░░░░░░░░░░░░░░░░░░░░░░░█▀▀░█▄█░█▀█░█░█░█▀▀░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+# │░░░░░░░░░░░░░░░░░░░░░░░░░░░█░░░█░█░█▀█░█▀▄░█▀▀░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+# │░░░░░░░░░░░░░░░░░░░░░░░░░░░▀▀▀░▀░▀░▀░▀░▀░▀░▀▀▀░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+# ╰──────────────────────────────────────────────────────────────────────────╯
 
 # Files and directories
 CMakeLists.txt.user
@@ -332,12 +333,12 @@ CTestTestfile.cmake
 _deps
 build
 
-# ----> BASE : C AND CPP <-----------------------------------------------------
-# ╭───────────────────────────────────────────────────────────────────────────╮
-# │░░░░░░░░░░░░░░░░░░░░░░█▀▀░░░█▀█░█▀█░█▀▄░░░█▀▀░█▀█░█▀█░░░░░░░░░░░░░░░░░░░░░░│
-# │░░░░░░░░░░░░░░░░░░░░░░█░░░░░█▀█░█░█░█░█░░░█░░░█▀▀░█▀▀░░░░░░░░░░░░░░░░░░░░░░│
-# │░░░░░░░░░░░░░░░░░░░░░░▀▀▀░░░▀░▀░▀░▀░▀▀░░░░▀▀▀░▀░░░▀░░░░░░░░░░░░░░░░░░░░░░░░│
-# ╰───────────────────────────────────────────────────────────────────────────╯
+# ----/ BASE : C AND CPP /----------------------------------------------------
+# ╭──────────────────────────────────────────────────────────────────────────╮
+# │░░░░░░░░░░░░░░░░░░░░░█▀▀░░░█▀█░█▀█░█▀▄░░░█▀▀░█▀█░█▀█░░░░░░░░░░░░░░░░░░░░░░│
+# │░░░░░░░░░░░░░░░░░░░░░█░░░░░█▀█░█░█░█░█░░░█░░░█▀▀░█▀▀░░░░░░░░░░░░░░░░░░░░░░│
+# │░░░░░░░░░░░░░░░░░░░░░▀▀▀░░░▀░▀░▀░▀░▀▀░░░░▀▀▀░▀░░░▀░░░░░░░░░░░░░░░░░░░░░░░░│
+# ╰──────────────────────────────────────────────────────────────────────────╯
 
 # Prerequisites
 *.d
@@ -395,12 +396,12 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
-# ----> BASE : OTHER <---------------------------------------------------------
-# ╭───────────────────────────────────────────────────────────────────────────╮
-# │░░░░░░░░░░░░░░░░░░░░░░░░░░░░█▀█░▀█▀░█░█░█▀▀░█▀▄░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
-# │░░░░░░░░░░░░░░░░░░░░░░░░░░░░█░█░░█░░█▀█░█▀▀░█▀▄░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
-# │░░░░░░░░░░░░░░░░░░░░░░░░░░░░▀▀▀░░▀░░▀░▀░▀▀▀░▀░▀░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
-# ╰───────────────────────────────────────────────────────────────────────────╯
+# ----/ BASE : OTHER /--------------------------------------------------------
+# ╭──────────────────────────────────────────────────────────────────────────╮
+# │░░░░░░░░░░░░░░░░░░░░░░░░░░░█▀█░▀█▀░█░█░█▀▀░█▀▄░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+# │░░░░░░░░░░░░░░░░░░░░░░░░░░░█░█░░█░░█▀█░█▀▀░█▀▄░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+# │░░░░░░░░░░░░░░░░░░░░░░░░░░░▀▀▀░░▀░░▀░▀░▀▀▀░▀░▀░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+# ╰──────────────────────────────────────────────────────────────────────────╯
 
 # Python setuptools_scm version
 _version.py
@@ -464,7 +465,7 @@ secrets
 .env.*.demo
 .env.*.backup
 
-# Todo Markdown case sensitive
+# Markdown case sensitive todo
 *[Tt][Oo][Dd][Oo].md
 
 # Extension SQLTools connection secrets
