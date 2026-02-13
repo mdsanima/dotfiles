@@ -13,7 +13,7 @@
 #       https://prettier.io/
 #
 # The rules are still a work in progress and subject to change.  I still need
-# to think about this configuration, and for now this is a base template.
+# to think about this configuration file, and for now this is a base template.
 
 ---
 endOfLine: lf
