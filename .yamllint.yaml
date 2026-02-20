@@ -29,6 +29,6 @@ rules:
     spaces: 2
     level: error
   line-length:
-    max: 78
+    max: 79
     level: warning
   truthy: disable
