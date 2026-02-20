@@ -5,8 +5,8 @@
 # Linter configuration for Markdown and CommonMark.  This tool is a style
 # checker that uses a predefined set of rules to check source files for issues
 # such as line length, trailing spaces, indention and more to check and format
-# files based on the CommonMark specification.  It is available as command
-# line tool and work with Prettier for formatting.  It can also integrate with
+# files based on the CommonMark specification.  It is available as command line
+# tool and work with Prettier for code formatting.  It can also integrate with
 # your editor to display diagnostics info like warnings or errors from the
 # Markdown language server.  These diagnostics are based on the rules defined
 # in this configuration file.  For more information about, refer to the
@@ -48,9 +48,9 @@ MD051: true
 
 # Maximum lengths
 line-length:
-  line_length: 78
+  line_length: 79
   heading_line_length: 64
-  code_block_line_length: 78
+  code_block_line_length: 79
   code_blocks: false
   tables: false
   headings: true

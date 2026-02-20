@@ -17,7 +17,7 @@
 
 ---
 endOfLine: lf
-printWidth: 118
+printWidth: 119
 semi: true
 singleQuote: false
 tabWidth: 4
@@ -29,34 +29,34 @@ overrides:
     excludeFiles: "CHANGELOG.md"
     options:
       parser: markdown
-      printWidth: 78
+      printWidth: 79
       proseWrap: always
       tabWidth: 2
   - files: "*.css"
     options:
       parser: css
-      printWidth: 78
+      printWidth: 79
   - files: "*.scss"
     options:
       parser: scss
-      printWidth: 78
+      printWidth: 79
   - files: "*.json"
     options:
       parser: json
-      printWidth: 78
+      printWidth: 79
       tabWidth: 2
   - files: "*.jsonc"
     options:
       parser: jsonc
-      printWidth: 78
+      printWidth: 79
       tabWidth: 2
   - files: "*.yaml"
     options:
       parser: yaml
-      printWidth: 78
+      printWidth: 79
       tabWidth: 2
   - files: "*.yml"
     options:
       parser: yaml
-      printWidth: 78
+      printWidth: 79
       tabWidth: 2

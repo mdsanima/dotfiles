@@ -4,11 +4,11 @@
 #
 # Linter configuration for YAML files.  This tool uses a predefined set of
 # rules to check source files for issues such as line length, trailing spaces,
-# and indentation.  It is available as a Python based command line tool and
-# can also integrate with your editor to display diagnostics info like
-# warnings or errors from the YAML language server.  These diagnostics are
-# based on the rules defined in this configuration file.  For more information
-# about, refer to the official source code at:
+# and indentation.  It is available as a Python based command line tool, and
+# can also integrate with your editor of choice to display diagnostics info
+# like warnings or errors from the YAML language server.  The diagnostic for
+# this linter are based on the rules defined in this config file.  For more
+# information about, refer to the official source code at:
 #
 #       https://github.com/adrienverge/yamllint/
 #
@@ -29,6 +29,6 @@ rules:
     spaces: 2
     level: error
   line-length:
-    max: 78
+    max: 79
     level: warning
   truthy: disable
