@@ -4,9 +4,9 @@
 #
 # Base template configuration for ignoring files on this repository.  Default
 # ignore file separated by language is based on GitHub template.  The template
-# for specific language is sourced from GitHub by creating a new repository
-# and initializing it.  For more information about ignoring files, refer to
-# the official documentation at:
+# for specific language is sourced from GitHub by creating a new repository,
+# and initializing it.  For more information about ignoring files in Git
+# repository, refer to the official documentation at:
 #
 #       https://help.github.com/articles/ignoring-files/
 #
@@ -105,8 +105,7 @@ ipython_config.py
 
 # pyenv
 #   For a library or package, you might want to ignore these files since the
-#   code is intended to run in multiple environments; otherwise, check them
-#   in:
+#   code is intended to run in multiple environments; otherwise, check them in:
 #.python-version
 
 # pipenv
@@ -118,15 +117,15 @@ ipython_config.py
 #Pipfile.lock
 
 # poetry
-#   Similar to Pipfile.lock, it is generally recommended to include
-#   poetry.lock in version control.  This is especially recommended for binary
-#   packages to ensure reproducibility, and is more commonly ignored for
-#   libraries.  https://python-poetry.org/docs/basic-usage/
+#   Similar to Pipfile.lock, it is generally recommended to include poetry.lock
+#   in version control.  This is especially recommended for binary packages to
+#   ensure reproducibility, and is more commonly ignored for libraries.
+#   https://python-poetry.org/docs/basic-usage/
 #poetry.lock
 
 # pdm
-#   Similar to Pipfile.lock, it is generally recommended to include pdm.lock
-#   in version control.
+#   Similar to Pipfile.lock, it is generally recommended to include pdm.lock in
+#   version control.
 #pdm.lock
 #   pdm stores project-wide configurations in .pdm.toml, but it is recommended
 #   to not include it in version control.  https://pdm.fming.dev/#use-with-ide

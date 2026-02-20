@@ -6,8 +6,8 @@
 # requests, and before push to origin from local reposiotry.  These rules are
 # used to check if the commit message contains a type.  The type is the first
 # word in the commit message and must match one of the types defined in the
-# types array in this file.  For more information about commitlint, refer to
-# the official documentation at:
+# types array in this file.  For more information about commitlint config,
+# refer to the official documentation at:
 #
 #       https://commitlint.js.org/reference/rules.html
 #
