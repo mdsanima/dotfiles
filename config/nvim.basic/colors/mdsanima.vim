@@ -1,5 +1,5 @@
 "
-" Copyright (c) 2023-2026 Marcin Różewski, Amarokelab
+" Copyright (c) 2023-2026 Marcin Różewski <marcinrozewski@gmail.com>
 " All rights reserved.
 "
 " Custom colors theme configuration.  This theme config is based on the default

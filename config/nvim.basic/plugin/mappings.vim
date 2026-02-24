@@ -1,5 +1,5 @@
 "
-" Copyright (c) 2023-2026 Marcin Różewski, Amarokelab
+" Copyright (c) 2023-2026 Marcin Różewski <marcinrozewski@gmail.com>
 " All rights reserved.
 "
 " Key mappings configuration.  These are loaded on demand.  This configuration

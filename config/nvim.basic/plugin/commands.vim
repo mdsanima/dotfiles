@@ -1,5 +1,5 @@
 "
-" Copyright (c) 2023-2026 Marcin Różewski, Amarokelab
+" Copyright (c) 2023-2026 Marcin Różewski <marcinrozewski@gmail.com>
 " All rights reserved.
 "
 " General commands configuration.  The commands in this file are loaded on
