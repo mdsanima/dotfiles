@@ -1,5 +1,5 @@
 "
-" Copyright (c) 2023-2026 Marcin Różewski, Amarokelab
+" Copyright (c) 2023-2026 Marcin Różewski <marcinrozewski@gmail.com>
 " All rights reserved.
 "
 " This is a custom configuration setting options for the Neovim editor.
@@ -26,7 +26,7 @@ set listchars+=tab:»\ ,     " Show tabs character
 set listchars+=trail:·,     " Show trailing spaces
 set mouse=a                 " Mouse support
 set number                  " Show line numbering
-set relativenumber          " Relative number of lines
+set relativenumber          " Relative line number
 set scrolloff=999           " Lines after before cursor
 set shiftwidth=4            " Offset spaces
 set showbreak=↪\            " Show break character

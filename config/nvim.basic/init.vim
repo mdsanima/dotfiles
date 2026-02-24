@@ -1,5 +1,5 @@
 "
-" Copyright (c) 2023-2026 Marcin Różewski, Amarokelab
+" Copyright (c) 2023-2026 Marcin Różewski <marcinrozewski@gmail.com>
 " All rights reserved.
 "
 " Initial basic configuration file for the Neovim editor.  Other configuration
@@ -10,7 +10,7 @@
 " reposiotry.  Make sure to check these files for more information about.
 "
 " This config are still a work in progress and subject to change.  I still need
-" to think about this configuration, and for now this is a basic template.
+" to think about this configuration file, and for now this is a basic template.
 "
 
 set exrc
