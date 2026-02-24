@@ -7,15 +7,15 @@
 " editor startup.
 "
 " NOTE: The key mapping for the 'Visual Block' cursor style is not working on
-" Windows Terminal Preview application with the 'CTRL+V' key shortcut, and the
-" solution is to use 'CTRL+Q' instead.  On the Visual Studio Code application
-" and Neovim extension the 'CTRL+V' key shortcut is working normally.  You can
-" unbind the key shortcut 'CTRL+V' on the Windows Terminal Preview application
-" and bind 'CTRL+SHIFT+V' keys instead for the copy text.
+" Windows Terminal Preview application with the <CTRL+V> key shortcut, and the
+" solution is to use <CTRL+Q> instead.  On the Visual Studio Code application
+" and Neovim extension the <CTRL+V> key shortcut is working normally.  You can
+" unbind the key shortcut <CTRL+V> on the Windows Terminal Preview application
+" and bind <SHIFT+CTRL+V> keys instead for the copy text.
 "
 
 " General
-map <C-S> :w<CR>  " Save file    CTRL+S
+map <C-S> :w<CR>  " Save file  <CTRL+S>
 
 " Get folding working with Visual Studio Code and Neovim extension
 if(exists("g:vscode"))

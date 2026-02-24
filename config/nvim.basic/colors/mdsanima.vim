@@ -3,11 +3,11 @@
 " All rights reserved.
 "
 " Custom colors theme configuration.  This theme config is based on the default
-" file named 'pablo.vim' from Vim editor.  Run command below for more info:
+" file named 'pablo.vim' from the Vim editor.  Run command below for more info:
 "
 "       vim -c 'edit $VIMRUNTIME/colors/pablo.vim'
 "
-" This custom colors scheme configuration is still work in progress and may be
+" This colors scheme configuration file is still work in progress and may be
 " change in the future.  I still need to think about this basic configuration
 " for the Neovim editor.  May be I should just use the default colors scheme.
 "
