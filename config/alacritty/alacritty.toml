@@ -12,30 +12,30 @@
 # to think about this configuration file, and for now this is a base template.
 
 [window]
-dimensions = { columns = 144, lines = 43 }
-opacity = 1.0
-decorations = "Full"
 decorations_theme_variant = "Dark"
+decorations               = "Full"
+dimensions.columns        = 144
+dimensions.lines          = 43
+opacity                   = 1.0
 
 [scrolling]
-history = 100000
-multiplier = 4
+history                   = 100000
+multiplier                = 4
 
 [colors.primary]
-foreground = "#D8D8D8"
-background = "#17191E"
+background                = "#17191E"
+foreground                = "#D8D8D8"
 
 [selection]
-save_to_clipboard = true
+save_to_clipboard         = true
 
 [cursor]
-style.shape = "Block"
-style.blinking = "Always"
-blink_interval = 512
-blink_timeout = 16
+style.blinking            = "Always"
+style.shape               = "Block"
+blink_interval            = 512
+blink_timeout             = 16
 
 [font]
-normal.family = "Departure Mono Nerd Font Mono"
-size = 8.0
-#normal.family = "Terminess Nerd Font Propo"
-#size = 11.0
+size                      = 8.0
+normal.family             = "Departure Mono Nerd Font Mono"
+#normal.family            = "Terminess Nerd Font Propo"
