@@ -11,5 +11,5 @@
 
 " Simple test function
 function mdsanima#hello()
-    echo "Hello World"
+    echo "Hello world"
 endfunction
