@@ -11,7 +11,7 @@
 	dh = diff HEAD
 	lo = log -p
 	ll = log --pretty=oneline
-	prune-branches = git branch -l | grep -v 'main' | xargs -r git branch -D
+	prune-branches = "!f() { current=$(git branch --show-current); git branch --format='%(refname:short)' | grep -v '^main$' | grep -v \"^$current$\" | xargs -r git branch -D; }; f"
 [commit]
 	gpgsign = true
 	verbose = true
