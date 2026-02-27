@@ -17,8 +17,8 @@ still work in progress.
 
 ## mdsanima-shell
 
-This package contains libraries for functions that help execute _Shell Scripts_
-on **GNU/Linux** systems like _Debian_ or _Ubuntu_.
+This package contains libraries and functions that help execute _Shell Scripts_
+on **GNU/Linux** systems, like _Debian_ or _Ubuntu_.
 
 > [!NOTE]
 >
@@ -26,7 +26,7 @@ on **GNU/Linux** systems like _Debian_ or _Ubuntu_.
 > installed as a package using `apt install` command. However, there are plans
 > to make it available as a standalone package in the future.
 
-The package might be deleted in the future.
+The package might be deleted in the future, or moved to another repository.
 
 ### Available libraries
 
