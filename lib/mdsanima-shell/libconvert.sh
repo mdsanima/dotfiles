@@ -8,7 +8,7 @@
 # to think about this library files, and for now this is a base code.
 #
 
-# -----/ DOCS /----------------------------------------------------------------
+# ----/ DOCS /-----------------------------------------------------------------
 # This function is for converting HEX color code to RGB values.  The returned
 # values are separated by semicolon and will be used in another function.
 #
