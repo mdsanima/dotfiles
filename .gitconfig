@@ -11,6 +11,7 @@
 	dh = diff HEAD
 	lo = log -p
 	ll = log --pretty=oneline
+	ls = log --graph --decorate --pretty=format:'%C(yellow)%h%C(reset) %C(blue)%an%C(reset)%C(auto)%d%C(reset) %s %C(italic green)%ar%C(reset)'
 	prune-branches = "!f() { current=$(git branch --show-current); git branch --format='%(refname:short)' | grep -v '^main$' | grep -v \"^$current$\" | xargs -r git branch -D; }; f"
 [commit]
 	gpgsign = true
