@@ -1,4 +1,5 @@
-# Copyright (c) 2024-2025 Marcin Różewski, Amarokelab.
+#
+# Copyright (c) 2023-2026 Marcin Różewski <marcinrozewski@gmail.com>
 # All rights reserved.
 #
 # Define base environment variables for the ZSH Shell.  The Z shell (ZSH) is
