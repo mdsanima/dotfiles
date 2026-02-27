@@ -1,13 +1,14 @@
 #
-# Copyright (c) 2023-2026 Marcin Różewski, Amarokelab
+# Copyright (c) 2023-2026 Marcin Różewski <marcinrozewski@gmail.com>
 # All rights reserved.
 #
-# Library for converting functions.  This library is still work in progress and
-# subject to change.  I still need to think about this repository code, and for
-# now this is a base code.
+# Library for converting functions.
+#
+# This library is still work in progress and subject to change.  I still need
+# to think about this library files, and for now this is a base code.
 #
 
-# -----/ DOCS /----------------------------------------------------------------
+# ----/ DOCS /-----------------------------------------------------------------
 # This function is for converting HEX color code to RGB values.  The returned
 # values are separated by semicolon and will be used in another function.
 #
@@ -19,10 +20,10 @@
 #   <hex_color>  The hexadecimal color code string, required
 #
 # Outputs:
-#   Output to STDOUT look like this '128;64;32' example
+#   Output to STDOUT look like this '128;64;32' example.
 #
 # Returns:
-#   The RGB integer values separated by semicolon
+#   The RGB integer values separated by semicolon.
 # -----------------------------------------------------------------------------
 function convert::hex_to_rgb() {
     local hex_color="$1"

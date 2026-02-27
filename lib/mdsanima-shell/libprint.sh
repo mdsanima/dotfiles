@@ -1,13 +1,14 @@
 #
-# Copyright (c) 2023-2026 Marcin Różewski, Amarokelab
+# Copyright (c) 2023-2026 Marcin Różewski <marcinrozewski@gmail.com>
 # All rights reserved.
 #
-# Library for printing functions.  This library is still work in progress and
-# subject to change.  I still need to think about this repository code, and for
-# now this is a base code.
+# Library for printing functions.
+#
+# This library is still work in progress and subject to change.  I still need
+# to think about this library files, and for now this is a base code.
 #
 
-# -----/ DOCS /----------------------------------------------------------------
+# ----/ DOCS /-----------------------------------------------------------------
 # This function provides a simple way to print the text with colors on the
 # terminal outputs.  The color mode may be number, name or the HEX code values.
 #
@@ -28,10 +29,10 @@
 #   <text>          The text to be printed in colors, required
 #
 # Outputs:
-#   Output to STDOUT or STDERR
+#   Output to STDOUT or STDERR.
 #
 # Returns:
-#   The nice colored text in your terminal
+#   The nice colored text in your terminal output.
 # -----------------------------------------------------------------------------
 function print::color() {
     local fg_color

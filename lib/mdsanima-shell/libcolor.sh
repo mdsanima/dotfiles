@@ -1,10 +1,11 @@
 #
-# Copyright (c) 2023-2026 Marcin Różewski, Amarokelab
+# Copyright (c) 2023-2026 Marcin Różewski <marcinrozewski@gmail.com>
 # All rights reserved.
 #
-# Library for color palette definition.  This library is still work in progress
-# and subject to change.  I still need to think about this repository code, and
-# for now this is a base code.
+# Library for color palette definition.
+#
+# This library is still work in progress and subject to change.  I still need
+# to think about this library files, and for now this is a base code.
 #
 
 # shellcheck disable=SC2034
