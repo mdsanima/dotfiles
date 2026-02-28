@@ -17,8 +17,8 @@ still work in progress.
 
 ## mdsanima-shell
 
-This package contains libraries for functions that help execute _Shell Scripts_
-on **GNU/Linux** systems like _Debian_ or _Ubuntu_.
+This package contains libraries and functions that help execute _Shell Scripts_
+on **GNU/Linux** systems, like _Debian_ or _Ubuntu_.
 
 > [!NOTE]
 >
@@ -26,7 +26,7 @@ on **GNU/Linux** systems like _Debian_ or _Ubuntu_.
 > installed as a package using `apt install` command. However, there are plans
 > to make it available as a standalone package in the future.
 
-The package might be deleted in the future.
+The package might be deleted in the future, or moved to another repository.
 
 ### Available libraries
 
@@ -50,25 +50,25 @@ and how to use it.
 
 Here is a list of available functions:
 
-- [`convert::hex_to_rgb`](./mdsanima-shell/libconvert.sh#L27)
-- [`event::debug`](./mdsanima-shell/libevent.sh#L11)
-- [`event::dev`](./mdsanima-shell/libevent.sh#L16)
-- [`event::error`](./mdsanima-shell/libevent.sh#L21)
-- [`event::info`](./mdsanima-shell/libevent.sh#L26)
-- [`event::success`](./mdsanima-shell/libevent.sh#L31)
-- [`event::warning`](./mdsanima-shell/libevent.sh#L36)
-- [`print::color`](./mdsanima-shell/libprint.sh#L36)
-- [`util::is_package_installed`](./mdsanima-shell/libutil.sh#L14)
-- [`util::is_installed`](./mdsanima-shell/libutil.sh#L28)
-- [`util::is_integer`](./mdsanima-shell/libutil.sh#L34)
-- [`util::is_float`](./mdsanima-shell/libutil.sh#L48)
-- [`util::is_number`](./mdsanima-shell/libutil.sh#L56)
-- [`util::is_string`](./mdsanima-shell/libutil.sh#L70)
-- [`util::is_special_char`](./mdsanima-shell/libutil.sh#L82)
-- [`util::is_first_char_special`](./mdsanima-shell/libutil.sh#L95)
-- [`util::is_hex`](./mdsanima-shell/libutil.sh#L108)
-- [`util::contains_special_char`](./mdsanima-shell/libutil.sh#L120)
-- [`util::one_line_progress`](./mdsanima-shell/libutil.sh#L132)
+- [`convert::hex_to_rgb`](./mdsanima-shell/libconvert.sh#L28)
+- [`event::debug`](./mdsanima-shell/libevent.sh#L12)
+- [`event::dev`](./mdsanima-shell/libevent.sh#L17)
+- [`event::error`](./mdsanima-shell/libevent.sh#L22)
+- [`event::info`](./mdsanima-shell/libevent.sh#L27)
+- [`event::success`](./mdsanima-shell/libevent.sh#L32)
+- [`event::warning`](./mdsanima-shell/libevent.sh#L37)
+- [`print::color`](./mdsanima-shell/libprint.sh#L37)
+- [`util::is_package_installed`](./mdsanima-shell/libutil.sh#L15)
+- [`util::is_installed`](./mdsanima-shell/libutil.sh#L29)
+- [`util::is_integer`](./mdsanima-shell/libutil.sh#L35)
+- [`util::is_float`](./mdsanima-shell/libutil.sh#L47)
+- [`util::is_number`](./mdsanima-shell/libutil.sh#L59)
+- [`util::is_string`](./mdsanima-shell/libutil.sh#L71)
+- [`util::is_special_char`](./mdsanima-shell/libutil.sh#L83)
+- [`util::is_first_char_special`](./mdsanima-shell/libutil.sh#L96)
+- [`util::is_hex`](./mdsanima-shell/libutil.sh#L109)
+- [`util::contains_special_char`](./mdsanima-shell/libutil.sh#L121)
+- [`util::one_line_progress`](./mdsanima-shell/libutil.sh#L133)
 
 ### Example usages
 

@@ -3,14 +3,14 @@
 These dotfiles include configuration settings for various tools for terminal
 customization, custom libraries, and many more. Additionally, this repository
 contains template files that can be used for other repositories, such as
-_GitHub Actions Workflow_, _Dependabot_, _Labeler_, or other commonly used
-dotfiles.
+**GitHub Actions Workflow**, **Dependabot**, **Labeler**, or other commonly
+used dotfiles.
 
 > [!CAUTION]
 >
 > The installation script and the library or others dotfiles in this repository
 > is still work in progress and subject to change. I still need to think about
-> the configuration, and for now this is a base code.
+> the configuration files, and for now this is a base code.
 
 You can use this code with restriction for now. A better code for the dotfiles
 and more configuration will be available here soon.
