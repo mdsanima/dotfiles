@@ -21,7 +21,15 @@
 default: true
 
 # Line length
-MD013: true
+MD013:
+  line_length: 79
+  heading_line_length: 64
+  code_block_line_length: 79
+  code_blocks: false
+  tables: false
+  headings: true
+  strict: false
+  stern: false
 
 # Trailing headings
 MD026:
@@ -45,14 +53,3 @@ MD046:
 
 # Link fragments
 MD051: true
-
-# Maximum lengths
-line-length:
-  line_length: 79
-  heading_line_length: 64
-  code_block_line_length: 79
-  code_blocks: false
-  tables: false
-  headings: true
-  strict: false
-  stern: false
