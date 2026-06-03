@@ -18,7 +18,7 @@
 	gpgsign = true
 	verbose = true
 [core]
-	editor = nvim
+	editor = nvim --clean
 	symlinks = true
 [include]
 	path = ~/.gitcredentials
