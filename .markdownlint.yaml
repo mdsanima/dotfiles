@@ -2,7 +2,7 @@
 # ensure readability and maintainability.  Consistent style not only improves
 # collaboration but also makes the code easier to review and debug.
 #
-# Linter configuration for Markdown and CommonMark.  This tool is a style
+# Linter configuration file for Markdown and CommonMark.  This tool is a style
 # checker that uses a predefined set of rules to check source files for issues
 # such as line length, trailing spaces, indention and more to check and format
 # files based on the CommonMark specification.  It is available as command line
@@ -18,18 +18,19 @@
 # to think about this configuration file, and for now this is a base template.
 
 ---
+# Default state for all rules
 default: true
 
-# Line length
+# Max line length
 MD013:
   line_length: 79
   heading_line_length: 64
   code_block_line_length: 79
-  code_blocks: false
-  tables: false
   headings: true
-  strict: false
+  code_blocks: false
   stern: false
+  strict: false
+  tables: false
 
 # Trailing headings
 MD026:
@@ -40,8 +41,7 @@ MD027: true
 
 # Inline HTML
 MD033:
-  allowed_elements:
-    [aside, b, center, del, details, div, em, h1, h2, i, img, ins, kbd, mark, strong, sub, summary, sup]
+  allowed_elements: [aside, b, center, del, details, div, em, h1, h2, i, img, ins, kbd, mark, strong, sub, summary, sup]
 
 # Emphasis headings
 MD036:
