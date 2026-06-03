@@ -33,7 +33,7 @@ MD027: true
 # Inline HTML
 MD033:
   allowed_elements:
-    [aside, center, details, div, h1, h2, img, kbd, strong, sub, summary, sup]
+    [aside, b, center, del, details, div, em, h1, h2, i, img, ins, kbd, mark, strong, sub, summary, sup]
 
 # Emphasis headings
 MD036:
