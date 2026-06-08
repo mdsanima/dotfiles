@@ -11,6 +11,8 @@
 # The rules are still a work in progress and subject to change.  I still need
 # to think about this configuration file, and for now this is a base template.
 
+import = ["~/.config/alacritty/theme/default.toml"]
+
 [window]
 decorations_theme_variant = "Dark"
 decorations               = "Full"
@@ -22,10 +24,6 @@ opacity                   = 1.0
 history                   = 100000
 multiplier                = 4
 
-[colors.primary]
-background                = "#17191E"
-foreground                = "#D8D8D8"
-
 [selection]
 save_to_clipboard         = true
 
@@ -36,6 +34,6 @@ blink_interval            = 512
 blink_timeout             = 16
 
 [font]
-size                      = 8.0
 normal.family             = "Departure Mono Nerd Font Mono"
-#normal.family            = "Terminess Nerd Font Propo"
+#normal.family             = "Terminess Nerd Font Mono"
+size                      = 6.0
