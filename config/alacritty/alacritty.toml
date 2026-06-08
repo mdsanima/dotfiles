@@ -11,7 +11,7 @@
 # The rules are still a work in progress and subject to change.  I still need
 # to think about this configuration file, and for now this is a base template.
 
-import = ["~/.config/alacritty/theme/default.toml"]
+import = ["~/.config/alacritty/theme/mdsanima.toml"]
 
 [window]
 decorations_theme_variant = "Dark"
