@@ -34,6 +34,6 @@ blink_interval            = 512
 blink_timeout             = 16
 
 [font]
-size                      = 8.0
 normal.family             = "Departure Mono Nerd Font Mono"
-#normal.family            = "Terminess Nerd Font Propo"
+#normal.family             = "Terminess Nerd Font Mono"
+size                      = 6.0
