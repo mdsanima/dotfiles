@@ -18,7 +18,7 @@
 	gpgsign = true
 	verbose = true
 [core]
-	editor = nvim --clean
+	editor = nvim --clean -u ~/.dotfiles/config/nvim.basic/plugin/mdsanima.vim
 	symlinks = true
 [include]
 	path = ~/.gitcredentials
