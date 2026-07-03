@@ -11,7 +11,7 @@
 	dh = diff HEAD
 	lo = log -p
 	ll = log --pretty=oneline
-	ls = log --graph --decorate --pretty=format:'%C(yellow)%h%C(reset) %C(cyan)%an%C(reset)%C(auto)%d%C(reset) %s %C(italic yellow)(%C(reset)%C(italic bold blue)%ar%C(reset)%C(italic yellow))%C(reset)'
+	ls = log --graph --decorate --pretty=format:'%C(yellow)%h%C(reset)%C(auto)%d%C(reset) %s %C(yellow)(%C(reset)%C(bold blue)%ar%C(reset) %C(italic green)by%C(reset) %C(bold cyan)%an%C(reset)%C(yellow))%C(reset)'
 	lp = log --graph --decorate --pretty=format:'%C(yellow)%h%C(reset) %<(15)%C(cyan)%an%C(reset) %<(23)%C(italic bold blue)%ar%C(reset) %s%C(auto)%d%C(reset)'
 	prune-branches = "!f() { current=$(git branch --show-current); git branch --format='%(refname:short)' | grep -v '^main$' | grep -v '^master$' | grep -v '^develop$' | grep -v '^release/' | grep -v \"^$current$\" | xargs -r git branch -D; }; f"
 [commit]
